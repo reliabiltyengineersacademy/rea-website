@@ -15,9 +15,11 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: 1,
-    slug: "predictive-maintenance-revolution",
-    title: "The Predictive Maintenance Revolution: Transforming Industrial Operations",
-    excerpt: "Discover how predictive maintenance is revolutionizing industrial operations by reducing downtime, optimizing costs, and extending equipment life through advanced analytics and IoT technologies.",
+    slug: 'predictive-maintenance-revolution',
+    title:
+      'The Predictive Maintenance Revolution: Transforming Industrial Operations',
+    excerpt:
+      'Discover how predictive maintenance is revolutionizing industrial operations by reducing downtime, optimizing costs, and extending equipment life through advanced analytics and IoT technologies.',
     content: `
       <h2>Introduction</h2>
       <p>Predictive maintenance represents a paradigm shift from traditional reactive and preventive maintenance strategies. By leveraging advanced analytics, machine learning, and IoT sensors, organizations can predict equipment failures before they occur, dramatically reducing unplanned downtime and maintenance costs.</p>
@@ -70,18 +72,21 @@ export const articles: Article[] = [
       
       <p>Organizations that embrace predictive maintenance today will gain a significant competitive advantage in operational efficiency, cost management, and asset reliability.</p>
     `,
-    author: "Vinoth Kumar Subramaniam",
-    date: "March 10, 2025",
-    readTime: "8 min read",
-    category: "Predictive Maintenance",
-    image: "https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Predictive Maintenance", "IoT", "Machine Learning", "Industrial Operations"]
+    author: 'Vinoth Kumar Subramaniam',
+    date: 'March 10, 2025',
+    readTime: '8 min read',
+    category: 'Predictive Maintenance',
+    image:
+      'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['IoT', 'Machine Learning', 'Industrial Operations'],
   },
   {
     id: 2,
-    slug: "vibration-analysis-fundamentals",
-    title: "Vibration Analysis Fundamentals: A Complete Guide for Reliability Engineers",
-    excerpt: "Master the fundamentals of vibration analysis for machinery diagnostics. Learn about frequency analysis, fault identification, and best practices for implementing vibration monitoring programs.",
+    slug: 'vibration-analysis-fundamentals',
+    title:
+      'Vibration Analysis Fundamentals: A Complete Guide for Reliability Engineers',
+    excerpt:
+      'Master the fundamentals of vibration analysis for machinery diagnostics. Learn about frequency analysis, fault identification, and best practices for implementing vibration monitoring programs.',
     content: `
       <h2>Understanding Vibration Analysis</h2>
       <p>Vibration analysis is one of the most powerful and widely used predictive maintenance techniques. It involves measuring and analyzing the vibration patterns of rotating machinery to detect developing faults before they lead to catastrophic failures.</p>
@@ -172,18 +177,25 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>Vibration analysis is a powerful tool for maintaining machinery reliability. Success requires proper equipment, training, procedures, and commitment to continuous improvement. When implemented correctly, vibration analysis can significantly reduce maintenance costs and improve equipment reliability.</p>
     `,
-    author: "Vinoth Kumar Subramaniam",
-    date: "March 8, 2025",
-    readTime: "12 min read",
-    category: "Condition Monitoring",
-    image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Vibration Analysis", "Condition Monitoring", "Machinery Diagnostics", "Predictive Maintenance"]
+    author: 'Vinoth Kumar Subramaniam',
+    date: 'March 8, 2025',
+    readTime: '12 min read',
+    category: 'Condition Monitoring',
+    image:
+      'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: [
+      'Vibration Analysis',
+      'Machinery Diagnostics',
+      'Predictive Maintenance',
+    ],
   },
   {
     id: 3,
-    slug: "root-cause-failure-analysis-methodology",
-    title: "Root Cause Failure Analysis: A Systematic Approach to Problem Solving",
-    excerpt: "Learn the systematic methodology for conducting effective root cause failure analysis. Discover proven techniques, tools, and best practices for identifying and eliminating the true causes of equipment failures.",
+    slug: 'root-cause-failure-analysis-methodology',
+    title:
+      'Root Cause Failure Analysis: A Systematic Approach to Problem Solving',
+    excerpt:
+      'Learn the systematic methodology for conducting effective root cause failure analysis. Discover proven techniques, tools, and best practices for identifying and eliminating the true causes of equipment failures.',
     content: `
       <h2>Introduction to Root Cause Failure Analysis</h2>
       <p>Root Cause Failure Analysis (RCFA) is a systematic process used to identify the underlying causes of equipment failures and develop effective solutions to prevent recurrence. Unlike traditional troubleshooting that focuses on immediate fixes, RCFA digs deeper to find the fundamental reasons why failures occur.</p>
@@ -362,18 +374,20 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>Effective RCFA is essential for achieving high levels of equipment reliability. It requires a systematic approach, proper tools, skilled personnel, and organizational commitment. When done well, RCFA not only solves immediate problems but also builds organizational learning and continuous improvement capabilities.</p>
     `,
-    author: "Vinoth Kumar Subramaniam",
-    date: "March 5, 2025",
-    readTime: "10 min read",
-    category: "Failure Analysis",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Root Cause Analysis", "Failure Analysis", "Problem Solving", "Reliability Engineering"]
+    author: 'Vinoth Kumar Subramaniam',
+    date: 'March 5, 2025',
+    readTime: '10 min read',
+    category: 'Failure Analysis',
+    image:
+      'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['Root Cause Analysis', 'Problem Solving', 'Reliability Engineering'],
   },
   {
     id: 4,
-    slug: "iso-55000-asset-management-implementation",
-    title: "ISO 55000 Asset Management: Implementation Guide for Organizations",
-    excerpt: "A comprehensive guide to implementing ISO 55000 asset management standards. Learn about the framework, benefits, implementation steps, and best practices for achieving world-class asset management.",
+    slug: 'iso-55000-asset-management-implementation',
+    title: 'ISO 55000 Asset Management: Implementation Guide for Organizations',
+    excerpt:
+      'A comprehensive guide to implementing ISO 55000 asset management standards. Learn about the framework, benefits, implementation steps, and best practices for achieving world-class asset management.',
     content: `
       <h2>Understanding ISO 55000</h2>
       <p>ISO 55000 is an international standard that provides a framework for asset management. It helps organizations manage their assets more effectively throughout their lifecycle, from acquisition to disposal, ensuring optimal value realization while managing risks and costs.</p>
@@ -591,18 +605,21 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>ISO 55000 provides a comprehensive framework for achieving excellence in asset management. Successful implementation requires commitment, planning, and sustained effort, but the benefits in terms of improved performance, reduced costs, and better risk management make it a worthwhile investment for any asset-intensive organization.</p>
     `,
-    author: "Vinoth Kumar Subramaniam",
-    date: "March 3, 2025",
-    readTime: "15 min read",
-    category: "Asset Management",
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["ISO 55000", "Asset Management", "Standards", "Implementation"]
+    author: 'Vinoth Kumar Subramaniam',
+    date: 'March 3, 2025',
+    readTime: '15 min read',
+    category: 'Asset Management',
+    image:
+      'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['ISO 55000', 'Standards', 'Implementation'],
   },
   {
     id: 5,
-    slug: "digital-transformation-maintenance",
-    title: "Digital Transformation in Maintenance: Embracing Industry 4.0 Technologies",
-    excerpt: "Explore how Industry 4.0 technologies are revolutionizing maintenance practices. Learn about digital twins, AI-powered analytics, and IoT integration for next-generation maintenance strategies.",
+    slug: 'digital-transformation-maintenance',
+    title:
+      'Digital Transformation in Maintenance: Embracing Industry 4.0 Technologies',
+    excerpt:
+      'Explore how Industry 4.0 technologies are revolutionizing maintenance practices. Learn about digital twins, AI-powered analytics, and IoT integration for next-generation maintenance strategies.',
     content: `
       <h2>The Digital Maintenance Revolution</h2>
       <p>Digital transformation is reshaping the maintenance landscape, moving organizations from reactive and scheduled maintenance approaches to intelligent, data-driven strategies. Industry 4.0 technologies are enabling unprecedented visibility into asset health and performance, creating opportunities for dramatic improvements in reliability and efficiency.</p>
@@ -829,11 +846,12 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>Digital transformation in maintenance represents a fundamental shift toward more intelligent, efficient, and effective asset management. Organizations that successfully embrace these technologies will gain significant competitive advantages through improved reliability, reduced costs, and enhanced safety performance. The key to success lies in thoughtful planning, phased implementation, and strong commitment to organizational change management.</p>
     `,
-    author: "Vinoth Kumar Subramaniam",
-    date: "March 1, 2025",
-    readTime: "14 min read",
-    category: "Digital Transformation",
-    image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
-    tags: ["Digital Transformation", "Industry 4.0", "IoT", "AI", "Predictive Maintenance"]
-  }
+    author: 'Vinoth Kumar Subramaniam',
+    date: 'March 1, 2025',
+    readTime: '14 min read',
+    category: 'Digital Transformation',
+    image:
+      'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
+    tags: ['Industry 4.0', 'IoT', 'AI', 'Predictive Maintenance'],
+  },
 ];
