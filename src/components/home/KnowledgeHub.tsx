@@ -5,8 +5,8 @@ import { ArrowRight, Clock, User } from 'lucide-react';
 import { Article } from '@/lib/types';
 import { formatReadTime } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { categories } from '@/constants/categories';
 import Container from '@/components/layout/Container';
+import { categories } from '@/constants/home/categories';
 import { Card, CardContent } from '@/components/ui/card';
 import NewsletterSubscription from '@/components/ui/newsletter-subscription';
 
@@ -97,8 +97,8 @@ export default function KnowledgeHub({
                   </div>
                   <div className='relative'>
                     <Image
-                      width={100}
-                      height={100}
+                      width={600}
+                      height={400}
                       src={featuredArticles[0].image}
                       alt={featuredArticles[0].title}
                       className='w-full h-full object-cover'
@@ -135,8 +135,8 @@ export default function KnowledgeHub({
                 <Card className='overflow-hidden h-full pt-0'>
                   <div className='relative'>
                     <Image
-                      width={100}
-                      height={100}
+                      width={400}
+                      height={300}
                       src={article.image}
                       alt={article.title}
                       className='w-full h-48 object-cover'

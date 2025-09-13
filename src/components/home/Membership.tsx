@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+import {
+  membershipBenefits,
+  upcomingWebinars,
+} from '@/constants/home/membership';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
-import { membershipBenefits, upcomingWebinars } from '@/constants/membership';
 
 export default function Membership() {
   return (
@@ -88,8 +91,8 @@ export default function Membership() {
                   src={webinar.image}
                   alt={webinar.title}
                   className='w-full h-40 object-cover'
-                  width={100}
-                  height={100}
+                  width={400}
+                  height={200}
                 />
                 <CardContent className='px-6'>
                   <div className='text-primary text-sm font-semibold mb-2'>

@@ -184,8 +184,10 @@ export default function NewsletterSubscription({
   }
 
   return (
-    <div className={`space-y-6 ${className}`}>
-      <div className='text-center'>
+    <div
+      className={`flex flex-col md:flex-row gap-6 items-center justify-between w-full ${className}`}
+    >
+      <div>
         <h3 className='text-2xl font-bold mb-2'>Stay Updated</h3>
         <p className='text-muted-foreground'>
           Subscribe to our newsletter for the latest reliability engineering
@@ -193,60 +195,60 @@ export default function NewsletterSubscription({
         </p>
       </div>
 
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className='flex flex-col sm:flex-row gap-4'
-        >
-          <FormField
-            control={form.control}
-            name='email'
-            render={({ field }) => (
-              <FormItem className='flex-1'>
-                <FormControl>
-                  <Input
-                    type='email'
-                    placeholder='Enter your email'
-                    className='bg-background min-h-12'
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button
-            type='submit'
-            className='shrink-0 min-h-12'
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? (
-              <>
-                <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2' />
-                Subscribing...
-              </>
-            ) : (
-              'Subscribe'
-            )}
-          </Button>
-        </form>
-      </Form>
-
-      {submitStatus === 'success' && (
-        <Alert className='border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950'>
-          <CheckCircle className='h-4 w-4 text-green-600' />
-          <AlertDescription className='text-green-800 dark:text-green-200'>
-            Successfully subscribed to our newsletter!
-          </AlertDescription>
-        </Alert>
-      )}
-
-      {submitStatus === 'error' && (
-        <Alert variant='destructive'>
-          <AlertCircle className='h-4 w-4' />
-          <AlertDescription>{errorMessage}</AlertDescription>
-        </Alert>
-      )}
+      <div className='max-w-md w-full'>
+        {submitStatus === 'success' ? (
+          <Alert className='border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950'>
+            <CheckCircle className='h-4 w-4 text-green-600' />
+            <AlertDescription className='text-green-800 dark:text-green-200'>
+              Successfully subscribed to our newsletter!
+            </AlertDescription>
+          </Alert>
+        ) : submitStatus === 'error' ? (
+          <Alert variant='destructive'>
+            <AlertCircle className='h-4 w-4' />
+            <AlertDescription>{errorMessage}</AlertDescription>
+          </Alert>
+        ) : (
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className='flex flex-col sm:flex-row gap-4'
+            >
+              <FormField
+                control={form.control}
+                name='email'
+                render={({ field }) => (
+                  <FormItem className='flex-1'>
+                    <FormControl>
+                      <Input
+                        type='email'
+                        placeholder='Enter your email'
+                        className='bg-background min-h-12'
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <Button
+                type='submit'
+                className='shrink-0 min-h-12'
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2' />
+                    Subscribing...
+                  </>
+                ) : (
+                  'Subscribe'
+                )}
+              </Button>
+            </form>
+          </Form>
+        )}
+      </div>
     </div>
   );
 }

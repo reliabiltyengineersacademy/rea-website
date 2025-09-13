@@ -1,49 +1,15 @@
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Youtube,
-  Facebook,
-} from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import {
+  quickLinks,
+  programs,
+  resources,
+  socialLinks,
+} from '@/constants/footer';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import NewsletterSubscription from '@/components/ui/newsletter-subscription';
-
-const quickLinks = [
-  { name: 'About Us', href: '/about' },
-  { name: 'Programs & Certifications', href: '/programs' },
-  { name: 'Training Modules', href: '/training' },
-  { name: 'Webinars', href: '/webinars' },
-  { name: 'Contact', href: '/contact' },
-];
-
-const programs = [
-  { name: 'CMRP Certification', href: '/programs#cmrp' },
-  { name: 'CMRT Certification', href: '/programs#cmrt' },
-  { name: 'CAMA Certification', href: '/programs#cama' },
-  { name: 'Vibration Analysis', href: '/programs#vibration' },
-  { name: 'Infrared Thermography', href: '/programs#thermography' },
-];
-
-const resources = [
-  { name: 'Case Studies', href: '/webinars' },
-  { name: 'White Papers', href: '/webinars' },
-  { name: 'Monthly Webinars', href: '/webinars' },
-  { name: 'Training Modules', href: '/training' },
-  { name: 'Pricing Plans', href: '/pricing' },
-];
-
-const socialLinks = [
-  { icon: Linkedin, href: '#', name: 'LinkedIn' },
-  { icon: Twitter, href: '#', name: 'Twitter' },
-  { icon: Youtube, href: '#', name: 'YouTube' },
-  { icon: Facebook, href: '#', name: 'Facebook' },
-];
 
 export default function Footer() {
   return (
@@ -67,22 +33,12 @@ export default function Footer() {
             </div>
 
             <div className='space-y-3'>
-              <div className='flex items-center'>
-                <Mail className='h-5 w-5 text-primary mr-3' />
-                <span className='text-muted-foreground'>
-                  info@reliabilityengineers.academy
+              <div className='flex items-start sm:items-center'>
+                <span className='text-2xl mr-3 flex-shrink-0 mt-1 sm:mt-0'>
+                  📧
                 </span>
-              </div>
-              <div className='flex items-center'>
-                <Phone className='h-5 w-5 text-primary mr-3' />
-                <span className='text-muted-foreground'>+1 (555) 123-4567</span>
-              </div>
-              <div className='flex items-start'>
-                <MapPin className='h-5 w-5 text-primary mr-3 mt-1' />
-                <span className='text-muted-foreground'>
-                  123 Reliability Drive, Suite 100
-                  <br />
-                  Houston, TX 77001, USA
+                <span className='text-muted-foreground break-all text-sm sm:text-base leading-relaxed'>
+                  reliabiltyengineersacademy@gmail.com
                 </span>
               </div>
             </div>

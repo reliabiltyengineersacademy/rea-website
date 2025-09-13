@@ -32,9 +32,11 @@ export interface Webinar {
 
 export interface ContactMessage {
   id: string;
-  name: string;
+  full_name: string;
   email: string;
-  subject: string;
+  company?: string;
+  phone?: string;
+  subject?: string;
   message: string;
   status: 'new' | 'read' | 'replied' | 'archived';
   created_at: string;

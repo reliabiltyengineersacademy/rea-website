@@ -15,9 +15,9 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { contactInfo } from '@/constants/contact';
 import { Textarea } from '@/components/ui/textarea';
 import Container from '@/components/layout/Container';
+import { contactInfo } from '@/constants/home/contact';
 import { Card, CardContent } from '@/components/ui/card';
 import { createContactMessageAction } from '@/actions/contact';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -103,10 +103,6 @@ export default function Contact() {
 
           <Card className='shadow-xl h-fit self-center'>
             <CardContent>
-              <h3 className='text-2xl font-bold text-foreground mb-6'>
-                Send us a Message
-              </h3>
-
               {submitStatus === 'success' ? (
                 <div className='text-center py-12'>
                   <CheckCircle className='size-16 text-green-500 mx-auto mb-4' />
@@ -133,7 +129,7 @@ export default function Contact() {
                     <div className='grid md:grid-cols-2 gap-6'>
                       <FormField
                         control={form.control}
-                        name='name'
+                        name='full_name'
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Full Name *</FormLabel>
@@ -164,15 +160,51 @@ export default function Contact() {
                       />
                     </div>
 
+                    <div className='grid md:grid-cols-2 gap-6'>
+                      <FormField
+                        control={form.control}
+                        name='company'
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Company</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder='Your company name'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name='phone'
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Phone Number</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder='Your phone number'
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
                     <FormField
                       control={form.control}
                       name='subject'
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Subject *</FormLabel>
+                          <FormLabel>Subject</FormLabel>
                           <FormControl>
                             <Input
-                              placeholder='What is this about?'
+                              placeholder='What is this about? (optional)'
                               {...field}
                             />
                           </FormControl>

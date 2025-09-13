@@ -3,6 +3,22 @@ import { Award, TrendingUp, Shield, Zap, Search, Settings } from 'lucide-react';
 export const certifications = [
   {
     icon: Award,
+    title: 'CAMA Certification',
+    subtitle: 'Certified Asset Management Assessor',
+    description:
+      'Advanced certification in asset management assessment and optimization strategies.',
+    duration: '8 months',
+    level: 'Expert',
+    features: [
+      'Asset Strategy',
+      'Risk Assessment',
+      'Performance Metrics',
+      'Lifecycle Management',
+    ],
+    link: '/programs/cama',
+  },
+  {
+    icon: Shield,
     title: 'CMRP Certification',
     subtitle: 'Certified Maintenance & Reliability Professional',
     description:
@@ -15,6 +31,7 @@ export const certifications = [
       'Reliability Analysis',
       'Work Management',
     ],
+    link: '/programs/cmrp',
   },
   {
     icon: TrendingUp,
@@ -30,21 +47,7 @@ export const certifications = [
       'Equipment Care',
       'Safety Protocols',
     ],
-  },
-  {
-    icon: Shield,
-    title: 'CAMA Certification',
-    subtitle: 'Certified Asset Management Assessor',
-    description:
-      'Advanced certification in asset management assessment and optimization strategies.',
-    duration: '8 months',
-    level: 'Expert',
-    features: [
-      'Asset Strategy',
-      'Risk Assessment',
-      'Performance Metrics',
-      'Lifecycle Management',
-    ],
+    link: '/programs/cmrt',
   },
   {
     icon: Zap,
@@ -60,6 +63,7 @@ export const certifications = [
       'Machinery Health',
       'Data Analysis',
     ],
+    link: '/programs/vibration',
   },
   {
     icon: Search,
@@ -75,6 +79,7 @@ export const certifications = [
       'Electrical Inspection',
       'Report Writing',
     ],
+    link: '/programs/thermography',
   },
   {
     icon: Settings,
@@ -90,5 +95,6 @@ export const certifications = [
       'Wear Patterns',
       'Lubrication Programs',
     ],
+    link: '/programs/lube-oil',
   },
 ];

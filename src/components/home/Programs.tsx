@@ -4,7 +4,7 @@ import { Award, TrendingUp, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
-import { certifications } from '@/constants/certificates';
+import { certifications } from '@/constants/home/certificates';
 
 export default function Programs() {
   return (
@@ -70,7 +70,7 @@ export default function Programs() {
                   asChild
                   className='w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70'
                 >
-                  <Link href='/programs'>Learn More</Link>
+                  <Link href={cert.link}>Learn More</Link>
                 </Button>
               </CardContent>
             </Card>

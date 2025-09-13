@@ -1,11 +1,9 @@
 export const plans = [
   {
-    id: 'individual',
-    name: 'Individual',
-    description: 'Perfect for individual learners and professionals',
-    monthlyPrice: '$49',
-    yearlyPrice: '$490',
-    savings: 'Save 17%',
+    id: 'student',
+    name: 'Student',
+    description: 'Perfect for students and individual learners',
+    price: '$25',
     features: [
       { text: 'Access to all core courses' },
       { text: 'CMRP, CMRT, CAMA preparation' },
@@ -16,7 +14,7 @@ export const plans = [
       { text: '30-day money-back guarantee' },
     ],
     button: {
-      text: 'Start Free Trial',
+      text: 'Get Started',
       url: '#',
     },
   },
@@ -24,12 +22,10 @@ export const plans = [
     id: 'professional',
     name: 'Professional',
     description: 'For serious professionals and small teams',
-    monthlyPrice: '$99',
-    yearlyPrice: '$990',
-    savings: 'Save 17%',
+    price: '$199',
     popular: true,
     features: [
-      { text: 'Everything in Individual' },
+      { text: 'Everything in Student' },
       { text: 'Advanced certification tracks' },
       { text: 'Live webinars and Q&A sessions' },
       { text: 'One-on-one mentoring (2 sessions)' },
@@ -39,17 +35,15 @@ export const plans = [
       { text: 'Team collaboration tools' },
     ],
     button: {
-      text: 'Start Free Trial',
+      text: 'Get Started',
       url: '#',
     },
   },
   {
-    id: 'enterprise',
-    name: 'Enterprise',
+    id: 'corporate',
+    name: 'Corporate',
     description: 'For organizations and large teams',
-    monthlyPrice: '$199',
-    yearlyPrice: '$1,990',
-    savings: 'Save 17%',
+    price: '$999',
     features: [
       { text: 'Everything in Professional' },
       { text: 'Unlimited team members' },

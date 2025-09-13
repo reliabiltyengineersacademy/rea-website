@@ -16,54 +16,9 @@ import {
 } from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { navigation } from '@/constants/navigation';
 import ThemeToggle from '@/components/layout/ThemeToggle';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  {
-    name: 'Programs & Certifications',
-    href: '/programs',
-    children: [
-      {
-        name: 'All Programs',
-        href: '/programs',
-        description:
-          'Explore all our certification programs and training courses',
-      },
-      {
-        name: 'Training Modules',
-        href: '/training',
-        description: 'Interactive learning modules for skill development',
-      },
-      {
-        name: '🎯 Demo Access',
-        href: '/training-demo',
-        description: 'Try our training platform with free demo access',
-      },
-      {
-        name: 'CMRP Certification',
-        href: '/programs#cmrp',
-        description: 'Certified Maintenance & Reliability Professional',
-      },
-      {
-        name: 'CMRT Certification',
-        href: '/programs#cmrt',
-        description: 'Certified Maintenance & Reliability Technician',
-      },
-      {
-        name: 'CAMA Certification',
-        href: '/programs#cama',
-        description: 'Certified Asset Management Assessor',
-      },
-    ],
-  },
-  { name: 'Webinars', href: '/webinars' },
-  { name: 'Articles', href: '/articles' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Contact', href: '/contact' },
-];
 
 const ListItem = ({
   title,
@@ -126,7 +81,7 @@ export default function Header() {
               src='/logo-transparent.png'
               alt='Reliability Engineers Academy'
               className={cn(
-                'h-14 w-auto transition-all duration-300',
+                'h-10 w-auto transition-all duration-300',
                 isScrolled
                   ? 'brightness-100 dark:brightness-0 dark:invert'
                   : 'brightness-0 invert'

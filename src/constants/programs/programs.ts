@@ -1,0 +1,118 @@
+import { Award, Shield, Settings, Zap, Search, BookOpen } from 'lucide-react';
+
+export const programs = [
+  {
+    id: 'cama',
+    title: 'CAMA Certification',
+    subtitle: 'Certified Asset Management Assessor',
+    icon: Award,
+    level: 'Expert',
+    duration: '8 months',
+    price: '$3,200',
+    description:
+      'The CAMA certification is the highest level credential for asset management professionals. This advanced program covers strategic asset management, risk assessment, and optimization strategies.',
+    features: [
+      'Asset Management Strategy',
+      'Risk Assessment & Mitigation',
+      'Performance Metrics & KPIs',
+      'Lifecycle Cost Analysis',
+      'Asset Optimization Techniques',
+      'Regulatory Compliance',
+    ],
+    link: '/programs/cama',
+  },
+  {
+    id: 'cmrp',
+    title: 'CMRP Certification',
+    subtitle: 'Certified Maintenance & Reliability Professional',
+    icon: Shield,
+    level: 'Professional',
+    duration: '6 months',
+    price: '$2,500',
+    description:
+      'The CMRP certification is the premier credential for maintenance and reliability professionals. This comprehensive program covers all aspects of maintenance and reliability management.',
+    features: [
+      'Asset Management Fundamentals',
+      'Maintenance Planning & Scheduling',
+      'Work Management Systems',
+      'Reliability Analysis & Improvement',
+      'Maintenance Strategy Development',
+      'Performance Measurement & KPIs',
+    ],
+    link: '/programs/cmrp',
+  },
+  {
+    id: 'cmrt',
+    title: 'CMRT Certification',
+    subtitle: 'Certified Maintenance & Reliability Technician',
+    icon: Settings,
+    level: 'Technician',
+    duration: '4 months',
+    price: '$1,800',
+    description:
+      'The CMRT certification focuses on hands-on technical skills for maintenance technicians. This program emphasizes practical applications and real-world problem-solving.',
+    features: [
+      'Preventive Maintenance Strategies',
+      'Equipment Troubleshooting Techniques',
+      'Safety Protocols & Procedures',
+      'Lubrication & Fluid Management',
+      'Vibration Analysis Basics',
+      'Root Cause Analysis',
+    ],
+    link: '/programs/cmrt',
+  },
+  {
+    id: 'vibration',
+    title: 'Vibration Analysis',
+    subtitle: 'ISO 18436 Certified Program',
+    icon: Zap,
+    level: 'Specialist',
+    duration: '3 months',
+    price: '$1,200',
+    description:
+      'Comprehensive vibration analysis training for predictive maintenance applications.',
+    features: [
+      'Signal Processing',
+      'Fault Diagnosis',
+      'Machinery Health',
+      'Data Analysis',
+    ],
+    link: '/programs/vibration',
+  },
+  {
+    id: 'thermography',
+    title: 'Infrared Thermography',
+    subtitle: 'Level I & II Certification',
+    icon: Search,
+    level: 'Specialist',
+    duration: '2 months',
+    price: '$900',
+    description:
+      'Professional thermography training for electrical and mechanical inspections.',
+    features: [
+      'Thermal Imaging',
+      'Heat Patterns',
+      'Electrical Inspection',
+      'Report Writing',
+    ],
+    link: '/programs/thermography',
+  },
+  {
+    id: 'lube-oil',
+    title: 'Lube Oil Analysis',
+    subtitle: 'Tribology & Oil Analysis',
+    icon: BookOpen,
+    level: 'Specialist',
+    duration: '3 months',
+    price: '$1,100',
+    description:
+      'Specialized training in lubricant analysis and tribological principles.',
+    features: [
+      'Oil Testing',
+      'Contamination Analysis',
+      'Wear Patterns',
+      'Lubrication Programs',
+    ],
+    link: '/programs/lube-oil',
+  },
+];

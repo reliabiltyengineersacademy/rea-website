@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Play, ChevronRight, ChevronLeft } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { slides } from '@/constants/hero';
+import { slides } from '@/constants/home/hero';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
@@ -27,7 +27,7 @@ export default function Hero() {
           <div className='text-primary-foreground'>
             <div className='inline-flex items-center bg-primary-foreground/10 rounded-full px-4 py-2 mb-6 backdrop-blur-sm border border-primary-foreground/20'>
               <span className='text-sm font-medium'>
-                🎯 Professional Reliability Training
+                🎯 Professional Asset Management and Reliability Engineering
               </span>
             </div>
 

@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
-import { achievements, differentiators } from '@/constants/whyChoose';
+import { achievements, differentiators } from '@/constants/home/whyChoose';
 
 export default function WhyChoose() {
   return (

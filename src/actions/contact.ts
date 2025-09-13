@@ -1,24 +1,32 @@
 'use server';
 
-import { createClient } from '@/lib/supabase/server';
+import { createClient as createServiceClient } from '@supabase/supabase-js';
+
 import { ContactMessage, DatabaseResponse } from '@/lib/types';
 
 export async function createContactMessageAction(message: {
-  name: string;
+  full_name: string;
   email: string;
-  subject: string;
+  subject?: string;
   message: string;
+  company?: string;
+  phone?: string;
 }): Promise<DatabaseResponse<ContactMessage>> {
   try {
-    const supabase = await createClient();
+    const supabase = createServiceClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SECRET_KEY!
+    );
 
     const { data, error } = await supabase
       .from('contact_messages')
       .insert({
-        name: message.name,
+        full_name: message.full_name,
         email: message.email,
         subject: message.subject,
         message: message.message,
+        company: message.company,
+        phone: message.phone,
         status: 'new',
       })
       .select()

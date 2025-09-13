@@ -1,5 +1,7 @@
 'use server';
 
+import { createClient as createServiceClient } from '@supabase/supabase-js';
+
 import { createClient } from '@/lib/supabase/server';
 import { Subscriber, DatabaseResponse } from '@/lib/types';
 
@@ -7,7 +9,10 @@ export async function subscribeToNewsletterAction(
   email: string
 ): Promise<DatabaseResponse<Subscriber>> {
   try {
-    const supabase = await createClient();
+    const supabase = createServiceClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SECRET_KEY!
+    );
 
     const { data: existingSubscriber, error: checkError } = await supabase
       .from('subscribers')
@@ -50,7 +55,10 @@ export async function unsubscribeFromNewsletterAction(
   email: string
 ): Promise<DatabaseResponse<void>> {
   try {
-    const supabase = await createClient();
+    const supabase = createServiceClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SECRET_KEY!
+    );
 
     const { error } = await supabase
       .from('subscribers')

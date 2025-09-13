@@ -1,0 +1,35 @@
+export const companies = [
+  {
+    name: 'Abu Dhabi Oil Co',
+    src: '/assets/companies/Abu Dhabi Oil Co logo.png',
+  },
+  { name: 'Aladon RCM', src: '/assets/companies/Aladon RCM Logo.webp' },
+  { name: 'Aramco', src: '/assets/companies/Aramco.webp' },
+  { name: 'ASQ', src: '/assets/companies/asq.jpeg' },
+  {
+    name: 'Asset Management',
+    src: '/assets/companies/Asset Management Logo.png',
+  },
+  { name: 'Dolphin Energy', src: '/assets/companies/Dolphin Energy Logo.png' },
+  { name: 'EGA', src: '/assets/companies/ega.png' },
+  { name: 'Exxon Mobile', src: '/assets/companies/Exxon Mobile Logo.jpg' },
+  { name: 'MMMC', src: '/assets/companies/mmmc.jpeg' },
+  { name: 'MMS', src: '/assets/companies/mms logo.png' },
+  { name: 'OQ', src: '/assets/companies/OQ Logo.png' },
+  { name: 'ReliabilityX', src: '/assets/companies/reliabilityx.png' },
+  { name: 'Reliance', src: '/assets/companies/reliance.png' },
+  { name: 'SABIC', src: '/assets/companies/Sabic Logo.png' },
+  { name: 'SBM', src: '/assets/companies/sbm.png' },
+  { name: 'Shell', src: '/assets/companies/Shell Logo.png' },
+  { name: 'SMRP', src: '/assets/companies/SMRP Logo.png' },
+  { name: 'SNOC', src: '/assets/companies/SNOC Logo.webp' },
+  {
+    name: 'TAQA Transmission',
+    src: '/assets/companies/TAQA Transmission Logo.png',
+  },
+  { name: 'Velosi', src: '/assets/companies/Velosi Logo.jpeg' },
+  {
+    name: 'Vibration Institute',
+    src: '/assets/companies/Vibration Institute logo.webp',
+  },
+];
