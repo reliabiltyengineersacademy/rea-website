@@ -26,16 +26,18 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Webinar } from '@/data/webinars';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
+import { Webinar, PaginatedResponse } from '@/lib/types';
+import { formatDate, formatDuration } from '@/lib/utils';
 
 export default function WebinarsClientPage({
   webinars,
   categories,
   sortOptions,
+  pagination,
   initialCategory,
   initialSearch,
   initialSort,
@@ -43,6 +45,7 @@ export default function WebinarsClientPage({
   webinars: Webinar[];
   categories: string[];
   sortOptions: { value: string; label: string }[];
+  pagination?: PaginatedResponse<Webinar>['pagination'];
   initialCategory: string;
   initialSearch: string;
   initialSort: string;
@@ -63,6 +66,10 @@ export default function WebinarsClientPage({
         }
       });
 
+      if (updates.category || updates.search || updates.sort) {
+        params.delete('page');
+      }
+
       startTransition(() => {
         router.push(`/webinars?${params.toString()}`, { scroll: false });
       });
@@ -74,6 +81,10 @@ export default function WebinarsClientPage({
     updateSearchParams({ category });
 
   const handleSortChange = (sort: string) => updateSearchParams({ sort });
+
+  const handlePageChange = (page: number) => {
+    updateSearchParams({ page: page.toString() });
+  };
 
   const [searchValue, setSearchValue] = useState(initialSearch);
 
@@ -145,6 +156,7 @@ export default function WebinarsClientPage({
                   <SelectValue placeholder='Category' />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value='All'>All</SelectItem>
                   {categories.map((option) => (
                     <SelectItem key={option} value={option}>
                       {option}
@@ -194,7 +206,7 @@ export default function WebinarsClientPage({
                 >
                   <div className='relative'>
                     <Image
-                      src={webinar.thumbnail}
+                      src={webinar.thumbnail || '/placeholder-webinar.jpg'}
                       alt={webinar.title}
                       width={400}
                       height={200}
@@ -207,7 +219,9 @@ export default function WebinarsClientPage({
                         asChild
                       >
                         <a
-                          href={webinar.recordingUrl || webinar.registrationUrl}
+                          href={
+                            webinar.recording_url || webinar.registration_url
+                          }
                           target={
                             webinar.status === 'completed' ? '_blank' : '_self'
                           }
@@ -222,23 +236,14 @@ export default function WebinarsClientPage({
                       </Button>
                     </div>
                     <div className='absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm'>
-                      {webinar.duration}
+                      {formatDuration(webinar.duration)}
                     </div>
                   </div>
 
                   <CardHeader>
                     <div className='flex items-start justify-between mb-2'>
                       <Badge variant='outline' className='text-xs'>
-                        {categories.find((cat) => {
-                          const categoryMap: Record<string, string> = {
-                            'Predictive Maintenance': 'predictive',
-                            'Technology & Innovation': 'technology',
-                            'Failure Analysis': 'analysis',
-                            'Asset Management': 'management',
-                            'Compliance & Standards': 'compliance',
-                          };
-                          return categoryMap[cat] === webinar.category;
-                        }) || webinar.category}
+                        {webinar.category}
                       </Badge>
                       <div className='flex items-center justify-between'>
                         <div className='flex items-center text-sm'>
@@ -263,7 +268,7 @@ export default function WebinarsClientPage({
                       </div>
                       <div className='flex items-center'>
                         <Calendar className='size-4 mr-2' />
-                        {webinar.date}
+                        {formatDate(webinar.scheduled_at, 'MMM d, yyyy')}
                       </div>
                     </div>
 
@@ -277,8 +282,8 @@ export default function WebinarsClientPage({
                       <a
                         href={
                           webinar.status === 'upcoming'
-                            ? webinar.registrationUrl
-                            : webinar.recordingUrl
+                            ? webinar.registration_url
+                            : webinar.recording_url
                         }
                         target={
                           webinar.status === 'upcoming' ? '_self' : '_blank'
@@ -303,6 +308,55 @@ export default function WebinarsClientPage({
               ))
             )}
           </div>
+
+          {pagination && pagination.totalPages > 1 && (
+            <div className='flex justify-center items-center gap-2 mt-8'>
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={() => handlePageChange(pagination.page - 1)}
+                disabled={pagination.page <= 1}
+              >
+                Previous
+              </Button>
+
+              <div className='flex items-center gap-1'>
+                {Array.from(
+                  { length: Math.min(5, pagination.totalPages) },
+                  (_, i) => {
+                    const pageNum =
+                      Math.max(
+                        1,
+                        Math.min(pagination.totalPages - 4, pagination.page - 2)
+                      ) + i;
+
+                    return (
+                      <Button
+                        key={pageNum}
+                        variant={
+                          pageNum === pagination.page ? 'default' : 'outline'
+                        }
+                        size='sm'
+                        onClick={() => handlePageChange(pageNum)}
+                        className='w-10'
+                      >
+                        {pageNum}
+                      </Button>
+                    );
+                  }
+                )}
+              </div>
+
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={() => handlePageChange(pagination.page + 1)}
+                disabled={pagination.page >= pagination.totalPages}
+              >
+                Next
+              </Button>
+            </div>
+          )}
         </Container>
       </section>
     </div>

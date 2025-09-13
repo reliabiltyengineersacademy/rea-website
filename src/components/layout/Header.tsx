@@ -121,8 +121,8 @@ export default function Header() {
           <Link href='/' className='mr-6'>
             <Image
               priority
-              width={120}
-              height={56}
+              width={282}
+              height={107}
               src='/logo-transparent.png'
               alt='Reliability Engineers Academy'
               className={cn(

@@ -13,21 +13,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Article } from '@/data/articles';
+import { Article, PaginatedResponse } from '@/lib/types';
+import { formatDate, formatReadTime } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardDescription, CardTitle } from '@/components/ui/card';
-
-const categories = [
-  'All',
-  'Predictive Maintenance',
-  'Asset Management',
-  'Condition Monitoring',
-  'Digital Transformation',
-  'Failure Analysis',
-];
 
 const sortOptions = [
   { value: 'latest', label: 'Latest' },
@@ -39,11 +31,15 @@ const sortOptions = [
 
 export default function ArticlesClientPage({
   articles,
+  categories,
+  pagination,
   initialCategory,
   initialSearch,
   initialSort,
 }: {
   articles: Article[];
+  categories: string[];
+  pagination?: PaginatedResponse<Article>['pagination'];
   initialCategory: string;
   initialSearch: string;
   initialSort: string;
@@ -64,6 +60,10 @@ export default function ArticlesClientPage({
         }
       });
 
+      if (updates.category || updates.search || updates.sort) {
+        params.delete('page');
+      }
+
       startTransition(() => {
         router.push(`/articles?${params.toString()}`, { scroll: false });
       });
@@ -77,6 +77,10 @@ export default function ArticlesClientPage({
 
   const handleSortChange = (sort: string) => {
     updateSearchParams({ sort });
+  };
+
+  const handlePageChange = (page: number) => {
+    updateSearchParams({ page: page.toString() });
   };
 
   const [searchValue, setSearchValue] = useState(initialSearch);
@@ -150,7 +154,7 @@ export default function ArticlesClientPage({
                   ? 'Articles'
                   : `${initialCategory} Articles`}
                 <span className='text-sm font-normal text-muted-foreground ml-2'>
-                  ({articles.length})
+                  ({pagination?.total || articles.length})
                 </span>
               </h2>
 
@@ -163,6 +167,7 @@ export default function ArticlesClientPage({
                     <SelectValue placeholder='Category' />
                   </SelectTrigger>
                   <SelectContent>
+                    <SelectItem value='All'>All</SelectItem>
                     {categories.map((option) => (
                       <SelectItem key={option} value={option}>
                         {option}
@@ -240,11 +245,13 @@ export default function ArticlesClientPage({
                             </div>
                             <div className='flex items-center gap-1'>
                               <Calendar className='size-4' />
-                              <span>{article.date}</span>
+                              <span>
+                                {formatDate(article.created_at, 'MMM d, yyyy')}
+                              </span>
                             </div>
                             <div className='flex items-center gap-1'>
                               <Clock className='size-4' />
-                              <span>{article.readTime}</span>
+                              <span>{formatReadTime(article.read_time)}</span>
                             </div>
                           </div>
                         </div>
@@ -261,7 +268,7 @@ export default function ArticlesClientPage({
                             ))}
                           </div>
                           <Button asChild variant='outline' size='sm'>
-                            <Link href={`/articles/${article.slug}`}>
+                            <Link href={`/articles/${article.id}`}>
                               Read More
                             </Link>
                           </Button>
@@ -272,6 +279,58 @@ export default function ArticlesClientPage({
                 ))
               )}
             </div>
+
+            {pagination && pagination.totalPages > 1 && (
+              <div className='flex justify-center items-center gap-2 mt-8'>
+                <Button
+                  variant='outline'
+                  size='sm'
+                  onClick={() => handlePageChange(pagination.page - 1)}
+                  disabled={pagination.page <= 1}
+                >
+                  Previous
+                </Button>
+
+                <div className='flex items-center gap-1'>
+                  {Array.from(
+                    { length: Math.min(5, pagination.totalPages) },
+                    (_, i) => {
+                      const pageNum =
+                        Math.max(
+                          1,
+                          Math.min(
+                            pagination.totalPages - 4,
+                            pagination.page - 2
+                          )
+                        ) + i;
+
+                      return (
+                        <Button
+                          key={pageNum}
+                          variant={
+                            pageNum === pagination.page ? 'default' : 'outline'
+                          }
+                          size='sm'
+                          onClick={() => handlePageChange(pageNum)}
+                          className='w-10'
+                        >
+                          {pageNum}
+                        </Button>
+                      );
+                    }
+                  )}
+                </div>
+
+                <Button
+                  variant='outline'
+                  size='sm'
+                  onClick={() => handlePageChange(pagination.page + 1)}
+                  disabled={pagination.page >= pagination.totalPages}
+                >
+                  Next
+                </Button>
+              </div>
+            )}
           </div>
         </Container>
       </section>

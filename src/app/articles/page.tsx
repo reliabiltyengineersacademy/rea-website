@@ -1,8 +1,12 @@
 import { Metadata } from 'next';
 import { Suspense } from 'react';
+import { notFound } from 'next/navigation';
 
 import ArticlesClientPage from './page.client';
-import { articles, type Article } from '@/data/articles';
+import {
+  getArticlesAction,
+  getArticleCategoriesAction,
+} from '@/actions/articles';
 
 export const metadata: Metadata = {
   title: 'Articles | Reliability Engineers Academy',
@@ -12,47 +16,21 @@ export const metadata: Metadata = {
     'reliability engineering articles, maintenance best practices, asset management insights, CMRP articles',
 };
 
-function filterAndSortArticles(
-  articles: Article[],
-  category?: string,
-  search?: string,
-  sort?: string
-) {
-  let filtered = [...articles];
-
-  if (category && category !== 'All') {
-    filtered = filtered.filter((article) => article.category === category);
+function mapSortToParams(sort: string) {
+  switch (sort) {
+    case 'latest':
+      return { sortBy: 'created_at' as const, sortOrder: 'desc' as const };
+    case 'oldest':
+      return { sortBy: 'created_at' as const, sortOrder: 'asc' as const };
+    case 'title-asc':
+      return { sortBy: 'title' as const, sortOrder: 'asc' as const };
+    case 'title-desc':
+      return { sortBy: 'title' as const, sortOrder: 'desc' as const };
+    case 'read-time':
+      return { sortBy: 'read_time' as const, sortOrder: 'asc' as const };
+    default:
+      return { sortBy: 'created_at' as const, sortOrder: 'desc' as const };
   }
-
-  if (search) {
-    const searchLower = search.toLowerCase();
-    filtered = filtered.filter(
-      (article) =>
-        article.title.toLowerCase().includes(searchLower) ||
-        article.excerpt.toLowerCase().includes(searchLower) ||
-        article.author.toLowerCase().includes(searchLower) ||
-        article.tags.some((tag) => tag.toLowerCase().includes(searchLower))
-    );
-  }
-
-  filtered.sort((a, b) => {
-    switch (sort) {
-      case 'latest':
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-      case 'oldest':
-        return new Date(a.date).getTime() - new Date(b.date).getTime();
-      case 'title-asc':
-        return a.title.localeCompare(b.title);
-      case 'title-desc':
-        return b.title.localeCompare(a.title);
-      case 'read-time':
-        return parseInt(a.readTime) - parseInt(b.readTime);
-      default:
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-    }
-  });
-
-  return filtered;
 }
 
 export default async function ArticlesPage({
@@ -62,21 +40,46 @@ export default async function ArticlesPage({
     category?: string;
     search?: string;
     sort?: string;
+    page?: string;
   }>;
 }) {
-  const { category = 'All', search = '', sort = 'latest' } = await searchParams;
+  const {
+    category = 'All',
+    search = '',
+    sort = 'latest',
+    page = '1',
+  } = await searchParams;
 
-  const filteredArticles = filterAndSortArticles(
-    articles,
-    category,
-    search,
-    sort
-  );
+  const sortParams = mapSortToParams(sort);
+  const categoryFilter = category === 'All' ? undefined : category;
+  const searchFilter = search || undefined;
+  const pageNumber = parseInt(page) || 1;
+
+  const articlesResult = await getArticlesAction({
+    category: categoryFilter,
+    search: searchFilter,
+    sortBy: sortParams.sortBy,
+    sortOrder: sortParams.sortOrder,
+    page: pageNumber,
+    limit: 12,
+  });
+
+  if (!articlesResult.success) {
+    console.error('Failed to fetch articles:', articlesResult.error);
+    notFound();
+  }
+
+  const categoriesResult = await getArticleCategoriesAction();
+  const categories = categoriesResult.success
+    ? categoriesResult.data || []
+    : [];
 
   return (
     <Suspense fallback={<div>Loading articles...</div>}>
       <ArticlesClientPage
-        articles={filteredArticles}
+        articles={articlesResult.data?.data || []}
+        categories={categories}
+        pagination={articlesResult.data?.pagination}
         initialCategory={category}
         initialSearch={search}
         initialSort={sort}

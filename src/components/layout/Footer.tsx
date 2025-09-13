@@ -10,9 +10,9 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import NewsletterSubscription from '@/components/ui/newsletter-subscription';
 
 const quickLinks = [
   { name: 'About Us', href: '/about' },
@@ -160,23 +160,7 @@ export default function Footer() {
 
         <Separator className='my-12' />
 
-        <div className='grid md:grid-cols-2 gap-8 items-center'>
-          <div>
-            <h3 className='text-xl font-semibold mb-2'>Stay Updated</h3>
-            <p className='text-muted-foreground'>
-              Subscribe to our newsletter for the latest reliability engineering
-              insights and updates.
-            </p>
-          </div>
-          <div className='flex flex-col sm:flex-row gap-4'>
-            <Input
-              type='email'
-              placeholder='Enter your email'
-              className='flex-1 bg-background min-h-12'
-            />
-            <Button className='shrink-0 min-h-12'>Subscribe</Button>
-          </div>
-        </div>
+        <NewsletterSubscription variant='default' />
 
         <Separator className='my-8' />
 

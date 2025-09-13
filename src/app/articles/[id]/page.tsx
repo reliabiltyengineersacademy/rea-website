@@ -3,9 +3,10 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, User } from 'lucide-react';
 
-import { articles } from '@/data/articles';
+import { getArticleByIdAction } from '@/actions/articles';
 import { Badge } from '@/components/ui/badge';
 import Container from '@/components/layout/Container';
+import { formatDate, formatReadTime } from '@/lib/utils';
 
 export async function generateMetadata({
   params,
@@ -15,13 +16,15 @@ export async function generateMetadata({
   }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const article = articles.find((a) => a.slug === id);
+  const articleResult = await getArticleByIdAction(id);
 
-  if (!article) {
+  if (!articleResult.success || !articleResult.data) {
     return {
       title: 'Article Not Found',
     };
   }
+
+  const article = articleResult.data;
 
   return {
     title: `${article.title} | Reliability Engineers Academy`,
@@ -39,11 +42,13 @@ export default async function ArticlePage({
   }>;
 }) {
   const { id } = await params;
-  const article = articles.find((a) => a.slug === id);
+  const articleResult = await getArticleByIdAction(id);
 
-  if (!article) {
+  if (!articleResult.success || !articleResult.data) {
     notFound();
   }
+
+  const article = articleResult.data;
 
   return (
     <section className='py-12 min-h-screen'>
@@ -65,17 +70,12 @@ export default async function ArticlePage({
             <div className='flex items-center gap-2'>
               <Calendar className='size-4' />
               <span>
-                {new Date(article.date).toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
+                {formatDate(article.created_at, 'EEEE, MMMM d, yyyy')}
               </span>
             </div>
             <div className='flex items-center gap-2'>
               <Clock className='size-4' />
-              <span>{article.readTime}</span>
+              <span>{formatReadTime(article.read_time)}</span>
             </div>
           </div>
 

@@ -1,118 +1,20 @@
-import {
-  BookOpen,
-  TrendingUp,
-  Shield,
-  Users,
-  ArrowRight,
-  Clock,
-  User,
-} from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, Clock, User } from 'lucide-react';
 
-import { Input } from '@/components/ui/input';
+import { Article } from '@/lib/types';
+import { formatReadTime } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { categories } from '@/constants/categories';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
+import NewsletterSubscription from '@/components/ui/newsletter-subscription';
 
-const categories = [
-  {
-    icon: TrendingUp,
-    title: 'Reliability Strategies',
-    description: 'Advanced methodologies for asset reliability optimization',
-    color: 'from-blue-500 to-blue-600',
-  },
-  {
-    icon: Shield,
-    title: 'Technology & Transformation',
-    description: 'Digital solutions and Industry 4.0 applications',
-    color: 'from-green-500 to-green-600',
-  },
-  {
-    icon: BookOpen,
-    title: 'Compliance & Governance',
-    description: 'Regulatory requirements and best practices',
-    color: 'from-purple-500 to-purple-600',
-  },
-  {
-    icon: Users,
-    title: 'Workforce Capability',
-    description: 'Training and development strategies',
-    color: 'from-orange-500 to-orange-600',
-  },
-];
-
-const featuredArticles = [
-  {
-    slug: 'predictive-maintenance-revolution',
-    title: 'Implementing Predictive Maintenance in Manufacturing',
-    excerpt:
-      'A comprehensive guide to deploying predictive maintenance strategies that reduce downtime by up to 40%.',
-    author: 'Vinoth Kumar Subramaniam',
-    readTime: '8 min read',
-    category: 'Reliability Strategies',
-    image:
-      'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=400',
-    featured: true,
-  },
-  {
-    slug: 'digital-transformation-maintenance',
-    title: 'Digital Twin Technology for Asset Management',
-    excerpt:
-      'Exploring how digital twins are revolutionizing asset performance monitoring and optimization.',
-    author: 'Vinoth Kumar Subramaniam',
-    readTime: '6 min read',
-    category: 'Technology & Transformation',
-    image:
-      'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-  {
-    slug: 'iso-55000-asset-management-implementation',
-    title: 'ISO 55000 Implementation Framework',
-    excerpt:
-      'Step-by-step approach to implementing ISO 55000 asset management standards in your organization.',
-    author: 'Vinoth Kumar Subramaniam',
-    readTime: '10 min read',
-    category: 'Compliance & Governance',
-    image:
-      'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-  {
-    slug: 'root-cause-failure-analysis-methodology',
-    title: 'Building Reliability Culture in Organizations',
-    excerpt:
-      'Strategies for developing a reliability-focused mindset across all levels of your organization.',
-    author: 'Vinoth Kumar Subramaniam',
-    readTime: '7 min read',
-    category: 'Workforce Capability',
-    image:
-      'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-  {
-    slug: 'vibration-analysis-fundamentals',
-    title: 'Advanced Vibration Analysis Case Studies',
-    excerpt:
-      'Real-world examples of vibration analysis applications in critical machinery diagnostics.',
-    author: 'Vinoth Kumar Subramaniam',
-    readTime: '12 min read',
-    category: 'Reliability Strategies',
-    image:
-      'https://images.pexels.com/photos/3862365/pexels-photo-3862365.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-  {
-    slug: 'digital-transformation-maintenance',
-    title: 'AI-Powered Maintenance Optimization',
-    excerpt:
-      'How artificial intelligence is transforming maintenance scheduling and resource allocation.',
-    author: 'Vinoth Kumar Subramaniam',
-    readTime: '9 min read',
-    category: 'Technology & Transformation',
-    image:
-      'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400',
-  },
-];
-
-export default function KnowledgeHub() {
+export default function KnowledgeHub({
+  featuredArticles,
+}: {
+  featuredArticles: Article[];
+}) {
   return (
     <section className='py-20 bg-background'>
       <Container>
@@ -156,56 +58,58 @@ export default function KnowledgeHub() {
           ))}
         </div>
 
-        <div className='mb-16'>
-          <h3 className='text-2xl font-bold text-foreground mb-8'>
-            Featured Article
-          </h3>
-          <Card className='bg-gradient-to-r from-primary to-primary/80 overflow-hidden shadow-2xl p-0 '>
-            <CardContent className='p-0'>
-              <div className='grid lg:grid-cols-2 gap-0'>
-                <div className='p-6 sm:p-12 text-primary-foreground'>
-                  <div className='inline-block bg-primary-foreground/20 text-sm font-semibold px-3 py-1 rounded-full mb-4'>
-                    {featuredArticles[0].category}
-                  </div>
-                  <h4 className='text-3xl font-bold mb-4'>
-                    {featuredArticles[0].title}
-                  </h4>
-                  <p className='text-primary-foreground/90 text-lg mb-6 leading-relaxed'>
-                    {featuredArticles[0].excerpt}
-                  </p>
-                  <div className='flex items-center space-x-6 text-primary-foreground/80 mb-8'>
-                    <div className='flex items-center'>
-                      <User className='size-4 mr-2' />
-                      {featuredArticles[0].author}
+        {featuredArticles.length > 0 && (
+          <div className='mb-16'>
+            <h3 className='text-2xl font-bold text-foreground mb-8'>
+              Featured Article
+            </h3>
+            <Card className='bg-gradient-to-r from-primary to-primary/80 overflow-hidden shadow-2xl p-0 '>
+              <CardContent className='p-0'>
+                <div className='grid lg:grid-cols-2 gap-0'>
+                  <div className='p-6 sm:p-12 text-primary-foreground'>
+                    <div className='inline-block bg-primary-foreground/20 text-sm font-semibold px-3 py-1 rounded-full mb-4'>
+                      {featuredArticles[0].category}
                     </div>
-                    <div className='flex items-center'>
-                      <Clock className='size-4 mr-2' />
-                      {featuredArticles[0].readTime}
+                    <h4 className='text-3xl font-bold mb-4'>
+                      {featuredArticles[0].title}
+                    </h4>
+                    <p className='text-primary-foreground/90 text-lg mb-6 leading-relaxed'>
+                      {featuredArticles[0].excerpt}
+                    </p>
+                    <div className='flex items-center space-x-6 text-primary-foreground/80 mb-8'>
+                      <div className='flex items-center'>
+                        <User className='size-4 mr-2' />
+                        {featuredArticles[0].author}
+                      </div>
+                      <div className='flex items-center'>
+                        <Clock className='size-4 mr-2' />
+                        {formatReadTime(featuredArticles[0].read_time)}
+                      </div>
                     </div>
+                    <Button
+                      asChild
+                      className='bg-primary-foreground text-primary hover:bg-primary-foreground/90'
+                    >
+                      <Link href={`/articles/${featuredArticles[0].id}`}>
+                        Read Full Article
+                      </Link>
+                    </Button>
                   </div>
-                  <Button
-                    asChild
-                    className='bg-primary-foreground text-primary hover:bg-primary-foreground/90'
-                  >
-                    <Link href={`/articles/${featuredArticles[0].slug}`}>
-                      Read Full Article
-                    </Link>
-                  </Button>
+                  <div className='relative'>
+                    <Image
+                      width={100}
+                      height={100}
+                      src={featuredArticles[0].image}
+                      alt={featuredArticles[0].title}
+                      className='w-full h-full object-cover'
+                    />
+                    <div className='absolute inset-0 bg-gradient-to-l from-transparent to-primary/20' />
+                  </div>
                 </div>
-                <div className='relative'>
-                  <Image
-                    width={100}
-                    height={100}
-                    src={featuredArticles[0].image}
-                    alt={featuredArticles[0].title}
-                    className='w-full h-full object-cover'
-                  />
-                  <div className='absolute inset-0 bg-gradient-to-l from-transparent to-primary/20' />
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
 
         <div>
           <div className='flex items-center justify-between mb-8'>
@@ -222,10 +126,10 @@ export default function KnowledgeHub() {
           </div>
 
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {featuredArticles.slice(1).map((article, index) => (
+            {featuredArticles.slice(1).map((article) => (
               <Link
-                key={index}
-                href={`/articles/${article.slug}`}
+                key={article.id}
+                href={`/articles/${article.id}`}
                 className='hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer'
               >
                 <Card className='overflow-hidden h-full pt-0'>
@@ -261,7 +165,7 @@ export default function KnowledgeHub() {
                       </div>
                       <div className='flex items-center'>
                         <Clock className='size-4 mr-1' />
-                        {article.readTime}
+                        {formatReadTime(article.read_time)}
                       </div>
                     </div>
                   </CardContent>
@@ -281,14 +185,10 @@ export default function KnowledgeHub() {
               engineering insights, case studies, and industry updates delivered
               to your inbox.
             </p>
-            <div className='flex flex-row gap-4 max-w-md mx-auto'>
-              <Input
-                type='email'
-                className='flex-1 min-h-12'
-                placeholder='Enter your email address'
-              />
-              <Button className='shrink-0 min-h-12'>Subscribe</Button>
-            </div>
+            <NewsletterSubscription
+              variant='inline'
+              className='max-w-md mx-auto'
+            />
           </CardContent>
         </Card>
       </Container>

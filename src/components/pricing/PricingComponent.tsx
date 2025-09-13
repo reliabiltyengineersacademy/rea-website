@@ -1,9 +1,8 @@
 'use client';
 
-import { CircleCheck } from 'lucide-react';
 import { useState } from 'react';
+import { CircleCheck } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -11,106 +10,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Switch } from '@/components/ui/switch';
+import { plans } from '@/constants/pricings';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Switch } from '@/components/ui/switch';
+import { Separator } from '@/components/ui/separator';
 
-interface PricingFeature {
-  text: string;
-}
-
-interface PricingPlan {
-  id: string;
-  name: string;
-  description: string;
-  monthlyPrice: string;
-  yearlyPrice: string;
-  features: PricingFeature[];
-  button: {
-    text: string;
-    url: string;
-  };
-  popular?: boolean;
-  savings?: string;
-}
-
-interface PricingComponentProps {
-  heading?: string;
-  description?: string;
-  plans?: PricingPlan[];
-}
-
-const PricingComponent = ({
-  plans = [
-    {
-      id: 'individual',
-      name: 'Individual',
-      description: 'Perfect for individual learners and professionals',
-      monthlyPrice: '$49',
-      yearlyPrice: '$490',
-      savings: 'Save 17%',
-      features: [
-        { text: 'Access to all core courses' },
-        { text: 'CMRP, CMRT, CAMA preparation' },
-        { text: 'Practice exams and quizzes' },
-        { text: 'Certificate of completion' },
-        { text: 'Mobile app access' },
-        { text: 'Email support' },
-        { text: '30-day money-back guarantee' },
-      ],
-      button: {
-        text: 'Start Free Trial',
-        url: '#',
-      },
-    },
-    {
-      id: 'professional',
-      name: 'Professional',
-      description: 'For serious professionals and small teams',
-      monthlyPrice: '$99',
-      yearlyPrice: '$990',
-      savings: 'Save 17%',
-      popular: true,
-      features: [
-        { text: 'Everything in Individual' },
-        { text: 'Advanced certification tracks' },
-        { text: 'Live webinars and Q&A sessions' },
-        { text: 'One-on-one mentoring (2 sessions)' },
-        { text: 'Priority support' },
-        { text: 'Downloadable resources' },
-        { text: 'Progress tracking and analytics' },
-        { text: 'Team collaboration tools' },
-      ],
-      button: {
-        text: 'Start Free Trial',
-        url: '#',
-      },
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise',
-      description: 'For organizations and large teams',
-      monthlyPrice: '$199',
-      yearlyPrice: '$1,990',
-      savings: 'Save 17%',
-      features: [
-        { text: 'Everything in Professional' },
-        { text: 'Unlimited team members' },
-        { text: 'Custom learning paths' },
-        { text: 'Admin dashboard and reporting' },
-        { text: 'API access and integrations' },
-        { text: 'Dedicated account manager' },
-        { text: 'Custom content development' },
-        { text: 'On-site training options' },
-        { text: 'SLA and priority support' },
-      ],
-      button: {
-        text: 'Contact Sales',
-        url: '#',
-      },
-    },
-  ],
-}: PricingComponentProps) => {
+export const PricingComponent = () => {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
