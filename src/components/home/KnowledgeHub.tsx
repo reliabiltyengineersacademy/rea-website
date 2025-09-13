@@ -48,7 +48,7 @@ const featuredArticles = [
     title: 'Implementing Predictive Maintenance in Manufacturing',
     excerpt:
       'A comprehensive guide to deploying predictive maintenance strategies that reduce downtime by up to 40%.',
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     readTime: '8 min read',
     category: 'Reliability Strategies',
     image:
@@ -60,7 +60,7 @@ const featuredArticles = [
     title: 'Digital Twin Technology for Asset Management',
     excerpt:
       'Exploring how digital twins are revolutionizing asset performance monitoring and optimization.',
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     readTime: '6 min read',
     category: 'Technology & Transformation',
     image:
@@ -71,7 +71,7 @@ const featuredArticles = [
     title: 'ISO 55000 Implementation Framework',
     excerpt:
       'Step-by-step approach to implementing ISO 55000 asset management standards in your organization.',
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     readTime: '10 min read',
     category: 'Compliance & Governance',
     image:
@@ -82,7 +82,7 @@ const featuredArticles = [
     title: 'Building Reliability Culture in Organizations',
     excerpt:
       'Strategies for developing a reliability-focused mindset across all levels of your organization.',
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     readTime: '7 min read',
     category: 'Workforce Capability',
     image:
@@ -93,7 +93,7 @@ const featuredArticles = [
     title: 'Advanced Vibration Analysis Case Studies',
     excerpt:
       'Real-world examples of vibration analysis applications in critical machinery diagnostics.',
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     readTime: '12 min read',
     category: 'Reliability Strategies',
     image:
@@ -104,7 +104,7 @@ const featuredArticles = [
     title: 'AI-Powered Maintenance Optimization',
     excerpt:
       'How artificial intelligence is transforming maintenance scheduling and resource allocation.',
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     readTime: '9 min read',
     category: 'Technology & Transformation',
     image:
@@ -194,8 +194,8 @@ export default function KnowledgeHub() {
                 </div>
                 <div className='relative'>
                   <Image
-                    width={100}
-                    height={100}
+                    width={600}
+                    height={400}
                     src={featuredArticles[0].image}
                     alt={featuredArticles[0].title}
                     className='w-full h-full object-cover'
@@ -231,8 +231,8 @@ export default function KnowledgeHub() {
                 <Card className='overflow-hidden h-full pt-0'>
                   <div className='relative'>
                     <Image
-                      width={100}
-                      height={100}
+                      width={400}
+                      height={300}
                       src={article.image}
                       alt={article.title}
                       className='w-full h-48 object-cover'

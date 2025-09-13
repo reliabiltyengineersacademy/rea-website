@@ -72,7 +72,7 @@ export const articles: Article[] = [
       
       <p>Organizations that embrace predictive maintenance today will gain a significant competitive advantage in operational efficiency, cost management, and asset reliability.</p>
     `,
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     date: 'March 10, 2025',
     readTime: '8 min read',
     category: 'Predictive Maintenance',
@@ -177,7 +177,7 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>Vibration analysis is a powerful tool for maintaining machinery reliability. Success requires proper equipment, training, procedures, and commitment to continuous improvement. When implemented correctly, vibration analysis can significantly reduce maintenance costs and improve equipment reliability.</p>
     `,
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     date: 'March 8, 2025',
     readTime: '12 min read',
     category: 'Condition Monitoring',
@@ -374,7 +374,7 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>Effective RCFA is essential for achieving high levels of equipment reliability. It requires a systematic approach, proper tools, skilled personnel, and organizational commitment. When done well, RCFA not only solves immediate problems but also builds organizational learning and continuous improvement capabilities.</p>
     `,
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     date: 'March 5, 2025',
     readTime: '10 min read',
     category: 'Failure Analysis',
@@ -605,7 +605,7 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>ISO 55000 provides a comprehensive framework for achieving excellence in asset management. Successful implementation requires commitment, planning, and sustained effort, but the benefits in terms of improved performance, reduced costs, and better risk management make it a worthwhile investment for any asset-intensive organization.</p>
     `,
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     date: 'March 3, 2025',
     readTime: '15 min read',
     category: 'Asset Management',
@@ -846,7 +846,7 @@ export const articles: Article[] = [
       <h2>Conclusion</h2>
       <p>Digital transformation in maintenance represents a fundamental shift toward more intelligent, efficient, and effective asset management. Organizations that successfully embrace these technologies will gain significant competitive advantages through improved reliability, reduced costs, and enhanced safety performance. The key to success lies in thoughtful planning, phased implementation, and strong commitment to organizational change management.</p>
     `,
-    author: 'Vinoth Kumar Subramaniam',
+    author: 'KVK Subramaniyam Naidu',
     date: 'March 1, 2025',
     readTime: '14 min read',
     category: 'Digital Transformation',

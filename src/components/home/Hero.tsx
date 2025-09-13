@@ -61,7 +61,7 @@ export default function Hero() {
           <div className='text-primary-foreground'>
             <div className='inline-flex items-center bg-primary-foreground/10 rounded-full px-4 py-2 mb-6 backdrop-blur-sm border border-primary-foreground/20'>
               <span className='text-sm font-medium'>
-                🎯 Professional Reliability Training
+                🎯 Professional Asset Management and Reliability Engineering
               </span>
             </div>
 

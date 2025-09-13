@@ -8,6 +8,22 @@ import { Card, CardContent } from '@/components/ui/card';
 const certifications = [
   {
     icon: Award,
+    title: 'CAMA Certification',
+    subtitle: 'Certified Asset Management Assessor',
+    description:
+      'Advanced certification in asset management assessment and optimization strategies.',
+    duration: '8 months',
+    level: 'Expert',
+    features: [
+      'Asset Strategy',
+      'Risk Assessment',
+      'Performance Metrics',
+      'Lifecycle Management',
+    ],
+    link: '/programs/cama',
+  },
+  {
+    icon: Shield,
     title: 'CMRP Certification',
     subtitle: 'Certified Maintenance & Reliability Professional',
     description:
@@ -20,6 +36,7 @@ const certifications = [
       'Reliability Analysis',
       'Work Management',
     ],
+    link: '/programs/cmrp',
   },
   {
     icon: TrendingUp,
@@ -35,21 +52,7 @@ const certifications = [
       'Equipment Care',
       'Safety Protocols',
     ],
-  },
-  {
-    icon: Shield,
-    title: 'CAMA Certification',
-    subtitle: 'Certified Asset Management Assessor',
-    description:
-      'Advanced certification in asset management assessment and optimization strategies.',
-    duration: '8 months',
-    level: 'Expert',
-    features: [
-      'Asset Strategy',
-      'Risk Assessment',
-      'Performance Metrics',
-      'Lifecycle Management',
-    ],
+    link: '/programs/cmrt',
   },
   {
     icon: Zap,
@@ -65,6 +68,7 @@ const certifications = [
       'Machinery Health',
       'Data Analysis',
     ],
+    link: '/programs/vibration',
   },
   {
     icon: Search,
@@ -80,6 +84,7 @@ const certifications = [
       'Electrical Inspection',
       'Report Writing',
     ],
+    link: '/programs/thermography',
   },
   {
     icon: Settings,
@@ -95,6 +100,7 @@ const certifications = [
       'Wear Patterns',
       'Lubrication Programs',
     ],
+    link: '/programs/lube-oil',
   },
 ];
 
@@ -162,7 +168,7 @@ export default function Programs() {
                   asChild
                   className='w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70'
                 >
-                  <Link href='/programs'>Learn More</Link>
+                  <Link href={cert.link}>Learn More</Link>
                 </Button>
               </CardContent>
             </Card>

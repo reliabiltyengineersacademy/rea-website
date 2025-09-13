@@ -22,9 +22,8 @@ export default function PricingPage() {
               Choose Your Learning Path
             </h1>
             <p className='text-xl text-muted-foreground mb-8'>
-              Flexible pricing options designed to meet your professional
-              development needs, whether you&apos;re an individual learner or
-              part of a team.
+              Simple, transparent pricing with one-time payments. Choose the plan
+              that best fits your learning goals and get lifetime access to all content.
             </p>
           </div>
         </Container>
@@ -88,21 +87,21 @@ export default function PricingPage() {
           <div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
             <div>
               <h4 className='text-xl font-semibold mb-3 text-white'>
-                Can I switch plans anytime?
+                What does lifetime access mean?
               </h4>
               <p className='text-gray-300'>
-                Yes, you can upgrade or downgrade your plan at any time. Changes
-                take effect at your next billing cycle.
+                Once you purchase a plan, you get unlimited access to all content
+                and updates forever. No recurring fees or subscription renewals.
               </p>
             </div>
 
             <div>
               <h4 className='text-xl font-semibold mb-3 text-white'>
-                Is there a free trial?
+                Can I upgrade my plan later?
               </h4>
               <p className='text-gray-300'>
-                We offer a 7-day free trial for new users to explore our
-                platform and content before committing.
+                Yes, you can upgrade from Student to Professional or Corporate
+                at any time. Contact us for upgrade pricing and options.
               </p>
             </div>
 
@@ -111,8 +110,8 @@ export default function PricingPage() {
                 What payment methods do you accept?
               </h4>
               <p className='text-gray-300'>
-                We accept all major credit cards, PayPal, and bank transfers for
-                annual subscriptions.
+                We accept all major credit cards, PayPal, and bank transfers.
+                All payments are secure and processed through trusted providers.
               </p>
             </div>
 
@@ -122,7 +121,7 @@ export default function PricingPage() {
               </h4>
               <p className='text-gray-300'>
                 Yes, we offer special pricing for teams of 5+ members. Contact
-                us for custom enterprise solutions.
+                us for custom corporate solutions and bulk pricing.
               </p>
             </div>
           </div>

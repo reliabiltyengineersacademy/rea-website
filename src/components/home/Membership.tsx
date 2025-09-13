@@ -154,8 +154,8 @@ export default function Membership() {
                   src={webinar.image}
                   alt={webinar.title}
                   className='w-full h-40 object-cover'
-                  width={100}
-                  height={100}
+                  width={400}
+                  height={200}
                 />
                 <CardContent className='px-6'>
                   <div className='text-primary text-sm font-semibold mb-2'>

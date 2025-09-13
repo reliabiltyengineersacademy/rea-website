@@ -1,7 +1,6 @@
 'use client';
 
 import { CircleCheck } from 'lucide-react';
-import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,7 +11,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 
 interface PricingFeature {
@@ -23,15 +21,13 @@ interface PricingPlan {
   id: string;
   name: string;
   description: string;
-  monthlyPrice: string;
-  yearlyPrice: string;
+  price: string;
   features: PricingFeature[];
   button: {
     text: string;
     url: string;
   };
   popular?: boolean;
-  savings?: string;
 }
 
 interface PricingComponentProps {
@@ -43,12 +39,10 @@ interface PricingComponentProps {
 const PricingComponent = ({
   plans = [
     {
-      id: 'individual',
-      name: 'Individual',
-      description: 'Perfect for individual learners and professionals',
-      monthlyPrice: '$49',
-      yearlyPrice: '$490',
-      savings: 'Save 17%',
+      id: 'student',
+      name: 'Student',
+      description: 'Perfect for students and individual learners',
+      price: '$25',
       features: [
         { text: 'Access to all core courses' },
         { text: 'CMRP, CMRT, CAMA preparation' },
@@ -59,7 +53,7 @@ const PricingComponent = ({
         { text: '30-day money-back guarantee' },
       ],
       button: {
-        text: 'Start Free Trial',
+        text: 'Get Started',
         url: '#',
       },
     },
@@ -67,12 +61,10 @@ const PricingComponent = ({
       id: 'professional',
       name: 'Professional',
       description: 'For serious professionals and small teams',
-      monthlyPrice: '$99',
-      yearlyPrice: '$990',
-      savings: 'Save 17%',
+      price: '$199',
       popular: true,
       features: [
-        { text: 'Everything in Individual' },
+        { text: 'Everything in Student' },
         { text: 'Advanced certification tracks' },
         { text: 'Live webinars and Q&A sessions' },
         { text: 'One-on-one mentoring (2 sessions)' },
@@ -82,17 +74,15 @@ const PricingComponent = ({
         { text: 'Team collaboration tools' },
       ],
       button: {
-        text: 'Start Free Trial',
+        text: 'Get Started',
         url: '#',
       },
     },
     {
-      id: 'enterprise',
-      name: 'Enterprise',
+      id: 'corporate',
+      name: 'Corporate',
       description: 'For organizations and large teams',
-      monthlyPrice: '$199',
-      yearlyPrice: '$1,990',
-      savings: 'Save 17%',
+      price: '$999',
       features: [
         { text: 'Everything in Professional' },
         { text: 'Unlimited team members' },
@@ -111,36 +101,15 @@ const PricingComponent = ({
     },
   ],
 }: PricingComponentProps) => {
-  const [isYearly, setIsYearly] = useState(false);
-
   return (
     <div className='w-full flex flex-col items-center gap-6 text-center'>
-      <div className='flex items-center gap-3 text-lg'>
-        <span
-          className={
-            !isYearly
-              ? 'font-semibold text-foreground'
-              : 'text-muted-foreground'
-          }
-        >
-          Monthly
-        </span>
-        <Switch
-          checked={isYearly}
-          onCheckedChange={() => setIsYearly(!isYearly)}
-        />
-        <span
-          className={
-            isYearly ? 'font-semibold text-foreground' : 'text-muted-foreground'
-          }
-        >
-          Yearly
-        </span>
-        {isYearly && (
-          <Badge variant='default' className='ml-2'>
-            Save 17%
-          </Badge>
-        )}
+      <div className='text-center'>
+        <h2 className='text-3xl font-bold text-foreground mb-4'>
+          One-Time Payment Plans
+        </h2>
+        <p className='text-lg text-muted-foreground'>
+          Choose the perfect plan for your learning journey. All plans include lifetime access.
+        </p>
       </div>
 
       <div className='flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 mt-8 w-full'>
@@ -166,16 +135,11 @@ const PricingComponent = ({
               </p>
               <div className='flex items-end gap-2'>
                 <span className='text-4xl font-bold'>
-                  {isYearly ? plan.yearlyPrice : plan.monthlyPrice}
+                  {plan.price}
                 </span>
                 <span className='text-muted-foreground mb-1'>
-                  {isYearly ? '/year' : '/month'}
+                  one-time
                 </span>
-                {isYearly && plan.savings && (
-                  <Badge variant='secondary' className='ml-auto'>
-                    {plan.savings}
-                  </Badge>
-                )}
               </div>
             </CardHeader>
 
@@ -184,11 +148,11 @@ const PricingComponent = ({
 
               {plan.id === 'professional' && (
                 <p className='mb-3 font-semibold text-sm'>
-                  Everything in Individual, plus:
+                  Everything in Student, plus:
                 </p>
               )}
 
-              {plan.id === 'enterprise' && (
+              {plan.id === 'corporate' && (
                 <p className='mb-3 font-semibold text-sm'>
                   Everything in Professional, plus:
                 </p>

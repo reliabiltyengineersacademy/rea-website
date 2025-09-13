@@ -20,7 +20,7 @@ export const webinars: Webinar[] = [
     title: 'Advanced Vibration Analysis Techniques',
     description:
       'Deep dive into advanced vibration analysis methods for predictive maintenance applications in rotating machinery.',
-    speaker: 'Vinoth Kumar Subramaniam',
+    speaker: 'KVK Subramaniyam Naidu',
     date: 'March 15, 2025',
     duration: '60 minutes',
     category: 'predictive',
@@ -36,7 +36,7 @@ export const webinars: Webinar[] = [
     title: 'Digital Transformation in Asset Management',
     description:
       'Exploring how digital technologies are revolutionizing asset management practices across industries.',
-    speaker: 'Vinoth Kumar Subramaniam',
+    speaker: 'KVK Subramaniyam Naidu',
     date: 'March 22, 2025',
     duration: '45 minutes',
     category: 'technology',
@@ -52,7 +52,7 @@ export const webinars: Webinar[] = [
     title: 'Root Cause Analysis Best Practices',
     description:
       'Comprehensive guide to conducting effective root cause failure analysis using proven methodologies.',
-    speaker: 'Vinoth Kumar Subramaniam',
+    speaker: 'KVK Subramaniyam Naidu',
     date: 'March 29, 2025',
     duration: '75 minutes',
     category: 'analysis',
@@ -68,7 +68,7 @@ export const webinars: Webinar[] = [
     title: 'ISO 55000 Implementation Framework',
     description:
       'Step-by-step approach to implementing ISO 55000 asset management standards in your organization.',
-    speaker: 'Vinoth Kumar Subramaniam',
+    speaker: 'KVK Subramaniyam Naidu',
     date: 'April 5, 2025',
     duration: '90 minutes',
     category: 'compliance',
@@ -84,7 +84,7 @@ export const webinars: Webinar[] = [
     title: 'Condition Monitoring Technologies',
     description:
       'Overview of modern condition monitoring technologies and their applications in industrial settings.',
-    speaker: 'Vinoth Kumar Subramaniam',
+    speaker: 'KVK Subramaniyam Naidu',
     date: 'April 12, 2025',
     duration: '55 minutes',
     category: 'predictive',
@@ -100,7 +100,7 @@ export const webinars: Webinar[] = [
     title: 'AI in Maintenance Optimization',
     description:
       'How artificial intelligence is transforming maintenance scheduling and resource allocation strategies.',
-    speaker: 'Vinoth Kumar Subramaniam',
+    speaker: 'KVK Subramaniyam Naidu',
     date: 'April 19, 2025',
     duration: '65 minutes',
     category: 'technology',

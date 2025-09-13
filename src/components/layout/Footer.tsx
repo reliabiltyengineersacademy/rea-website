@@ -1,7 +1,4 @@
 import {
-  Mail,
-  Phone,
-  MapPin,
   Linkedin,
   Twitter,
   Youtube,
@@ -15,11 +12,10 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
 const quickLinks = [
-  { name: 'About Us', href: '/about' },
+  { name: 'Meet the Founder', href: '/about' },
   { name: 'Programs & Certifications', href: '/programs' },
   { name: 'Training Modules', href: '/training' },
   { name: 'Webinars', href: '/webinars' },
-  { name: 'Contact', href: '/contact' },
 ];
 
 const programs = [
@@ -67,22 +63,10 @@ export default function Footer() {
             </div>
 
             <div className='space-y-3'>
-              <div className='flex items-center'>
-                <Mail className='h-5 w-5 text-primary mr-3' />
-                <span className='text-muted-foreground'>
-                  info@reliabilityengineers.academy
-                </span>
-              </div>
-              <div className='flex items-center'>
-                <Phone className='h-5 w-5 text-primary mr-3' />
-                <span className='text-muted-foreground'>+1 (555) 123-4567</span>
-              </div>
-              <div className='flex items-start'>
-                <MapPin className='h-5 w-5 text-primary mr-3 mt-1' />
-                <span className='text-muted-foreground'>
-                  123 Reliability Drive, Suite 100
-                  <br />
-                  Houston, TX 77001, USA
+              <div className='flex items-start sm:items-center'>
+                <span className='text-2xl mr-3 flex-shrink-0 mt-1 sm:mt-0'>📧</span>
+                <span className='text-muted-foreground break-all text-sm sm:text-base leading-relaxed'>
+                  reliabiltyengineersacademy@gmail.com
                 </span>
               </div>
             </div>
