@@ -5,6 +5,7 @@ import './globals.css';
 import ThemeProvider from '@/app/providers';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Work_Sans({
   variable: '--font-inter',
@@ -163,6 +164,8 @@ export default function RootLayout({
 
             <Footer />
           </div>
+
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

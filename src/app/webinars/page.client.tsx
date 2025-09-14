@@ -8,6 +8,7 @@ import {
   Search,
   Play,
 } from 'lucide-react';
+import { toast } from 'sonner';
 import Image from 'next/image';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useCallback, useTransition, useState, useEffect } from 'react';
@@ -213,27 +214,28 @@ export default function WebinarsClientPage({
                       className='w-full h-48 object-cover'
                     />
                     <div className='absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center'>
+                      {/* <Link
+                        href={
+                          (webinar.recording_url ||
+                            webinar.registration_url) as string
+                        }
+                        target={
+                          webinar.status === 'completed' ? '_blank' : '_self'
+                        }
+                        rel={
+                          webinar.status === 'completed'
+                            ? 'noopener noreferrer'
+                            : undefined
+                        }
+                      > */}
                       <Button
                         size='lg'
+                        onClick={() => toast.info('Coming soon')}
                         className='w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform'
-                        asChild
                       >
-                        <a
-                          href={
-                            webinar.recording_url || webinar.registration_url
-                          }
-                          target={
-                            webinar.status === 'completed' ? '_blank' : '_self'
-                          }
-                          rel={
-                            webinar.status === 'completed'
-                              ? 'noopener noreferrer'
-                              : undefined
-                          }
-                        >
-                          <Play className='h-8 w-8 text-primary ml-1' />
-                        </a>
+                        <Play className='h-8 w-8 text-primary ml-1' />
                       </Button>
+                      {/* </Link> */}
                     </div>
                     <div className='absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm'>
                       {formatDuration(webinar.duration)}
@@ -272,37 +274,37 @@ export default function WebinarsClientPage({
                       </div>
                     </div>
 
+                    {/* <Link
+                      href={
+                        (webinar.status === 'upcoming'
+                          ? webinar.registration_url
+                          : webinar.recording_url) as string
+                      }
+                      target={
+                        webinar.status === 'upcoming' ? '_self' : '_blank'
+                      }
+                      rel={
+                        webinar.status === 'upcoming'
+                          ? undefined
+                          : 'noopener noreferrer'
+                      }
+                    > */}
                     <Button
                       className='w-full'
-                      asChild
+                      onClick={() => toast.info('Coming soon')}
                       variant={
                         webinar.status === 'upcoming' ? 'default' : 'outline'
                       }
                     >
-                      <a
-                        href={
-                          webinar.status === 'upcoming'
-                            ? webinar.registration_url
-                            : webinar.recording_url
-                        }
-                        target={
-                          webinar.status === 'upcoming' ? '_self' : '_blank'
-                        }
-                        rel={
-                          webinar.status === 'upcoming'
-                            ? undefined
-                            : 'noopener noreferrer'
-                        }
-                      >
-                        <Play className='h-5 w-5 mr-2' />
-                        {webinar.status === 'upcoming'
-                          ? 'Register Now'
-                          : 'Watch Recording'}
-                        {webinar.status === 'completed' && (
-                          <ExternalLink className='ml-2 size-4' />
-                        )}
-                      </a>
+                      <Play className='h-5 w-5 mr-2' />
+                      {webinar.status === 'upcoming'
+                        ? 'Register Now'
+                        : 'Watch Recording'}
+                      {webinar.status === 'completed' && (
+                        <ExternalLink className='ml-2 size-4' />
+                      )}
                     </Button>
+                    {/* </Link> */}
                   </CardContent>
                 </Card>
               ))
