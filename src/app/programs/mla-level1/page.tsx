@@ -1,25 +1,29 @@
 import {
   Award,
   CheckCircle,
+  Clock,
   Users,
   BookOpen,
   ArrowRight,
-  Thermometer,
+  Droplets,
+  Settings,
+  Microscope,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
-  certificationLevels,
-  targetAudience,
   benefits,
-  applicationAreas,
-  equipmentTypes,
-  industryStandards,
-} from '@/constants/programs/infraredThermography';
+  targetAudience,
+  courseModules,
+  practicalSkills,
+  testMethods,
+  certificationDetails,
+  learningOutcomes,
+} from '@/constants/programs/mlaLevel1';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const InfraredThermography = () => {
+const MLALevel1 = () => {
   return (
     <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-primary to-primary/80 text-primary-foreground'>
@@ -27,21 +31,20 @@ const InfraredThermography = () => {
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
             <div>
               <div className='inline-flex items-center bg-primary-foreground/20 rounded-full px-4 py-2 mb-6'>
-                <Thermometer className='h-5 w-5 mr-2' />
+                <Droplets className='h-5 w-5 mr-2' />
                 <span className='text-sm font-medium'>
-                  Level I & II Certification
+                  ISO 18436-4 Level I
                 </span>
               </div>
 
               <h1 className='text-4xl lg:text-5xl font-bold mb-6'>
-                Infrared Thermography Certification
+                Machine Lubricant Analyst ISO Level I Training
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Master the science of thermal imaging with our comprehensive
-                Level I & II thermography certification program. Detect problems
-                before they become failures using non-contact inspection
-                techniques.
+                Master the fundamentals of lubricant analysis with our ISO 18436-4
+                Level I certification program. Learn to perform basic oil analysis,
+                identify contamination, and optimize lubrication programs.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -68,23 +71,23 @@ const InfraredThermography = () => {
               <div className='bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8'>
                 <div className='grid grid-cols-2 gap-6'>
                   <div className='text-center'>
-                    <div className='text-3xl font-bold mb-2'>12,000+</div>
+                    <div className='text-3xl font-bold mb-2'>2,000+</div>
                     <div className='text-primary-foreground/80'>
-                      Certified Thermographers
+                      Level I Analysts
                     </div>
                   </div>
                   <div className='text-center'>
-                    <div className='text-3xl font-bold mb-2'>45+</div>
+                    <div className='text-3xl font-bold mb-2'>35+</div>
                     <div className='text-primary-foreground/80'>Countries</div>
                   </div>
                   <div className='text-center'>
-                    <div className='text-3xl font-bold mb-2'>85%</div>
+                    <div className='text-3xl font-bold mb-2'>20%</div>
                     <div className='text-primary-foreground/80'>
-                      Problem Detection Rate
+                      Lubrication Cost Reduction
                     </div>
                   </div>
                   <div className='text-center'>
-                    <div className='text-3xl font-bold mb-2'>96%</div>
+                    <div className='text-3xl font-bold mb-2'>95%</div>
                     <div className='text-primary-foreground/80'>Pass Rate</div>
                   </div>
                 </div>
@@ -97,52 +100,52 @@ const InfraredThermography = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Program Overview
+            Course Overview
           </h2>
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                Infrared thermography is a powerful non-destructive testing
-                technique that uses thermal imaging to detect temperature
-                variations in equipment and structures. Our certification
-                program follows ASNT guidelines and industry standards.
+                The Machine Lubricant Analyst Level I program provides fundamental
+                training in lubricant analysis and contamination control. This
+                course is designed for maintenance technicians, lubrication
+                specialists, and entry-level analysts who need to understand
+                basic oil analysis principles and techniques.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                This comprehensive training covers both theoretical principles
-                and practical applications, preparing you to perform
-                professional thermal inspections across electrical, mechanical,
-                and building systems.
+                Participants will learn to perform basic oil analysis tests,
+                identify contamination sources, select appropriate lubricants,
+                and implement effective contamination control programs. This
+                certification serves as the foundation for advanced lubricant
+                analysis training.
               </p>
             </div>
             <Card className='p-8'>
               <CardHeader>
-                <CardTitle className='text-xl'>
-                  Certification Standards
-                </CardTitle>
+                <CardTitle className='text-xl'>Course Details</CardTitle>
               </CardHeader>
               <CardContent className='space-y-4'>
                 <div className='flex items-center'>
-                  <Award className='h-5 w-5 text-primary mr-3' />
+                  <Clock className='h-5 w-5 text-primary mr-3' />
                   <span className='text-muted-foreground'>
-                    ASNT SNT-TC-1A Compliant
-                  </span>
-                </div>
-                <div className='flex items-center'>
-                  <CheckCircle className='h-5 w-5 text-primary mr-3' />
-                  <span className='text-muted-foreground'>
-                    Industry recognized certification
-                  </span>
-                </div>
-                <div className='flex items-center'>
-                  <Users className='h-5 w-5 text-primary mr-3' />
-                  <span className='text-muted-foreground'>
-                    Two-level certification path
+                    {certificationDetails.duration} training
                   </span>
                 </div>
                 <div className='flex items-center'>
                   <BookOpen className='h-5 w-5 text-primary mr-3' />
                   <span className='text-muted-foreground'>
-                    Comprehensive training materials
+                    {certificationDetails.format}
+                  </span>
+                </div>
+                <div className='flex items-center'>
+                  <Users className='h-5 w-5 text-primary mr-3' />
+                  <span className='text-muted-foreground'>
+                    {certificationDetails.prerequisites}
+                  </span>
+                </div>
+                <div className='flex items-center'>
+                  <Award className='h-5 w-5 text-primary mr-3' />
+                  <span className='text-muted-foreground'>
+                    {certificationDetails.certification}
                   </span>
                 </div>
               </CardContent>
@@ -152,146 +155,7 @@ const InfraredThermography = () => {
 
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Certification Levels
-          </h2>
-          <div className='space-y-8'>
-            {certificationLevels.map((level, index) => (
-              <Card key={index} className='p-8'>
-                <CardContent>
-                  <div className='grid lg:grid-cols-2 gap-8'>
-                    <div>
-                      <div className='flex items-center mb-4'>
-                        <div className='w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mr-4'>
-                          <span className='text-primary-foreground font-bold text-lg'>
-                            {index + 1}
-                          </span>
-                        </div>
-                        <div>
-                          <h3 className='text-xl font-bold text-foreground'>
-                            {level.level}
-                          </h3>
-                          <p className='text-primary font-medium'>
-                            {level.duration}
-                          </p>
-                        </div>
-                      </div>
-                      <p className='text-muted-foreground mb-6'>
-                        {level.description}
-                      </p>
-
-                      <h4 className='font-semibold text-foreground mb-3'>
-                        Key Topics
-                      </h4>
-                      <ul className='space-y-2'>
-                        {level.topics.map((topic, topicIndex) => (
-                          <li key={topicIndex} className='flex items-center'>
-                            <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>
-                              {topic}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className='font-semibold text-foreground mb-3'>
-                        Capabilities
-                      </h4>
-                      <ul className='space-y-3'>
-                        {level.capabilities.map((capability, capIndex) => (
-                          <li key={capIndex} className='flex items-start'>
-                            <CheckCircle className='h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0' />
-                            <span className='text-muted-foreground text-sm'>
-                              {capability}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className='mb-16'>
-          <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Application Areas
-          </h2>
-          <div className='grid md:grid-cols-2 gap-8'>
-            {applicationAreas.map((area, index) => (
-              <Card key={index} className='p-8'>
-                <CardContent>
-                  <div className='flex items-center mb-4'>
-                    <div className='w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4'>
-                      <area.icon className='h-6 w-6 text-primary' />
-                    </div>
-                    <h3 className='text-xl font-semibold text-foreground'>
-                      {area.title}
-                    </h3>
-                  </div>
-                  <p className='text-muted-foreground mb-4'>
-                    {area.description}
-                  </p>
-                  <div className='grid grid-cols-2 gap-2'>
-                    {area.applications.map((app, appIndex) => (
-                      <div key={appIndex} className='flex items-center'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2'></div>
-                        <span className='text-muted-foreground text-sm'>
-                          {app}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className='mb-16'>
-          <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Equipment & Technology
-          </h2>
-          <Card className='p-8'>
-            <CardContent>
-              <div className='grid md:grid-cols-2 gap-6'>
-                {equipmentTypes.map((equipment, index) => (
-                  <div key={index} className='flex items-center'>
-                    <CheckCircle className='h-5 w-5 text-primary mr-3 flex-shrink-0' />
-                    <span className='text-muted-foreground'>{equipment}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className='mb-16'>
-          <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Industry Standards
-          </h2>
-          <div className='grid md:grid-cols-2 gap-6'>
-            {industryStandards.map((standard, index) => (
-              <Card key={index} className='p-6'>
-                <CardContent>
-                  <h3 className='text-lg font-semibold text-foreground mb-2'>
-                    {standard.standard}
-                  </h3>
-                  <p className='text-muted-foreground text-sm'>
-                    {standard.description}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div className='mb-16'>
-          <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Certification Benefits
+            Course Benefits
           </h2>
           <div className='grid md:grid-cols-2 gap-6'>
             {benefits.map((benefit, index) => (
@@ -301,6 +165,141 @@ const InfraredThermography = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Learning Outcomes
+          </h2>
+          <Card className='p-8'>
+            <CardContent>
+              <div className='grid md:grid-cols-2 gap-6'>
+                {learningOutcomes.map((outcome, index) => (
+                  <div key={index} className='flex items-start'>
+                    <CheckCircle className='h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0' />
+                    <span className='text-muted-foreground'>{outcome}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Course Modules
+          </h2>
+          <div className='space-y-8'>
+            {courseModules.map((module, index) => (
+              <Card key={index} className='p-8'>
+                <CardContent>
+                  <div className='grid lg:grid-cols-3 gap-8'>
+                    <div>
+                      <div className='flex items-center mb-4'>
+                        <div className='w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center mr-4'>
+                          <span className='text-primary-foreground font-bold text-lg'>
+                            {index + 1}
+                          </span>
+                        </div>
+                        <div>
+                          <h3 className='text-xl font-bold text-foreground'>
+                            {module.module}
+                          </h3>
+                          <p className='text-primary font-medium'>
+                            {module.duration}
+                          </p>
+                        </div>
+                      </div>
+                      <p className='text-muted-foreground mb-4'>
+                        {module.description}
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className='font-semibold text-foreground mb-3'>
+                        Key Topics
+                      </h4>
+                      <ul className='space-y-2'>
+                        {module.topics.map((topic, topicIndex) => (
+                          <li key={topicIndex} className='flex items-center'>
+                            <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
+                            <span className='text-muted-foreground'>{topic}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className='font-semibold text-foreground mb-3'>
+                        Skills Developed
+                      </h4>
+                      <ul className='space-y-2'>
+                        <li className='flex items-start'>
+                          <CheckCircle className='h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0' />
+                          <span className='text-muted-foreground text-sm'>
+                            Practical lubricant analysis skills
+                          </span>
+                        </li>
+                        <li className='flex items-start'>
+                          <CheckCircle className='h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0' />
+                          <span className='text-muted-foreground text-sm'>
+                            Contamination control techniques
+                          </span>
+                        </li>
+                        <li className='flex items-start'>
+                          <CheckCircle className='h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0' />
+                          <span className='text-muted-foreground text-sm'>
+                            Lubricant selection expertise
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Practical Skills Developed
+          </h2>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            {practicalSkills.map((skill, index) => (
+              <Card key={index} className='p-6 text-center'>
+                <CardContent>
+                  <div className='w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4'>
+                    <skill.icon className='h-8 w-8 text-primary' />
+                  </div>
+                  <h3 className='text-lg font-semibold text-foreground mb-3'>
+                    {skill.title}
+                  </h3>
+                  <p className='text-muted-foreground text-sm'>
+                    {skill.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Test Methods Covered
+          </h2>
+          <Card className='p-8'>
+            <CardContent>
+              <div className='grid md:grid-cols-2 gap-6'>
+                {testMethods.map((method, index) => (
+                  <div key={index} className='flex items-center'>
+                    <CheckCircle className='h-5 w-5 text-primary mr-3 flex-shrink-0' />
+                    <span className='text-muted-foreground'>{method}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className='mb-16'>
@@ -325,89 +324,89 @@ const InfraredThermography = () => {
 
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-foreground mb-8'>
-            REA Training Program
+            REA MLA Level I Training Program
           </h2>
           <Card className='bg-gradient-to-br from-primary/5 to-primary/10 p-12'>
             <CardContent>
               <div className='grid lg:grid-cols-2 gap-12'>
                 <div>
                   <h3 className='text-2xl font-bold text-foreground mb-6'>
-                    Professional Thermography Training
+                    Comprehensive Lubricant Analysis Training
                   </h3>
                   <p className='text-lg text-muted-foreground mb-6'>
-                    Our program combines classroom instruction with extensive
-                    hands-on practice using professional-grade thermal imaging
-                    equipment and real-world inspection scenarios.
+                    Our MLA Level I program combines theoretical knowledge with
+                    extensive hands-on laboratory practice using industry-standard
+                    testing equipment. Participants gain practical experience in
+                    lubricant analysis that they can immediately apply in their
+                    workplace.
                   </p>
                   <p className='text-lg text-muted-foreground mb-6'>
                     <strong>Lead Instructor:</strong> KVK Subramaniyam Naidu -
-                    Certified Level III thermographer with 15+ years of
-                    experience.
+                    Certified lubricant analyst with 20+ years of experience in
+                    oil analysis and contamination control.
                   </p>
                   <ul className='space-y-3'>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        Hands-on training with thermal cameras
+                        Hands-on laboratory training
                       </span>
                     </li>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        Real-world inspection scenarios
+                        Industry-standard testing equipment
                       </span>
                     </li>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        Professional analysis software training
+                        Real-world case studies and examples
                       </span>
                     </li>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        ASNT certification exam preparation
+                        ISO 18436-4 exam preparation
                       </span>
                     </li>
                   </ul>
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>
-                      Training Equipment
-                    </CardTitle>
+                    <CardTitle className='text-xl'>Laboratory Equipment</CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        Thermal Cameras
+                        Viscosity Testers
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Professional-grade thermal imaging systems
+                        Kinematic and dynamic viscosity measurement
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        Analysis Software
+                        Particle Counters
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Industry-standard thermal analysis tools
+                        Automated particle counting and analysis
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        Test Targets
+                        Water Content Analyzers
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Electrical panels, motors, and mechanical systems
+                        Karl Fischer titration and other methods
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        Calibration Sources
+                        Chemical Analysis
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Blackbody sources and reference standards
+                        Acid number, base number, and other tests
                       </p>
                     </div>
                   </CardContent>
@@ -419,11 +418,13 @@ const InfraredThermography = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>See Beyond the Visible</h2>
+            <h2 className='text-3xl font-bold mb-4'>
+              Master Lubricant Analysis
+            </h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
-              Master the art of thermal imaging and become a certified
-              thermographer capable of detecting problems invisible to the naked
-              eye.
+              Join thousands of professionals who have mastered lubricant
+              analysis and optimized their lubrication programs for better
+              equipment reliability and cost savings.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>
@@ -431,7 +432,7 @@ const InfraredThermography = () => {
                   size='lg'
                   className='bg-primary-foreground text-primary hover:bg-primary-foreground/90'
                 >
-                  Enroll in Program
+                  Enroll in MLA Level I Course
                 </Button>
               </Link>
               <Link href='/contact'>
@@ -451,4 +452,4 @@ const InfraredThermography = () => {
   );
 };
 
-export default InfraredThermography;
+export default MLALevel1;

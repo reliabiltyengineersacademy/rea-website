@@ -71,9 +71,9 @@ export default function Header() {
           : 'bg-transparent border-b-0'
       )}
     >
-      <div className='xl:container px-4 flex h-16 items-center justify-between'>
-        <div className='mr-4 flex'>
-          <Link href='/' className='mr-6'>
+      <div className='xl:container px-4 flex h-20 items-center justify-between'>
+        <div className='mr-6 flex'>
+          <Link href='/' className='mr-8'>
             <Image
               priority
               width={282}
@@ -81,7 +81,7 @@ export default function Header() {
               src='/logo-transparent.png'
               alt='Reliability Engineers Academy'
               className={cn(
-                'h-10 w-auto transition-all duration-300',
+                'h-14 w-auto transition-all duration-300',
                 isScrolled
                   ? 'brightness-100 dark:brightness-0 dark:invert'
                   : 'brightness-0 invert'
@@ -186,9 +186,9 @@ export default function Header() {
                     <Image
                       src='/logo-transparent.png'
                       alt='Reliability Engineers Academy'
-                      width={80}
-                      height={32}
-                      className='h-8 w-auto'
+                      width={120}
+                      height={48}
+                      className='h-10 w-auto'
                     />
                   </div>
                   <Button

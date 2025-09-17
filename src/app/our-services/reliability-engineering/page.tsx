@@ -10,7 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function ReliabilityEngineeringPage() {
   return (
-    <div className='pt-20 min-h-screen bg-background'>
+    <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100 dark:from-blue-900 dark:via-blue-800 dark:to-blue-900 text-foreground'>
         <Container className='py-20'>
           <div className='text-center max-w-4xl mx-auto'>

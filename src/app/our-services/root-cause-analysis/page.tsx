@@ -11,7 +11,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function RootCauseAnalysisPage() {
   return (
-    <div className='pt-20 min-h-screen bg-background'>
+    <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100 dark:from-purple-900 dark:via-purple-800 dark:to-purple-900 text-foreground'>
         <Container className='py-20'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>

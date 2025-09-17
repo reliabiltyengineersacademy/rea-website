@@ -66,6 +66,76 @@ export const navigation = [
           'Explore all our certification programs and training courses',
       },
       {
+        name: 'RCM2 Introductory Course',
+        href: '/programs/rcm2-introductory',
+        description: 'Master the fundamentals of Reliability Centered Maintenance',
+      },
+      {
+        name: 'RCM2 Facilitator Training',
+        href: '/programs/rcm2-facilitator',
+        description: 'Become a certified RCM2 facilitator and program leader',
+      },
+      {
+        name: 'Vibration Training CAT I',
+        href: '/programs/vibration-cat1',
+        description: 'ISO 18436-2 Category I Vibration Analysis Certification',
+      },
+      {
+        name: 'Vibration Training CAT II',
+        href: '/programs/vibration-cat2',
+        description: 'ISO 18436-2 Category II Advanced Vibration Analysis',
+      },
+      {
+        name: 'MLA Level I Training',
+        href: '/programs/mla-level1',
+        description: 'ISO 18436-4 Machine Lubricant Analyst Level I',
+      },
+      {
+        name: 'MLA Level II Training',
+        href: '/programs/mla-level2',
+        description: 'ISO 18436-4 Machine Lubricant Analyst Level II',
+      },
+      {
+        name: 'MCA Level I Training',
+        href: '/programs/mca-level1',
+        description: 'Motor Circuit Analysis & Electrical Signature Analysis Level I',
+      },
+      {
+        name: 'CBM Basic Level',
+        href: '/programs/cbm-basic',
+        description: 'Condition Based Maintenance for Plant Assets - Basic Level',
+      },
+      {
+        name: 'ARP-A Certification',
+        href: '/programs/arp-advocate',
+        description: 'Asset Reliability Practitioner - Advocate',
+      },
+      {
+        name: 'ARP-E Certification',
+        href: '/programs/arp-engineer',
+        description: 'Asset Reliability Practitioner - Engineer',
+      },
+      {
+        name: 'Balancing & Alignment',
+        href: '/programs/balancing-alignment',
+        description: 'Precision balancing and alignment techniques for rotating equipment',
+      },
+      {
+        name: 'TÜV Functional Safety',
+        href: '/programs/tuv-functional-safety',
+        description: 'TÜV RHEINLAND Functional Safety Training Program',
+      },
+      {
+        name: 'MCA Level II Training',
+        href: '/programs/mca-level2',
+        description: 'Motor Circuit Analysis & Electrical Signature Analysis Level II',
+      },
+      {
+        name: 'Rotating Equipment Course',
+        href: '/programs/rotating-equipment',
+        description: 'Operation & Maintenance Of Main Rotating Equipment Course',
+      },
+      {
         name: 'Vibration Analysis',
         href: '/programs/vibration',
         description: 'ISO 18436 Certified Vibration Analysis Program',

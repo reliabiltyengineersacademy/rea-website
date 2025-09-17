@@ -6,8 +6,11 @@ import {
   BookOpen,
   ArrowRight,
   Wrench,
+  ExternalLink,
+  Handshake,
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import {
   benefits,
@@ -15,13 +18,14 @@ import {
   examTopics,
   practicalSkills,
 } from '@/constants/programs/cmrtCertification';
+import { raseCourses, raseInfo } from '@/constants/programs/rasePartnerCourses';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const CMRTCertification = () => {
   return (
-    <div className='pt-20 min-h-screen bg-background'>
+    <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-primary to-primary/80 text-primary-foreground'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -56,7 +60,7 @@ const CMRTCertification = () => {
                 <Button
                   variant='outline'
                   size='lg'
-                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4'
+                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 bg-transparent'
                 >
                   Download Brochure
                 </Button>
@@ -366,6 +370,108 @@ const CMRTCertification = () => {
           </Card>
         </div>
 
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Partner Training Programs
+          </h2>
+          <Card className='bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 p-8 mb-8'>
+            <CardContent>
+              <div className='flex items-start mb-6'>
+                <div className='relative w-16 h-16 mr-6 flex-shrink-0'>
+                  <Image
+                    src='/rase-logo.png'
+                    alt='RASE Technical Training Centre Logo'
+                    fill
+                    className='object-contain'
+                  />
+                </div>
+                <div className='flex-1'>
+                  <h3 className='text-xl font-bold text-foreground mb-2'>
+                    {raseInfo.name}
+                  </h3>
+                  <p className='text-muted-foreground mb-4'>
+                    {raseInfo.description}
+                  </p>
+                  <div className='flex items-center text-blue-600 dark:text-blue-400'>
+                    <ExternalLink className='h-4 w-4 mr-2' />
+                    <a 
+                      href={raseInfo.website} 
+                      target='_blank' 
+                      rel='noopener noreferrer'
+                      className='hover:underline font-medium'
+                    >
+                      Visit RASE Training Center
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                {raseInfo.benefits.map((benefit, index) => (
+                  <div key={index} className='flex items-center'>
+                    <CheckCircle className='h-4 w-4 text-blue-600 dark:text-blue-400 mr-2 flex-shrink-0' />
+                    <span className='text-sm text-muted-foreground'>{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {raseCourses.map((course, index) => (
+              <Card key={index} className='p-6 hover:shadow-lg transition-shadow'>
+                <CardContent>
+                  <div className='flex items-start justify-between mb-4'>
+                    <div className='w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4'>
+                      <course.icon className='h-6 w-6 text-primary' />
+                    </div>
+                    <div className='flex flex-col items-end'>
+                      <Badge variant='secondary' className='mb-2'>
+                        {course.level}
+                      </Badge>
+                      <span className='text-sm text-muted-foreground'>
+                        {course.duration}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <h3 className='text-lg font-semibold text-foreground mb-3 line-clamp-2'>
+                    {course.title}
+                  </h3>
+                  
+                  <p className='text-muted-foreground text-sm mb-4 line-clamp-3'>
+                    {course.description}
+                  </p>
+                  
+                  <div className='space-y-2 mb-4'>
+                    {course.features.slice(0, 3).map((feature, featureIndex) => (
+                      <div key={featureIndex} className='flex items-center'>
+                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0'></div>
+                        <span className='text-xs text-muted-foreground'>{feature}</span>
+                      </div>
+                    ))}
+                    {course.features.length > 3 && (
+                      <div className='text-xs text-muted-foreground'>
+                        +{course.features.length - 3} more features
+                      </div>
+                    )}
+                  </div>
+                  
+                  <a
+                    href={course.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm'
+                  >
+                    Learn More
+                    <ExternalLink className='h-3 w-3 ml-1' />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
             <h2 className='text-3xl font-bold mb-4'>
@@ -389,7 +495,7 @@ const CMRTCertification = () => {
                 <Button
                   variant='outline'
                   size='lg'
-                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary'
+                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent'
                 >
                   Contact Us
                 </Button>

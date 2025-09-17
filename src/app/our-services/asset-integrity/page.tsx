@@ -7,7 +7,7 @@ import { services, standards } from '@/constants/our-services/asssetIntegrity';
 
 export default function AssetIntegrityPage() {
   return (
-    <div className='pt-20 min-h-screen bg-background'>
+    <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-orange-100 via-orange-200 to-orange-100 dark:from-orange-900 dark:via-orange-800 dark:to-orange-900 text-foreground'>
         <Container className='py-20'>
           <div className='text-center max-w-4xl mx-auto'>

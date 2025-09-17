@@ -20,7 +20,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const CMRPCertification = () => {
   return (
-    <div className='pt-20 min-h-screen bg-background'>
+    <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-primary to-primary/80 text-primary-foreground'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -55,7 +55,7 @@ const CMRPCertification = () => {
                 <Button
                   variant='outline'
                   size='lg'
-                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4'
+                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 bg-transparent'
                 >
                   Download Brochure
                 </Button>
@@ -345,7 +345,7 @@ const CMRPCertification = () => {
                 <Button
                   variant='outline'
                   size='lg'
-                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary'
+                  className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent'
                 >
                   Contact Us
                 </Button>

@@ -21,8 +21,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className='-mt-16 relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 min-h-dvh flex items-center overflow-hidden'>
-      <Container className='relative z-10 mt-16 py-8'>
+    <section className='-mt-20 relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 min-h-dvh flex items-center overflow-hidden'>
+      <Container className='relative z-10 mt-20 py-8'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
           <div className='text-primary-foreground'>
             <div className='inline-flex items-center bg-primary-foreground/10 rounded-full px-4 py-2 mb-6 backdrop-blur-sm border border-primary-foreground/20'>

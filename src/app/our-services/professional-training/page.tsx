@@ -11,7 +11,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function ProfessionalTrainingPage() {
   return (
-    <div className='pt-20 min-h-screen bg-background'>
+    <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-indigo-100 via-indigo-200 to-indigo-100 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-900 text-foreground'>
         <Container className='py-20'>
           <div className='text-center max-w-4xl mx-auto'>
