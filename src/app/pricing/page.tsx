@@ -42,7 +42,7 @@ export default function PricingPage() {
       </section>
 
       <section className='py-20'>
-        <Container>
+        <Container className='flex flex-col gap-8'>
           <div className='w-full flex flex-col items-center gap-6 text-center'>
             <div className='text-center'>
               <h2 className='text-3xl font-bold text-foreground mb-4'>
@@ -54,7 +54,7 @@ export default function PricingPage() {
               </p>
             </div>
 
-            <div className='flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 mt-8 w-full'>
+            <div className='flex flex-col md:flex-row items-center md:items-stretch justify-center gap-6 w-full'>
               {plans.map((plan) => (
                 <Card
                   key={plan.id}

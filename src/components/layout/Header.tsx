@@ -17,7 +17,6 @@ import {
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { navigation } from '@/constants/navigation';
-import ThemeToggle from '@/components/layout/ThemeToggle';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const ListItem = ({
@@ -71,9 +70,9 @@ export default function Header() {
           : 'bg-transparent border-b-0'
       )}
     >
-      <div className='xl:container px-4 flex h-20 items-center justify-between'>
-        <div className='mr-6 flex'>
-          <Link href='/' className='mr-8'>
+      <div className='xl:container px-4 flex h-16 items-center justify-between'>
+        <div className='mr-4 flex'>
+          <Link href='/' className='mr-6'>
             <Image
               priority
               width={282}
@@ -81,7 +80,7 @@ export default function Header() {
               src='/logo-transparent.png'
               alt='Reliability Engineers Academy'
               className={cn(
-                'h-14 w-auto transition-all duration-300',
+                'h-12 md:h-14 w-auto transition-all duration-300',
                 isScrolled
                   ? 'brightness-100 dark:brightness-0 dark:invert'
                   : 'brightness-0 invert'
@@ -151,17 +150,6 @@ export default function Header() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-
-          <div className='hidden lg:flex items-center'>
-            <div
-              className={cn(
-                'transition-colors duration-300',
-                isScrolled ? 'text-foreground' : 'text-white'
-              )}
-            >
-              <ThemeToggle />
-            </div>
-          </div>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className='lg:hidden'>
@@ -253,18 +241,6 @@ export default function Header() {
                       </div>
                     ))}
                   </nav>
-                </div>
-
-                <div className='border-t p-6 space-y-4'>
-                  <div className='flex items-center justify-between'>
-                    <span className='text-sm font-medium text-foreground'>
-                      Theme
-                    </span>
-                    <ThemeToggle />
-                  </div>
-                  <div className='text-xs text-muted-foreground text-center'>
-                    © 2025 Reliability Engineers Academy
-                  </div>
                 </div>
               </div>
             </SheetContent>

@@ -147,7 +147,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning className='antialiased'>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className='antialiased'
+      data-scroll-behavior='smooth'
+    >
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} ${sourceSerif4.variable} min-h-screen bg-background text-foreground`}
       >

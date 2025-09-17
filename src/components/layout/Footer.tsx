@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import NewsletterSubscription from '@/components/ui/newsletter-subscription';
+import ThemeToggle from '@/components/layout/ThemeToggle';
 
 export default function Footer() {
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
                 alt='Reliability Engineers Academy'
                 width={120}
                 height={48}
-                className='h-12 w-auto mb-4'
+                className='h-12 md:h-14 w-auto mb-4 brightness-100 dark:brightness-0 dark:invert'
               />
               <p className='text-muted-foreground leading-relaxed'>
                 Empowering engineers and organizations with world-class
@@ -124,25 +125,31 @@ export default function Footer() {
           <div className='text-muted-foreground text-sm mb-4 md:mb-0'>
             © 2025 Reliability Engineers Academy. All rights reserved.
           </div>
-          <div className='flex space-x-6 text-sm'>
-            <Link
-              href='#privacy'
-              className='text-muted-foreground hover:text-primary transition-colors'
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href='#terms'
-              className='text-muted-foreground hover:text-primary transition-colors'
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href='#cookies'
-              className='text-muted-foreground hover:text-primary transition-colors'
-            >
-              Cookie Policy
-            </Link>
+          <div className='flex items-center space-x-6'>
+            <div className='flex space-x-6 text-sm'>
+              <Link
+                href='#privacy'
+                className='text-muted-foreground hover:text-primary transition-colors'
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href='#terms'
+                className='text-muted-foreground hover:text-primary transition-colors'
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href='#cookies'
+                className='text-muted-foreground hover:text-primary transition-colors'
+              >
+                Cookie Policy
+              </Link>
+            </div>
+            <div className='flex items-center space-x-2'>
+              <span className='text-sm text-muted-foreground'>Theme:</span>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>

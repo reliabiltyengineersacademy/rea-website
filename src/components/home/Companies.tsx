@@ -88,9 +88,9 @@ export default function Companies({
                 <Image
                   src={logo.src}
                   alt={logo.name}
-                  width={128}
-                  height={64}
-                  className='max-h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300'
+                  width={100}
+                  height={100}
+                  className='h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300'
                   style={{
                     filter: 'grayscale(100%)',
                   }}
@@ -106,9 +106,9 @@ export default function Companies({
                 <Image
                   src={logo.src}
                   alt={logo.name}
-                  width={128}
-                  height={64}
-                  className='max-h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300'
+                  width={100}
+                  height={100}
+                  className='h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300'
                   style={{
                     filter: 'grayscale(100%)',
                   }}
