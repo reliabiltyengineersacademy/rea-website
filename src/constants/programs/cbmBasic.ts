@@ -1,4 +1,4 @@
-import { Wrench, CheckCircle, Users, BookOpen, Award, Settings, Activity } from 'lucide-react';
+import { Wrench, BookOpen, Settings, Activity } from 'lucide-react';
 
 export const benefits = [
   'Comprehensive understanding of condition-based maintenance principles',
@@ -12,7 +12,8 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Maintenance Technicians',
-    description: 'Technicians responsible for equipment monitoring and maintenance',
+    description:
+      'Technicians responsible for equipment monitoring and maintenance',
   },
   {
     title: 'Maintenance Engineers',
@@ -25,64 +26,6 @@ export const targetAudience = [
   {
     title: 'Reliability Engineers',
     description: 'Engineers focused on equipment reliability and performance',
-  },
-];
-
-export const courseModules = [
-  {
-    module: 'Module 1: CBM Fundamentals',
-    duration: '8 hours',
-    description: 'Basic principles of condition-based maintenance',
-    topics: [
-      'CBM concepts and benefits',
-      'Maintenance strategies comparison',
-      'Failure modes and patterns',
-      'CBM program planning',
-    ],
-  },
-  {
-    module: 'Module 2: Condition Monitoring Techniques',
-    duration: '12 hours',
-    description: 'Various condition monitoring methods and technologies',
-    topics: [
-      'Vibration monitoring',
-      'Thermal analysis',
-      'Oil analysis',
-      'Electrical testing',
-    ],
-  },
-  {
-    module: 'Module 3: Data Collection and Analysis',
-    duration: '10 hours',
-    description: 'Collecting and analyzing condition monitoring data',
-    topics: [
-      'Data collection procedures',
-      'Trending and analysis',
-      'Alarm setting and management',
-      'Data interpretation',
-    ],
-  },
-  {
-    module: 'Module 4: CBM Implementation',
-    duration: '8 hours',
-    description: 'Implementing CBM programs in plant environments',
-    topics: [
-      'Program planning and setup',
-      'Team training and development',
-      'Equipment selection and prioritization',
-      'Cost-benefit analysis',
-    ],
-  },
-  {
-    module: 'Module 5: Maintenance Integration',
-    duration: '6 hours',
-    description: 'Integrating CBM with other maintenance activities',
-    topics: [
-      'Work order integration',
-      'Scheduling and planning',
-      'Documentation and reporting',
-      'Continuous improvement',
-    ],
   },
 ];
 

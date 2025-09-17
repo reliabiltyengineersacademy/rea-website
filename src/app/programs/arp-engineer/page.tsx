@@ -6,16 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Target,
-  Settings,
-  TrendingUp,
-  BarChart,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   certificationDetails,
   learningOutcomes,
@@ -115,9 +111,8 @@ const ARPEngineer = () => {
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will master advanced reliability analysis
                 techniques, program design, team leadership, and optimization
-                strategies. This certification prepares you for senior roles
-                in reliability engineering and opens doors to management
-                positions.
+                strategies. This certification prepares you for senior roles in
+                reliability engineering and opens doors to management positions.
               </p>
             </div>
             <Card className='p-8'>
@@ -231,12 +226,11 @@ const ARPEngineer = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>
-              Advance to Expert Level
-            </h2>
+            <h2 className='text-3xl font-bold mb-4'>Advance to Expert Level</h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
               Take your reliability engineering skills to the next level and
-              become a recognized expert in asset reliability and program management.
+              become a recognized expert in asset reliability and program
+              management.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>

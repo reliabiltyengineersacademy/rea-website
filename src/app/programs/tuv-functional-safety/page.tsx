@@ -6,15 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Shield,
-  Settings,
-  AlertTriangle,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   certificationDetails,
   learningOutcomes,
@@ -42,8 +39,9 @@ const TUVFunctionalSafety = () => {
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
                 Master functional safety principles and earn internationally
-                recognized TÜV RHEINLAND certification. Learn to design, implement,
-                and manage functional safety systems for critical applications.
+                recognized TÜV RHEINLAND certification. Learn to design,
+                implement, and manage functional safety systems for critical
+                applications.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -105,16 +103,17 @@ const TUVFunctionalSafety = () => {
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
                 The TÜV RHEINLAND Functional Safety Training Program provides
-                comprehensive training in functional safety principles, standards,
-                and implementation. This course is designed for safety engineers,
-                process engineers, and project managers who need to understand
-                and implement functional safety systems.
+                comprehensive training in functional safety principles,
+                standards, and implementation. This course is designed for
+                safety engineers, process engineers, and project managers who
+                need to understand and implement functional safety systems.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will learn to design safety instrumented systems,
-                conduct risk assessments, and ensure compliance with international
-                safety standards. This certification is internationally recognized
-                and opens doors to senior safety engineering roles.
+                conduct risk assessments, and ensure compliance with
+                international safety standards. This certification is
+                internationally recognized and opens doors to senior safety
+                engineering roles.
               </p>
             </div>
             <Card className='p-8'>

@@ -6,8 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Zap,
-  Settings,
-  TrendingUp,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -42,9 +40,10 @@ const VibrationCat1 = () => {
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Master the fundamentals of vibration analysis with our ISO 18436-2
-                Category I certification program. Learn to collect data, identify
-                basic faults, and start your journey in predictive maintenance.
+                Master the fundamentals of vibration analysis with our ISO
+                18436-2 Category I certification program. Learn to collect data,
+                identify basic faults, and start your journey in predictive
+                maintenance.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -222,7 +221,9 @@ const VibrationCat1 = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -435,7 +436,9 @@ const VibrationCat1 = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Training Equipment</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Training Equipment
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>

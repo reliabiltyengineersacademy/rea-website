@@ -6,8 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Droplets,
-  Settings,
-  Microscope,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -32,9 +30,7 @@ const MLALevel1 = () => {
             <div>
               <div className='inline-flex items-center bg-primary-foreground/20 rounded-full px-4 py-2 mb-6'>
                 <Droplets className='h-5 w-5 mr-2' />
-                <span className='text-sm font-medium'>
-                  ISO 18436-4 Level I
-                </span>
+                <span className='text-sm font-medium'>ISO 18436-4 Level I</span>
               </div>
 
               <h1 className='text-4xl lg:text-5xl font-bold mb-6'>
@@ -42,9 +38,10 @@ const MLALevel1 = () => {
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Master the fundamentals of lubricant analysis with our ISO 18436-4
-                Level I certification program. Learn to perform basic oil analysis,
-                identify contamination, and optimize lubrication programs.
+                Master the fundamentals of lubricant analysis with our ISO
+                18436-4 Level I certification program. Learn to perform basic
+                oil analysis, identify contamination, and optimize lubrication
+                programs.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -105,11 +102,11 @@ const MLALevel1 = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                The Machine Lubricant Analyst Level I program provides fundamental
-                training in lubricant analysis and contamination control. This
-                course is designed for maintenance technicians, lubrication
-                specialists, and entry-level analysts who need to understand
-                basic oil analysis principles and techniques.
+                The Machine Lubricant Analyst Level I program provides
+                fundamental training in lubricant analysis and contamination
+                control. This course is designed for maintenance technicians,
+                lubrication specialists, and entry-level analysts who need to
+                understand basic oil analysis principles and techniques.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will learn to perform basic oil analysis tests,
@@ -223,7 +220,9 @@ const MLALevel1 = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -335,10 +334,10 @@ const MLALevel1 = () => {
                   </h3>
                   <p className='text-lg text-muted-foreground mb-6'>
                     Our MLA Level I program combines theoretical knowledge with
-                    extensive hands-on laboratory practice using industry-standard
-                    testing equipment. Participants gain practical experience in
-                    lubricant analysis that they can immediately apply in their
-                    workplace.
+                    extensive hands-on laboratory practice using
+                    industry-standard testing equipment. Participants gain
+                    practical experience in lubricant analysis that they can
+                    immediately apply in their workplace.
                   </p>
                   <p className='text-lg text-muted-foreground mb-6'>
                     <strong>Lead Instructor:</strong> KVK Subramaniyam Naidu -
@@ -374,7 +373,9 @@ const MLALevel1 = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Laboratory Equipment</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Laboratory Equipment
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>

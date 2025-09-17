@@ -6,16 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Zap,
-  Settings,
-  Activity,
-  BarChart,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   advancedTestMethods,
   certificationDetails,
@@ -262,8 +258,8 @@ const MCALevel2 = () => {
                     Our MCA Level II program provides comprehensive advanced
                     training in complex electrical analysis, program management,
                     and team leadership. Participants work with sophisticated
-                    equipment and real-world case studies to develop expert-level
-                    capabilities.
+                    equipment and real-world case studies to develop
+                    expert-level capabilities.
                   </p>
                   <p className='text-lg text-muted-foreground mb-6'>
                     <strong>Lead Instructor:</strong> KVK Subramaniyam Naidu -
@@ -299,7 +295,9 @@ const MCALevel2 = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Advanced Training Features</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Advanced Training Features
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -315,7 +313,8 @@ const MCALevel2 = () => {
                         Complex Motors
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Training on large motors, generators, and complex systems
+                        Training on large motors, generators, and complex
+                        systems
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -343,12 +342,11 @@ const MCALevel2 = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>
-              Advance to Expert Level
-            </h2>
+            <h2 className='text-3xl font-bold mb-4'>Advance to Expert Level</h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
               Take your motor circuit analysis skills to the next level and
-              become a recognized expert in electrical diagnostics and program management.
+              become a recognized expert in electrical diagnostics and program
+              management.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>

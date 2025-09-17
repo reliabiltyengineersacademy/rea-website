@@ -6,8 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Target,
-  Settings,
-  TrendingUp,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -222,7 +220,9 @@ const ARPAdvocate = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>

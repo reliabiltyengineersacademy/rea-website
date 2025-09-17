@@ -6,9 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Zap,
-  Settings,
-  TrendingUp,
-  BarChart,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -44,8 +41,8 @@ const VibrationCat2 = () => {
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
                 Advance your vibration analysis expertise with our ISO 18436-2
-                Category II certification program. Master complex fault diagnosis,
-                program leadership, and advanced analysis techniques.
+                Category II certification program. Master complex fault
+                diagnosis, program leadership, and advanced analysis techniques.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -106,11 +103,11 @@ const VibrationCat2 = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                The Vibration Training Category II program builds upon Category I
-                knowledge to provide advanced skills in vibration analysis and
-                fault diagnosis. This course is designed for experienced analysts
-                who need to handle complex machinery problems and lead vibration
-                analysis programs.
+                The Vibration Training Category II program builds upon Category
+                I knowledge to provide advanced skills in vibration analysis and
+                fault diagnosis. This course is designed for experienced
+                analysts who need to handle complex machinery problems and lead
+                vibration analysis programs.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will master advanced analysis techniques, complex
@@ -223,7 +220,9 @@ const VibrationCat2 = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -436,7 +435,9 @@ const VibrationCat2 = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Advanced Training Features</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Advanced Training Features
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -480,12 +481,10 @@ const VibrationCat2 = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>
-              Advance to Expert Level
-            </h2>
+            <h2 className='text-3xl font-bold mb-4'>Advance to Expert Level</h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
-              Take your vibration analysis skills to the next level and become
-              a recognized expert in predictive maintenance and machinery
+              Take your vibration analysis skills to the next level and become a
+              recognized expert in predictive maintenance and machinery
               diagnostics.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

@@ -6,7 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Wrench,
-  Settings,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -40,9 +39,9 @@ const RCM2Introductory = () => {
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Master the fundamentals of Reliability Centered Maintenance (RCM2)
-                methodology. Learn to develop effective maintenance strategies
-                that optimize equipment reliability and reduce costs.
+                Master the fundamentals of Reliability Centered Maintenance
+                (RCM2) methodology. Learn to develop effective maintenance
+                strategies that optimize equipment reliability and reduce costs.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -86,7 +85,9 @@ const RCM2Introductory = () => {
                   </div>
                   <div className='text-center'>
                     <div className='text-3xl font-bold mb-2'>95%</div>
-                    <div className='text-primary-foreground/80'>Success Rate</div>
+                    <div className='text-primary-foreground/80'>
+                      Success Rate
+                    </div>
                   </div>
                 </div>
               </div>
@@ -104,15 +105,15 @@ const RCM2Introductory = () => {
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
                 The RCM2 Introductory Course provides comprehensive training in
-                the world's most widely used maintenance strategy development
-                methodology. RCM2 helps organizations optimize their maintenance
-                programs by focusing on the most critical failure modes and
-                selecting the most effective maintenance tasks.
+                the world&apos;s most widely used maintenance strategy
+                development methodology. RCM2 helps organizations optimize their
+                maintenance programs by focusing on the most critical failure
+                modes and selecting the most effective maintenance tasks.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 This course combines theoretical knowledge with practical
                 exercises, enabling participants to immediately apply RCM2
-                principles in their workplace. You'll learn to develop
+                principles in their workplace. You&apos;ll learn to develop
                 cost-effective maintenance strategies that improve equipment
                 reliability and reduce unplanned downtime.
               </p>
@@ -203,7 +204,9 @@ const RCM2Introductory = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -315,10 +318,10 @@ const RCM2Introductory = () => {
                   </h3>
                   <p className='text-lg text-muted-foreground mb-6'>
                     Our RCM2 Introductory Course is designed by industry experts
-                    and provides hands-on experience with real-world applications.
-                    Participants work through actual case studies and develop
-                    practical skills they can immediately apply in their
-                    workplace.
+                    and provides hands-on experience with real-world
+                    applications. Participants work through actual case studies
+                    and develop practical skills they can immediately apply in
+                    their workplace.
                   </p>
                   <p className='text-lg text-muted-foreground mb-6'>
                     <strong>Lead Instructor:</strong> KVK Subramaniyam Naidu -
@@ -398,13 +401,11 @@ const RCM2Introductory = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>
-              Master RCM2 Methodology
-            </h2>
+            <h2 className='text-3xl font-bold mb-4'>Master RCM2 Methodology</h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
               Join thousands of professionals who have mastered RCM2 and
-              transformed their maintenance strategies for better reliability and
-              cost optimization.
+              transformed their maintenance strategies for better reliability
+              and cost optimization.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>

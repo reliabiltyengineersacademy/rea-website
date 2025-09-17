@@ -1,4 +1,4 @@
-import { Award, CheckCircle, Users, BookOpen, Settings, Target, TrendingUp, BarChart } from 'lucide-react';
+import { Users, Settings, Target, BarChart } from 'lucide-react';
 
 export const benefits = [
   'Advanced understanding of asset reliability engineering principles',
@@ -28,69 +28,12 @@ export const targetAudience = [
   },
 ];
 
-export const courseModules = [
-  {
-    module: 'Module 1: Advanced Reliability Theory',
-    duration: '12 hours',
-    description: 'Advanced reliability engineering principles and methodologies',
-    topics: [
-      'Advanced reliability mathematics',
-      'Reliability modeling and simulation',
-      'Life cycle analysis',
-      'Reliability optimization',
-    ],
-  },
-  {
-    module: 'Module 2: Reliability Program Design',
-    duration: '16 hours',
-    description: 'Designing and implementing comprehensive reliability programs',
-    topics: [
-      'Program planning and strategy',
-      'Reliability standards and best practices',
-      'Technology selection and implementation',
-      'Performance measurement and improvement',
-    ],
-  },
-  {
-    module: 'Module 3: Advanced Analysis Techniques',
-    duration: '14 hours',
-    description: 'Sophisticated reliability analysis and optimization methods',
-    topics: [
-      'Advanced failure analysis',
-      'Reliability-centered maintenance (RCM)',
-      'Root cause analysis (RCA)',
-      'Reliability improvement techniques',
-    ],
-  },
-  {
-    module: 'Module 4: Program Management',
-    duration: '10 hours',
-    description: 'Managing reliability programs and teams effectively',
-    topics: [
-      'Team leadership and development',
-      'Project management for reliability',
-      'Change management and implementation',
-      'Continuous improvement strategies',
-    ],
-  },
-  {
-    module: 'Module 5: Specialized Applications',
-    duration: '8 hours',
-    description: 'Specialized reliability applications and industry-specific challenges',
-    topics: [
-      'Industry-specific reliability challenges',
-      'Emerging technologies and trends',
-      'Risk management and mitigation',
-      'Regulatory compliance and standards',
-    ],
-  },
-];
-
 export const practicalSkills = [
   {
     icon: Target,
     title: 'Program Design',
-    description: 'Designing and implementing comprehensive reliability programs',
+    description:
+      'Designing and implementing comprehensive reliability programs',
   },
   {
     icon: BarChart,

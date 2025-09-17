@@ -1,4 +1,4 @@
-import { Shield, CheckCircle, Users, BookOpen, Award, Settings, AlertTriangle } from 'lucide-react';
+import { Shield, BookOpen, Settings, AlertTriangle } from 'lucide-react';
 
 export const benefits = [
   'TÜV RHEINLAND internationally recognized functional safety certification',
@@ -12,7 +12,8 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Safety Engineers',
-    description: 'Engineers responsible for functional safety systems and risk management',
+    description:
+      'Engineers responsible for functional safety systems and risk management',
   },
   {
     title: 'Process Engineers',
@@ -20,7 +21,8 @@ export const targetAudience = [
   },
   {
     title: 'Maintenance Engineers',
-    description: 'Engineers responsible for safety-critical equipment maintenance',
+    description:
+      'Engineers responsible for safety-critical equipment maintenance',
   },
   {
     title: 'Project Managers',
@@ -28,69 +30,12 @@ export const targetAudience = [
   },
 ];
 
-export const courseModules = [
-  {
-    module: 'Module 1: Functional Safety Fundamentals',
-    duration: '12 hours',
-    description: 'Basic principles of functional safety and risk management',
-    topics: [
-      'Functional safety concepts and terminology',
-      'Risk assessment and hazard analysis',
-      'Safety lifecycle and management',
-      'International standards and regulations',
-    ],
-  },
-  {
-    module: 'Module 2: Safety Standards and Regulations',
-    duration: '10 hours',
-    description: 'Understanding safety standards and regulatory requirements',
-    topics: [
-      'IEC 61508 and IEC 61511 standards',
-      'ISO 13849 and ISO 14121 standards',
-      'Regional regulations and compliance',
-      'Certification and validation requirements',
-    ],
-  },
-  {
-    module: 'Module 3: Safety System Design',
-    duration: '14 hours',
-    description: 'Designing functional safety systems and safety instrumented systems',
-    topics: [
-      'Safety instrumented system (SIS) design',
-      'Safety integrity level (SIL) determination',
-      'Safety function specification',
-      'System architecture and redundancy',
-    ],
-  },
-  {
-    module: 'Module 4: Risk Assessment and Analysis',
-    duration: '12 hours',
-    description: 'Conducting risk assessments and safety analyses',
-    topics: [
-      'Hazard identification and analysis',
-      'Risk evaluation and classification',
-      'Layer of protection analysis (LOPA)',
-      'Fault tree and event tree analysis',
-    ],
-  },
-  {
-    module: 'Module 5: Implementation and Validation',
-    duration: '8 hours',
-    description: 'Implementing and validating functional safety systems',
-    topics: [
-      'System implementation and testing',
-      'Validation and verification procedures',
-      'Commissioning and startup',
-      'Ongoing maintenance and management',
-    ],
-  },
-];
-
 export const practicalSkills = [
   {
     icon: Shield,
     title: 'Safety System Design',
-    description: 'Designing functional safety systems and safety instrumented systems',
+    description:
+      'Designing functional safety systems and safety instrumented systems',
   },
   {
     icon: AlertTriangle,

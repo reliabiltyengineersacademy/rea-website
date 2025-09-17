@@ -1,4 +1,4 @@
-import { Droplets, CheckCircle, Users, BookOpen, Award, Settings, Microscope } from 'lucide-react';
+import { Droplets, BookOpen, Settings, Microscope } from 'lucide-react';
 
 export const benefits = [
   'ISO 18436-4 Machine Lubricant Analyst Level I certification',
@@ -12,15 +12,18 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Maintenance Technicians',
-    description: 'Technicians responsible for equipment lubrication and maintenance',
+    description:
+      'Technicians responsible for equipment lubrication and maintenance',
   },
   {
     title: 'Lubrication Specialists',
-    description: 'Specialists focused on lubrication programs and oil management',
+    description:
+      'Specialists focused on lubrication programs and oil management',
   },
   {
     title: 'Entry-Level Analysts',
-    description: 'New professionals starting their career in lubricant analysis',
+    description:
+      'New professionals starting their career in lubricant analysis',
   },
   {
     title: 'Plant Operators',

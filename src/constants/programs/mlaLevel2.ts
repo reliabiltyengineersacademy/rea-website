@@ -1,4 +1,4 @@
-import { Droplets, CheckCircle, Users, BookOpen, Award, Settings, Microscope, BarChart } from 'lucide-react';
+import { Droplets, Settings, Microscope, BarChart } from 'lucide-react';
 
 export const benefits = [
   'ISO 18436-4 Machine Lubricant Analyst Level II certification',
@@ -12,11 +12,13 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'MLA Level I Analysts',
-    description: 'Certified Level I analysts seeking advanced skills and certification',
+    description:
+      'Certified Level I analysts seeking advanced skills and certification',
   },
   {
     title: 'Lubrication Engineers',
-    description: 'Engineers responsible for lubrication programs and optimization',
+    description:
+      'Engineers responsible for lubrication programs and optimization',
   },
   {
     title: 'Senior Technicians',
@@ -25,64 +27,6 @@ export const targetAudience = [
   {
     title: 'Maintenance Managers',
     description: 'Managers overseeing lubrication programs and teams',
-  },
-];
-
-export const courseModules = [
-  {
-    module: 'Module 1: Advanced Lubricant Chemistry',
-    duration: '12 hours',
-    description: 'Advanced understanding of lubricant chemistry and formulation',
-    topics: [
-      'Advanced additive chemistry',
-      'Lubricant degradation mechanisms',
-      'Synthetic vs mineral oils',
-      'Lubricant compatibility and mixing',
-    ],
-  },
-  {
-    module: 'Module 2: Advanced Analysis Techniques',
-    duration: '16 hours',
-    description: 'Sophisticated analysis methods and interpretation',
-    topics: [
-      'Spectroscopic analysis (FTIR, ICP)',
-      'Advanced particle analysis',
-      'Wear debris analysis',
-      'Ferrography and microscopy',
-    ],
-  },
-  {
-    module: 'Module 3: Failure Analysis',
-    duration: '12 hours',
-    description: 'Diagnosing lubrication-related equipment failures',
-    topics: [
-      'Failure mode identification',
-      'Root cause analysis techniques',
-      'Wear pattern analysis',
-      'Failure prevention strategies',
-    ],
-  },
-  {
-    module: 'Module 4: Program Management',
-    duration: '12 hours',
-    description: 'Managing comprehensive lubrication programs',
-    topics: [
-      'Program planning and implementation',
-      'Data management and trending',
-      'Cost optimization strategies',
-      'Team training and development',
-    ],
-  },
-  {
-    module: 'Module 5: Specialized Applications',
-    duration: '8 hours',
-    description: 'Specialized lubrication applications and challenges',
-    topics: [
-      'High-temperature applications',
-      'Food-grade lubricants',
-      'Biodegradable lubricants',
-      'Extreme pressure applications',
-    ],
   },
 ];
 

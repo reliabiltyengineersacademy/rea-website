@@ -6,15 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Wrench,
-  Settings,
-  Activity,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   monitoringTechniques,
   certificationDetails,
@@ -43,9 +40,9 @@ const CBMBasic = () => {
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
                 Master the fundamentals of condition-based maintenance for plant
-                assets. Learn to implement CBM programs, use condition monitoring
-                techniques, and optimize maintenance strategies for better
-                equipment reliability.
+                assets. Learn to implement CBM programs, use condition
+                monitoring techniques, and optimize maintenance strategies for
+                better equipment reliability.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -106,17 +103,18 @@ const CBMBasic = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                The Condition Based Maintenance (CBM) Basic Level program provides
-                comprehensive training in implementing CBM programs for plant
-                assets. This course is designed for maintenance technicians,
-                engineers, and operators who need to understand and implement
-                condition-based maintenance strategies.
+                The Condition Based Maintenance (CBM) Basic Level program
+                provides comprehensive training in implementing CBM programs for
+                plant assets. This course is designed for maintenance
+                technicians, engineers, and operators who need to understand and
+                implement condition-based maintenance strategies.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will learn various condition monitoring techniques,
                 data collection and analysis methods, and how to integrate CBM
                 with existing maintenance programs. This certification serves as
-                the foundation for advanced CBM and predictive maintenance training.
+                the foundation for advanced CBM and predictive maintenance
+                training.
               </p>
             </div>
             <Card className='p-8'>

@@ -6,7 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Presentation,
-  Settings,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -40,9 +39,9 @@ const RCM2Facilitator = () => {
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Become a certified RCM2 facilitator and lead maintenance strategy
-                development initiatives. Master advanced facilitation skills and
-                become an expert in RCM2 program implementation.
+                Become a certified RCM2 facilitator and lead maintenance
+                strategy development initiatives. Master advanced facilitation
+                skills and become an expert in RCM2 program implementation.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -86,7 +85,9 @@ const RCM2Facilitator = () => {
                   </div>
                   <div className='text-center'>
                     <div className='text-3xl font-bold mb-2'>98%</div>
-                    <div className='text-primary-foreground/80'>Success Rate</div>
+                    <div className='text-primary-foreground/80'>
+                      Success Rate
+                    </div>
                   </div>
                 </div>
               </div>
@@ -220,7 +221,9 @@ const RCM2Facilitator = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>

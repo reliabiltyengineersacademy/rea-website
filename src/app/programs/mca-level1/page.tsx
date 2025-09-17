@@ -6,15 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Zap,
-  Settings,
-  Activity,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   testMethods,
   certificationDetails,
@@ -43,8 +40,9 @@ const MCALevel1 = () => {
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
                 Master the fundamentals of motor circuit analysis and electrical
-                signature analysis. Learn to identify electrical faults, diagnose
-                motor problems, and enhance your predictive maintenance capabilities.
+                signature analysis. Learn to identify electrical faults,
+                diagnose motor problems, and enhance your predictive maintenance
+                capabilities.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -106,17 +104,17 @@ const MCALevel1 = () => {
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
                 The Motor Circuit Analysis Level I program provides fundamental
-                training in electrical testing and motor diagnostics. This course
-                is designed for electrical technicians, maintenance engineers,
-                and professionals who need to understand motor circuit analysis
-                and electrical signature analysis principles.
+                training in electrical testing and motor diagnostics. This
+                course is designed for electrical technicians, maintenance
+                engineers, and professionals who need to understand motor
+                circuit analysis and electrical signature analysis principles.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will learn to perform motor circuit tests, conduct
                 electrical signature analysis, identify electrical faults, and
                 enhance their predictive maintenance capabilities for electrical
-                systems. This certification serves as the foundation for advanced
-                motor diagnostics training.
+                systems. This certification serves as the foundation for
+                advanced motor diagnostics training.
               </p>
             </div>
             <Card className='p-8'>

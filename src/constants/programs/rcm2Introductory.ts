@@ -1,4 +1,4 @@
-import { Wrench, CheckCircle, Users, BookOpen, Award, Settings } from 'lucide-react';
+import { Wrench, CheckCircle, BookOpen, Settings } from 'lucide-react';
 
 export const benefits = [
   'Master the fundamentals of Reliability Centered Maintenance (RCM2) methodology',
@@ -12,19 +12,23 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Maintenance Engineers',
-    description: 'Engineers responsible for developing and optimizing maintenance strategies',
+    description:
+      'Engineers responsible for developing and optimizing maintenance strategies',
   },
   {
     title: 'Reliability Engineers',
-    description: 'Professionals focused on improving equipment reliability and performance',
+    description:
+      'Professionals focused on improving equipment reliability and performance',
   },
   {
     title: 'Maintenance Managers',
-    description: 'Managers overseeing maintenance operations and strategy implementation',
+    description:
+      'Managers overseeing maintenance operations and strategy implementation',
   },
   {
     title: 'Plant Engineers',
-    description: 'Engineers involved in plant operations and equipment management',
+    description:
+      'Engineers involved in plant operations and equipment management',
   },
 ];
 

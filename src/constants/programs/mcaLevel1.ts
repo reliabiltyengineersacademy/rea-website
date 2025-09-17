@@ -1,4 +1,4 @@
-import { Zap, CheckCircle, Users, BookOpen, Award, Settings, Activity } from 'lucide-react';
+import { Zap, BookOpen, Settings, Activity } from 'lucide-react';
 
 export const benefits = [
   'Comprehensive understanding of motor circuit analysis principles',
@@ -12,11 +12,13 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Electrical Technicians',
-    description: 'Technicians responsible for motor maintenance and electrical systems',
+    description:
+      'Technicians responsible for motor maintenance and electrical systems',
   },
   {
     title: 'Maintenance Engineers',
-    description: 'Engineers involved in electrical equipment maintenance and reliability',
+    description:
+      'Engineers involved in electrical equipment maintenance and reliability',
   },
   {
     title: 'Electrical Analysts',
@@ -25,64 +27,6 @@ export const targetAudience = [
   {
     title: 'Plant Operators',
     description: 'Operators monitoring electrical equipment and systems',
-  },
-];
-
-export const courseModules = [
-  {
-    module: 'Module 1: Electrical Fundamentals',
-    duration: '8 hours',
-    description: 'Basic electrical principles and motor theory',
-    topics: [
-      'AC and DC electrical theory',
-      'Motor construction and operation',
-      'Electrical circuits and components',
-      'Power quality fundamentals',
-    ],
-  },
-  {
-    module: 'Module 2: Motor Circuit Analysis',
-    duration: '12 hours',
-    description: 'Motor circuit testing and analysis techniques',
-    topics: [
-      'Insulation resistance testing',
-      'Polarization index measurements',
-      'DC resistance testing',
-      'Circuit impedance analysis',
-    ],
-  },
-  {
-    module: 'Module 3: Electrical Signature Analysis',
-    duration: '12 hours',
-    description: 'Electrical signature analysis principles and applications',
-    topics: [
-      'Current signature analysis',
-      'Voltage signature analysis',
-      'Power signature analysis',
-      'Harmonic analysis basics',
-    ],
-  },
-  {
-    module: 'Module 4: Fault Detection',
-    duration: '8 hours',
-    description: 'Identifying electrical faults and motor problems',
-    topics: [
-      'Common electrical faults',
-      'Motor winding problems',
-      'Bearing and mechanical issues',
-      'Power quality problems',
-    ],
-  },
-  {
-    module: 'Module 5: Testing Procedures',
-    duration: '8 hours',
-    description: 'Proper testing procedures and safety protocols',
-    topics: [
-      'Safety procedures and PPE',
-      'Testing equipment operation',
-      'Data collection and documentation',
-      'Report generation and interpretation',
-    ],
   },
 ];
 

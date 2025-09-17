@@ -7,7 +7,6 @@ import {
   ArrowRight,
   Wrench,
   ExternalLink,
-  Handshake,
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -394,9 +393,9 @@ const CMRTCertification = () => {
                   </p>
                   <div className='flex items-center text-blue-600 dark:text-blue-400'>
                     <ExternalLink className='h-4 w-4 mr-2' />
-                    <a 
-                      href={raseInfo.website} 
-                      target='_blank' 
+                    <a
+                      href={raseInfo.website}
+                      target='_blank'
                       rel='noopener noreferrer'
                       className='hover:underline font-medium'
                     >
@@ -405,12 +404,14 @@ const CMRTCertification = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {raseInfo.benefits.map((benefit, index) => (
                   <div key={index} className='flex items-center'>
                     <CheckCircle className='h-4 w-4 text-blue-600 dark:text-blue-400 mr-2 flex-shrink-0' />
-                    <span className='text-sm text-muted-foreground'>{benefit}</span>
+                    <span className='text-sm text-muted-foreground'>
+                      {benefit}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -419,7 +420,10 @@ const CMRTCertification = () => {
 
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {raseCourses.map((course, index) => (
-              <Card key={index} className='p-6 hover:shadow-lg transition-shadow'>
+              <Card
+                key={index}
+                className='p-6 hover:shadow-lg transition-shadow'
+              >
                 <CardContent>
                   <div className='flex items-start justify-between mb-4'>
                     <div className='w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4'>
@@ -434,29 +438,33 @@ const CMRTCertification = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <h3 className='text-lg font-semibold text-foreground mb-3 line-clamp-2'>
                     {course.title}
                   </h3>
-                  
+
                   <p className='text-muted-foreground text-sm mb-4 line-clamp-3'>
                     {course.description}
                   </p>
-                  
+
                   <div className='space-y-2 mb-4'>
-                    {course.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className='flex items-center'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0'></div>
-                        <span className='text-xs text-muted-foreground'>{feature}</span>
-                      </div>
-                    ))}
+                    {course.features
+                      .slice(0, 3)
+                      .map((feature, featureIndex) => (
+                        <div key={featureIndex} className='flex items-center'>
+                          <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0'></div>
+                          <span className='text-xs text-muted-foreground'>
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
                     {course.features.length > 3 && (
                       <div className='text-xs text-muted-foreground'>
                         +{course.features.length - 3} more features
                       </div>
                     )}
                   </div>
-                  
+
                   <a
                     href={course.link}
                     target='_blank'

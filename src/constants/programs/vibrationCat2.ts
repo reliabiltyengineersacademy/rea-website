@@ -1,4 +1,4 @@
-import { Zap, CheckCircle, Users, BookOpen, Award, Settings, TrendingUp, BarChart } from 'lucide-react';
+import { Zap, Settings, TrendingUp, BarChart } from 'lucide-react';
 
 export const benefits = [
   'ISO 18436-2 Category II internationally recognized certification',
@@ -12,15 +12,18 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Category I Analysts',
-    description: 'Certified Category I analysts seeking advanced skills and certification',
+    description:
+      'Certified Category I analysts seeking advanced skills and certification',
   },
   {
     title: 'Senior Technicians',
-    description: 'Experienced technicians responsible for complex machinery analysis',
+    description:
+      'Experienced technicians responsible for complex machinery analysis',
   },
   {
     title: 'Reliability Engineers',
-    description: 'Engineers leading predictive maintenance programs and initiatives',
+    description:
+      'Engineers leading predictive maintenance programs and initiatives',
   },
   {
     title: 'Maintenance Managers',

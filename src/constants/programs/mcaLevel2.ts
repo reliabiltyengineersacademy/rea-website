@@ -1,4 +1,4 @@
-import { Zap, CheckCircle, Users, BookOpen, Award, Settings, Activity, BarChart } from 'lucide-react';
+import { Zap, Settings, Activity, BarChart } from 'lucide-react';
 
 export const benefits = [
   'Advanced motor circuit analysis and electrical signature analysis skills',
@@ -12,11 +12,13 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'MCA Level I Analysts',
-    description: 'Certified Level I analysts seeking advanced skills and certification',
+    description:
+      'Certified Level I analysts seeking advanced skills and certification',
   },
   {
     title: 'Electrical Engineers',
-    description: 'Engineers responsible for electrical systems and motor analysis',
+    description:
+      'Engineers responsible for electrical systems and motor analysis',
   },
   {
     title: 'Senior Technicians',
@@ -24,65 +26,8 @@ export const targetAudience = [
   },
   {
     title: 'Maintenance Managers',
-    description: 'Managers overseeing electrical maintenance programs and teams',
-  },
-];
-
-export const courseModules = [
-  {
-    module: 'Module 1: Advanced Electrical Theory',
-    duration: '12 hours',
-    description: 'Advanced electrical principles and motor theory',
-    topics: [
-      'Advanced AC/DC theory',
-      'Motor design and construction',
-      'Power quality analysis',
-      'Harmonic analysis and mitigation',
-    ],
-  },
-  {
-    module: 'Module 2: Advanced Circuit Analysis',
-    duration: '16 hours',
-    description: 'Sophisticated motor circuit analysis techniques',
-    topics: [
-      'Advanced insulation testing',
-      'Surge testing and analysis',
-      'Impedance analysis',
-      'Circuit fault location',
-    ],
-  },
-  {
-    module: 'Module 3: Advanced Signature Analysis',
-    duration: '16 hours',
-    description: 'Complex electrical signature analysis and interpretation',
-    topics: [
-      'Advanced current signature analysis',
-      'Voltage signature analysis',
-      'Power signature analysis',
-      'Harmonic signature analysis',
-    ],
-  },
-  {
-    module: 'Module 4: Complex Fault Diagnosis',
-    duration: '12 hours',
-    description: 'Diagnosing complex electrical faults and motor problems',
-    topics: [
-      'Advanced fault identification',
-      'Root cause analysis',
-      'Failure mode analysis',
-      'Prevention strategies',
-    ],
-  },
-  {
-    module: 'Module 5: Program Management',
-    duration: '8 hours',
-    description: 'Managing electrical analysis programs and teams',
-    topics: [
-      'Program planning and implementation',
-      'Team training and development',
-      'Data management and trending',
-      'Cost optimization strategies',
-    ],
+    description:
+      'Managers overseeing electrical maintenance programs and teams',
   },
 ];
 

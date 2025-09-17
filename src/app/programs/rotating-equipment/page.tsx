@@ -6,9 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Wrench,
-  Settings,
-  Activity,
-  Cog,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -43,10 +40,10 @@ const RotatingEquipment = () => {
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Master the operation and maintenance of critical rotating equipment
-                including pumps, compressors, turbines, and motors. Learn advanced
-                troubleshooting techniques and optimization strategies for maximum
-                equipment reliability and performance.
+                Master the operation and maintenance of critical rotating
+                equipment including pumps, compressors, turbines, and motors.
+                Learn advanced troubleshooting techniques and optimization
+                strategies for maximum equipment reliability and performance.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -118,7 +115,8 @@ const RotatingEquipment = () => {
                 equipment, perform advanced maintenance procedures, troubleshoot
                 complex problems, and optimize equipment performance. This
                 certification enhances equipment reliability and reduces
-                maintenance costs through proper operation and maintenance practices.
+                maintenance costs through proper operation and maintenance
+                practices.
               </p>
             </div>
             <Card className='p-8'>
@@ -225,7 +223,9 @@ const RotatingEquipment = () => {
                         {module.topics.map((topic, topicIndex) => (
                           <li key={topicIndex} className='flex items-center'>
                             <div className='w-2 h-2 bg-primary rounded-full mr-3'></div>
-                            <span className='text-muted-foreground'>{topic}</span>
+                            <span className='text-muted-foreground'>
+                              {topic}
+                            </span>
                           </li>
                         ))}
                       </ul>
@@ -338,8 +338,9 @@ const RotatingEquipment = () => {
                   <p className='text-lg text-muted-foreground mb-6'>
                     Our Rotating Equipment course combines theoretical knowledge
                     with extensive hands-on practice using real equipment and
-                    industry-standard tools. Participants gain practical experience
-                    that they can immediately apply in their workplace.
+                    industry-standard tools. Participants gain practical
+                    experience that they can immediately apply in their
+                    workplace.
                   </p>
                   <p className='text-lg text-muted-foreground mb-6'>
                     <strong>Lead Instructor:</strong> KVK Subramaniyam Naidu -
@@ -375,7 +376,9 @@ const RotatingEquipment = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Training Equipment</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Training Equipment
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -407,7 +410,8 @@ const RotatingEquipment = () => {
                         Test Equipment
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Vibration analyzers, alignment tools, and diagnostic equipment
+                        Vibration analyzers, alignment tools, and diagnostic
+                        equipment
                       </p>
                     </div>
                   </CardContent>
@@ -423,9 +427,9 @@ const RotatingEquipment = () => {
               Master Rotating Equipment
             </h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
-              Join thousands of professionals who have mastered rotating equipment
-              operation and maintenance and are delivering superior equipment
-              performance and reliability.
+              Join thousands of professionals who have mastered rotating
+              equipment operation and maintenance and are delivering superior
+              equipment performance and reliability.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>

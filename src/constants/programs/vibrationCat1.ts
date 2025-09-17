@@ -1,4 +1,4 @@
-import { Zap, CheckCircle, Users, BookOpen, Award, Settings, TrendingUp } from 'lucide-react';
+import { Zap, BookOpen, Settings, TrendingUp } from 'lucide-react';
 
 export const benefits = [
   'ISO 18436-2 Category I internationally recognized certification',
@@ -12,19 +12,23 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Maintenance Technicians',
-    description: 'Technicians responsible for equipment monitoring and basic maintenance tasks',
+    description:
+      'Technicians responsible for equipment monitoring and basic maintenance tasks',
   },
   {
     title: 'Plant Operators',
-    description: 'Operators involved in equipment monitoring and condition assessment',
+    description:
+      'Operators involved in equipment monitoring and condition assessment',
   },
   {
     title: 'Entry-Level Analysts',
-    description: 'New professionals starting their career in vibration analysis',
+    description:
+      'New professionals starting their career in vibration analysis',
   },
   {
     title: 'Maintenance Engineers',
-    description: 'Engineers seeking basic vibration analysis skills for their work',
+    description:
+      'Engineers seeking basic vibration analysis skills for their work',
   },
 ];
 

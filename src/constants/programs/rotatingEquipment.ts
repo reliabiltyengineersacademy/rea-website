@@ -1,4 +1,4 @@
-import { Wrench, CheckCircle, Users, BookOpen, Award, Settings, Activity, Cog } from 'lucide-react';
+import { Wrench, Settings, Activity, Cog } from 'lucide-react';
 
 export const benefits = [
   'Comprehensive understanding of rotating equipment operation and maintenance',
@@ -12,19 +12,23 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Maintenance Engineers',
-    description: 'Engineers responsible for rotating equipment maintenance and reliability',
+    description:
+      'Engineers responsible for rotating equipment maintenance and reliability',
   },
   {
     title: 'Plant Operators',
-    description: 'Operators involved in rotating equipment operation and monitoring',
+    description:
+      'Operators involved in rotating equipment operation and monitoring',
   },
   {
     title: 'Senior Technicians',
-    description: 'Experienced technicians managing complex rotating equipment systems',
+    description:
+      'Experienced technicians managing complex rotating equipment systems',
   },
   {
     title: 'Reliability Engineers',
-    description: 'Engineers focused on rotating equipment reliability and performance',
+    description:
+      'Engineers focused on rotating equipment reliability and performance',
   },
 ];
 
@@ -123,7 +127,8 @@ export const practicalSkills = [
   {
     icon: Wrench,
     title: 'Equipment Operation',
-    description: 'Operating various types of rotating equipment safely and efficiently',
+    description:
+      'Operating various types of rotating equipment safely and efficiently',
   },
   {
     icon: Settings,

@@ -6,15 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Wrench,
-  Settings,
-  Target,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   equipmentTypes,
   certificationDetails,
@@ -105,11 +102,11 @@ const BalancingAlignment = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                The Balancing and Alignment Course provides comprehensive training
-                in precision balancing and alignment techniques for rotating
-                equipment. This course is designed for maintenance technicians,
-                millwrights, and engineers who need to master these critical
-                maintenance skills.
+                The Balancing and Alignment Course provides comprehensive
+                training in precision balancing and alignment techniques for
+                rotating equipment. This course is designed for maintenance
+                technicians, millwrights, and engineers who need to master these
+                critical maintenance skills.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will learn to use advanced balancing and alignment

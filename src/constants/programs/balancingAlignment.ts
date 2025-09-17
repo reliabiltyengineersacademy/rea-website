@@ -1,4 +1,4 @@
-import { Wrench, CheckCircle, Users, BookOpen, Award, Settings, Target } from 'lucide-react';
+import { Wrench, BookOpen, Settings, Target } from 'lucide-react';
 
 export const benefits = [
   'Comprehensive understanding of balancing and alignment principles',
@@ -16,7 +16,8 @@ export const targetAudience = [
   },
   {
     title: 'Millwrights',
-    description: 'Skilled tradespeople specializing in machinery installation and maintenance',
+    description:
+      'Skilled tradespeople specializing in machinery installation and maintenance',
   },
   {
     title: 'Vibration Analysts',
@@ -28,74 +29,18 @@ export const targetAudience = [
   },
 ];
 
-export const courseModules = [
-  {
-    module: 'Module 1: Balancing Fundamentals',
-    duration: '8 hours',
-    description: 'Basic principles of rotating equipment balancing',
-    topics: [
-      'Balancing theory and principles',
-      'Types of unbalance and causes',
-      'Balancing standards and tolerances',
-      'Safety procedures and precautions',
-    ],
-  },
-  {
-    module: 'Module 2: Alignment Fundamentals',
-    duration: '8 hours',
-    description: 'Basic principles of shaft and coupling alignment',
-    topics: [
-      'Alignment theory and principles',
-      'Types of misalignment and causes',
-      'Alignment methods and techniques',
-      'Alignment tolerances and standards',
-    ],
-  },
-  {
-    module: 'Module 3: Balancing Equipment',
-    duration: '10 hours',
-    description: 'Using balancing machines and portable balancers',
-    topics: [
-      'Balancing machine operation',
-      'Portable balancing equipment',
-      'Data collection and analysis',
-      'Correction weight calculations',
-    ],
-  },
-  {
-    module: 'Module 4: Alignment Equipment',
-    duration: '10 hours',
-    description: 'Using laser alignment and traditional alignment tools',
-    topics: [
-      'Laser alignment systems',
-      'Traditional alignment methods',
-      'Measurement techniques',
-      'Correction procedures',
-    ],
-  },
-  {
-    module: 'Module 5: Practical Applications',
-    duration: '8 hours',
-    description: 'Hands-on practice with real equipment',
-    topics: [
-      'Balancing practice exercises',
-      'Alignment practice exercises',
-      'Problem-solving techniques',
-      'Quality control and verification',
-    ],
-  },
-];
-
 export const practicalSkills = [
   {
     icon: Wrench,
     title: 'Balancing Operations',
-    description: 'Performing precision balancing operations on rotating equipment',
+    description:
+      'Performing precision balancing operations on rotating equipment',
   },
   {
     icon: Target,
     title: 'Alignment Operations',
-    description: 'Performing precision alignment operations on rotating equipment',
+    description:
+      'Performing precision alignment operations on rotating equipment',
   },
   {
     icon: Settings,

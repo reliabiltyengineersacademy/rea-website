@@ -1,20 +1,19 @@
-import { 
-  Wrench, 
-  Settings, 
-  Target, 
-  Zap, 
-  Cog, 
-  Shield, 
-  Activity, 
-  CheckCircle,
-  ExternalLink 
+import {
+  Wrench,
+  Settings,
+  Target,
+  Zap,
+  Cog,
+  Shield,
+  Activity,
 } from 'lucide-react';
 
 export const raseCourses = [
   {
     id: 'rotating-equipment-installation',
     title: 'Rotating Equipment Installation and Maintenance Training Course',
-    description: 'Comprehensive training on installation, maintenance, and troubleshooting of rotating equipment including pumps, compressors, and turbines.',
+    description:
+      'Comprehensive training on installation, maintenance, and troubleshooting of rotating equipment including pumps, compressors, and turbines.',
     duration: '40 hours',
     level: 'Intermediate',
     icon: Wrench,
@@ -24,14 +23,15 @@ export const raseCourses = [
       'Troubleshooting techniques',
       'Safety protocols',
       'Performance optimization',
-      'Hands-on practical training'
+      'Hands-on practical training',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'millwright-training',
     title: 'Millwright Training Course',
-    description: 'Professional millwright training covering mechanical systems, precision alignment, and equipment maintenance.',
+    description:
+      'Professional millwright training covering mechanical systems, precision alignment, and equipment maintenance.',
     duration: '48 hours',
     level: 'Advanced',
     icon: Settings,
@@ -41,14 +41,15 @@ export const raseCourses = [
       'Equipment maintenance procedures',
       'Blueprint reading',
       'Safety standards',
-      'Practical workshop training'
+      'Practical workshop training',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'laser-shaft-alignment',
     title: 'Laser Shaft Alignment Training Course',
-    description: 'Advanced laser alignment techniques for rotating equipment to ensure optimal performance and reduced vibration.',
+    description:
+      'Advanced laser alignment techniques for rotating equipment to ensure optimal performance and reduced vibration.',
     duration: '24 hours',
     level: 'Specialist',
     icon: Target,
@@ -58,14 +59,15 @@ export const raseCourses = [
       'Vibration reduction methods',
       'Equipment setup and operation',
       'Troubleshooting alignment issues',
-      'Industry best practices'
+      'Industry best practices',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'reverse-dial-alignment',
     title: 'Reverse Dial Indicating Alignment Training Course',
-    description: 'Traditional reverse dial indicating methods for precise shaft alignment of rotating machinery.',
+    description:
+      'Traditional reverse dial indicating methods for precise shaft alignment of rotating machinery.',
     duration: '20 hours',
     level: 'Intermediate',
     icon: Zap,
@@ -75,14 +77,15 @@ export const raseCourses = [
       'Alignment calculations',
       'Correction procedures',
       'Quality control methods',
-      'Practical applications'
+      'Practical applications',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'rim-face-alignment',
     title: 'Rim and Face Alignment Training Course',
-    description: 'Fundamental rim and face alignment techniques for basic rotating equipment alignment requirements.',
+    description:
+      'Fundamental rim and face alignment techniques for basic rotating equipment alignment requirements.',
     duration: '16 hours',
     level: 'Foundation',
     icon: Cog,
@@ -92,14 +95,15 @@ export const raseCourses = [
       'Correction techniques',
       'Safety procedures',
       'Tool operation',
-      'Practical exercises'
+      'Practical exercises',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'valve-repair-maintenance',
     title: 'Industrial Valve Repair and Maintenance Training Course',
-    description: 'Comprehensive training on industrial valve types, repair procedures, and maintenance best practices.',
+    description:
+      'Comprehensive training on industrial valve types, repair procedures, and maintenance best practices.',
     duration: '32 hours',
     level: 'Intermediate',
     icon: Shield,
@@ -109,14 +113,15 @@ export const raseCourses = [
       'Maintenance scheduling',
       'Troubleshooting techniques',
       'Safety protocols',
-      'Hands-on repair training'
+      'Hands-on repair training',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'scaffolding-training',
     title: 'Industrial Scaffolding Erection & Dismantling Training Course',
-    description: 'Safety-focused training on proper scaffolding erection, dismantling, and maintenance procedures.',
+    description:
+      'Safety-focused training on proper scaffolding erection, dismantling, and maintenance procedures.',
     duration: '24 hours',
     level: 'Foundation',
     icon: Activity,
@@ -126,14 +131,16 @@ export const raseCourses = [
       'Dismantling techniques',
       'Inspection requirements',
       'Load calculations',
-      'Safety equipment usage'
+      'Safety equipment usage',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
+    link: 'https://www.rasetechservices.com/rase-training',
   },
   {
     id: 'wellhead-xmas-tree',
-    title: 'Well-Head & X-Mas Tree Installation and Maintenance Training Course',
-    description: 'Specialized training for oil and gas industry equipment including wellhead and Christmas tree systems.',
+    title:
+      'Well-Head & X-Mas Tree Installation and Maintenance Training Course',
+    description:
+      'Specialized training for oil and gas industry equipment including wellhead and Christmas tree systems.',
     duration: '36 hours',
     level: 'Advanced',
     icon: Wrench,
@@ -143,15 +150,16 @@ export const raseCourses = [
       'Installation procedures',
       'Maintenance protocols',
       'Safety requirements',
-      'Industry-specific training'
+      'Industry-specific training',
     ],
-    link: 'https://www.rasetechservices.com/rase-training'
-  }
+    link: 'https://www.rasetechservices.com/rase-training',
+  },
 ];
 
 export const raseInfo = {
   name: 'RASE Technical Training Centre',
-  description: 'RASE Technical Training Centre is our trusted partner providing specialized technical training programs that complement CMRT certification requirements.',
+  description:
+    'RASE Technical Training Centre is our trusted partner providing specialized technical training programs that complement CMRT certification requirements.',
   website: 'https://www.rasetechservices.com/rase-training',
   contact: 'Contact RASE directly for enrollment and course schedules',
   benefits: [
@@ -160,6 +168,6 @@ export const raseInfo = {
     'Hands-on practical training approach',
     'Flexible scheduling options',
     'Comprehensive course materials',
-    'Certification upon completion'
-  ]
+    'Certification upon completion',
+  ],
 };

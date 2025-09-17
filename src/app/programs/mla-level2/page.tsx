@@ -6,16 +6,12 @@ import {
   BookOpen,
   ArrowRight,
   Droplets,
-  Settings,
-  Microscope,
-  BarChart,
 } from 'lucide-react';
 import Link from 'next/link';
 
 import {
   benefits,
   targetAudience,
-  courseModules,
   practicalSkills,
   advancedTestMethods,
   certificationDetails,
@@ -106,17 +102,18 @@ const MLALevel2 = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                The Machine Lubricant Analyst Level II program builds upon Level I
-                knowledge to provide advanced skills in lubricant analysis and
-                failure diagnosis. This course is designed for experienced analysts
-                who need to handle complex lubrication problems and lead
-                comprehensive lubricant analysis programs.
+                The Machine Lubricant Analyst Level II program builds upon Level
+                I knowledge to provide advanced skills in lubricant analysis and
+                failure diagnosis. This course is designed for experienced
+                analysts who need to handle complex lubrication problems and
+                lead comprehensive lubricant analysis programs.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Participants will master advanced analysis techniques, complex
-                failure diagnosis, program management, and team leadership skills.
-                This certification prepares you for senior roles in lubrication
-                engineering and opens doors to advanced management positions.
+                failure diagnosis, program management, and team leadership
+                skills. This certification prepares you for senior roles in
+                lubrication engineering and opens doors to advanced management
+                positions.
               </p>
             </div>
             <Card className='p-8'>
@@ -248,12 +245,11 @@ const MLALevel2 = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>
-              Advance to Expert Level
-            </h2>
+            <h2 className='text-3xl font-bold mb-4'>Advance to Expert Level</h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
-              Take your lubricant analysis skills to the next level and become
-              a recognized expert in lubrication engineering and program management.
+              Take your lubricant analysis skills to the next level and become a
+              recognized expert in lubrication engineering and program
+              management.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>

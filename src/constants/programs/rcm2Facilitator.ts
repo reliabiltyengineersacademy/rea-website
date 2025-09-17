@@ -1,4 +1,4 @@
-import { Users, CheckCircle, BookOpen, Award, Presentation, Settings } from 'lucide-react';
+import { Users, BookOpen, Presentation, Settings } from 'lucide-react';
 
 export const benefits = [
   'Become a certified RCM2 facilitator capable of leading RCM2 studies',
@@ -12,15 +12,18 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'RCM2 Practitioners',
-    description: 'Professionals with RCM2 experience seeking facilitator certification',
+    description:
+      'Professionals with RCM2 experience seeking facilitator certification',
   },
   {
     title: 'Maintenance Managers',
-    description: 'Managers responsible for implementing RCM2 programs in their organizations',
+    description:
+      'Managers responsible for implementing RCM2 programs in their organizations',
   },
   {
     title: 'Reliability Engineers',
-    description: 'Engineers leading maintenance strategy development initiatives',
+    description:
+      'Engineers leading maintenance strategy development initiatives',
   },
   {
     title: 'Consultants',

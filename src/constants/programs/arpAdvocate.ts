@@ -1,4 +1,4 @@
-import { Award, CheckCircle, Users, BookOpen, Settings, Target, TrendingUp } from 'lucide-react';
+import { Users, Settings, Target, TrendingUp } from 'lucide-react';
 
 export const benefits = [
   'Comprehensive understanding of asset reliability principles and practices',
@@ -12,7 +12,8 @@ export const benefits = [
 export const targetAudience = [
   {
     title: 'Maintenance Professionals',
-    description: 'Maintenance technicians and supervisors seeking reliability knowledge',
+    description:
+      'Maintenance technicians and supervisors seeking reliability knowledge',
   },
   {
     title: 'Plant Operators',
@@ -20,11 +21,13 @@ export const targetAudience = [
   },
   {
     title: 'Entry-Level Engineers',
-    description: 'New engineers starting their career in reliability engineering',
+    description:
+      'New engineers starting their career in reliability engineering',
   },
   {
     title: 'Team Leaders',
-    description: 'Team leaders responsible for reliability improvement initiatives',
+    description:
+      'Team leaders responsible for reliability improvement initiatives',
   },
 ];
 
