@@ -160,6 +160,31 @@ export const navigation = [
         href: '/programs/cama',
         description: 'Certified Asset Management Assessor',
       },
+      {
+        name: 'ASQ CRE Certification',
+        href: '/programs/asq-cre',
+        description: 'Certified Reliability Engineer',
+      },
+      {
+        name: 'Prosci Change Management',
+        href: '/programs/prosci-change-management',
+        description: 'Certified Change Management Specialist',
+      },
+      {
+        name: 'Asset Performance Management',
+        href: '/programs/asset-performance-management',
+        description: 'APM Certification',
+      },
+      {
+        name: 'Diploma in Reliability Engineering',
+        href: '/programs/diploma-reliability-engineering',
+        description: 'Advanced Diploma Program',
+      },
+      {
+        name: 'Certificate in EV Engineering',
+        href: '/programs/certificate-ev-engineering-system-integration',
+        description: 'EV Engineering & System Integration',
+      },
     ],
   },
   { name: 'Webinars', href: '/webinars' },

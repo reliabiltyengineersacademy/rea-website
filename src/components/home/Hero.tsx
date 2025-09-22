@@ -27,7 +27,7 @@ export default function Hero() {
           <div className='text-primary-foreground'>
             <div className='inline-flex items-center bg-primary-foreground/10 rounded-full px-4 py-2 mb-6 backdrop-blur-sm border border-primary-foreground/20'>
               <span className='text-sm font-medium'>
-                🎯 Professional Asset Management and Reliability Engineering
+                🎯 Expert Consulting and Certification in Asset Management, Maintenance Strategy, and Reliability Engineering
               </span>
             </div>
 
@@ -40,8 +40,7 @@ export default function Hero() {
 
             <p className='text-base md:text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
               Empowering engineers and organizations with world-class training,
-              certifications, and expertise in asset reliability engineering,
-              predictive diagnostics, and maintenance optimization.
+              certification, and expertise in asset management.
             </p>
 
             <div className='flex flex-row gap-4'>
@@ -61,7 +60,7 @@ export default function Hero() {
             <div className='grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-primary-foreground/20'>
               <div className='text-center'>
                 <div className='text-3xl font-bold text-primary-foreground mb-2'>
-                  500+
+                  1000+
                 </div>
                 <div className='text-primary-foreground/80 text-sm'>
                   Certified Engineers

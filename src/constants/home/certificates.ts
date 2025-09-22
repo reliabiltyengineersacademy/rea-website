@@ -1,4 +1,4 @@
-import { Award, TrendingUp, Shield, Zap, Search, Settings } from 'lucide-react';
+import { Award, TrendingUp, Shield, Zap, Search, Settings, Cog, Users, BarChart3, Wrench, Car } from 'lucide-react';
 
 export const certifications = [
   {
@@ -96,5 +96,85 @@ export const certifications = [
       'Lubrication Programs',
     ],
     link: '/programs/lube-oil',
+  },
+  {
+    icon: Cog,
+    title: 'ASQ CRE Certification',
+    subtitle: 'Certified Reliability Engineer',
+    description:
+      'Advanced certification in reliability engineering principles and practices for product and system enhancement.',
+    duration: '6 months',
+    level: 'Professional',
+    features: [
+      'Reliability Analysis',
+      'Failure Mode Analysis',
+      'Reliability Testing',
+      'Program Management',
+    ],
+    link: '/programs/asq-cre',
+  },
+  {
+    icon: Users,
+    title: 'Prosci Change Management',
+    subtitle: 'Certified Change Management Specialist',
+    description:
+      'World-class certification program that equips you with tools and expertise to lead successful organizational change.',
+    duration: '3-5 days',
+    level: 'Professional',
+    features: [
+      'ADKAR Model',
+      '3-Phase Process',
+      'Change Planning',
+      'Organizational Change',
+    ],
+    link: '/programs/prosci-change-management',
+  },
+  {
+    icon: BarChart3,
+    title: 'Asset Performance Management',
+    subtitle: 'APM Certification',
+    description:
+      'Master the art of optimizing asset reliability, availability, and performance while minimizing costs and operational risks.',
+    duration: '40+ hours',
+    level: 'Professional',
+    features: [
+      'Predictive Maintenance',
+      'Asset Optimization',
+      'Risk Management',
+      'Performance Metrics',
+    ],
+    link: '/programs/asset-performance-management',
+  },
+  {
+    icon: Wrench,
+    title: 'Diploma in Reliability Engineering',
+    subtitle: 'Advanced Diploma Program',
+    description:
+      'Comprehensive program covering reliability engineering principles, failure analysis, testing, and system optimization.',
+    duration: '120+ hours',
+    level: 'Advanced',
+    features: [
+      'Failure Analysis',
+      'Statistical Methods',
+      'Reliability Testing',
+      'System Optimization',
+    ],
+    link: '/programs/diploma-reliability-engineering',
+  },
+  {
+    icon: Car,
+    title: 'Certificate in EV Engineering',
+    subtitle: 'EV Engineering & System Integration',
+    description:
+      'Master cutting-edge electric vehicle technologies, battery systems, power electronics, and vehicle integration.',
+    duration: '100+ hours',
+    level: 'Professional',
+    features: [
+      'Battery Technology',
+      'Power Electronics',
+      'Vehicle Integration',
+      'Charging Systems',
+    ],
+    link: '/programs/certificate-ev-engineering-system-integration',
   },
 ];

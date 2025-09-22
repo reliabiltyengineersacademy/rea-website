@@ -1,4 +1,4 @@
-import { Award, Shield, Settings, Zap, Search, BookOpen, Wrench, Droplets, Activity, Target, AlertTriangle, Cog } from 'lucide-react';
+import { Award, Shield, Settings, Zap, Search, BookOpen, Wrench, Droplets, Activity, Target, AlertTriangle, Cog, Users, BarChart3, GraduationCap, Car } from 'lucide-react';
 
 export const programs = [
   {
@@ -394,5 +394,105 @@ export const programs = [
       'Lubrication Programs',
     ],
     link: '/programs/lube-oil',
+  },
+  {
+    id: 'asq-cre',
+    title: 'ASQ CRE Certification',
+    subtitle: 'Certified Reliability Engineer',
+    icon: Cog,
+    level: 'Professional',
+    duration: '6 months',
+    price: '$2,800',
+    description:
+      'Advanced certification in reliability engineering principles and practices for product and system enhancement. Master performance evaluation and prediction to enhance safety, reliability, and maintainability.',
+    features: [
+      'Reliability Analysis',
+      'Failure Mode Analysis',
+      'Reliability Testing',
+      'Program Management',
+      'Design for Reliability',
+      'Lifecycle Management',
+    ],
+    link: '/programs/asq-cre',
+  },
+  {
+    id: 'prosci-change-management',
+    title: 'Prosci Change Management',
+    subtitle: 'Certified Change Management Specialist',
+    icon: Users,
+    level: 'Professional',
+    duration: '3-5 days',
+    price: '$4,500',
+    description:
+      'World-class certification program that equips you with tools, expertise, and ongoing support to lead successful organizational change using Prosci\'s proven methodology and ADKAR Model.',
+    features: [
+      'ADKAR Model Mastery',
+      '3-Phase Process',
+      'Change Management Planning',
+      'Organizational Change',
+      'Project Application',
+      'Global Network Access',
+    ],
+    link: '/programs/prosci-change-management',
+  },
+  {
+    id: 'asset-performance-management',
+    title: 'Asset Performance Management',
+    subtitle: 'APM Certification',
+    icon: BarChart3,
+    level: 'Professional',
+    duration: '40+ hours',
+    price: '$3,200',
+    description:
+      'Master the art of optimizing asset reliability, availability, and performance while minimizing costs and operational risks. Comprehensive training in APM principles, tools, and implementation strategies.',
+    features: [
+      'Predictive Maintenance',
+      'Asset Optimization',
+      'Risk Management',
+      'Performance Metrics',
+      'Digital APM Tools',
+      'Lifecycle Management',
+    ],
+    link: '/programs/asset-performance-management',
+  },
+  {
+    id: 'diploma-reliability-engineering',
+    title: 'Diploma in Reliability Engineering',
+    subtitle: 'Advanced Diploma Program',
+    icon: GraduationCap,
+    level: 'Advanced',
+    duration: '120+ hours',
+    price: '$4,800',
+    description:
+      'Comprehensive program covering reliability engineering principles, failure analysis, testing, and system optimization. Master advanced techniques in statistical analysis, reliability modeling, and risk management.',
+    features: [
+      'Failure Analysis',
+      'Statistical Methods',
+      'Reliability Testing',
+      'System Optimization',
+      'Risk Management',
+      'Program Management',
+    ],
+    link: '/programs/diploma-reliability-engineering',
+  },
+  {
+    id: 'certificate-ev-engineering-system-integration',
+    title: 'Certificate in EV Engineering',
+    subtitle: 'EV Engineering & System Integration',
+    icon: Car,
+    level: 'Professional',
+    duration: '100+ hours',
+    price: '$3,500',
+    description:
+      'Master cutting-edge electric vehicle technologies, battery systems, power electronics, and vehicle integration. Comprehensive training in EV engineering principles and system integration methodologies.',
+    features: [
+      'Battery Technology',
+      'Power Electronics',
+      'Vehicle Integration',
+      'Charging Systems',
+      'Motor Control',
+      'Testing & Validation',
+    ],
+    link: '/programs/certificate-ev-engineering-system-integration',
   },
 ];
