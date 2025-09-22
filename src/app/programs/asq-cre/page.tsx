@@ -6,8 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Shield,
-  TrendingUp,
-  Search,
 } from 'lucide-react';
 import Link from 'next/link';
 

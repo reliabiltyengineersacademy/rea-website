@@ -1,6 +1,46 @@
-import { Award, Shield, Settings, Zap, Search, BookOpen, Wrench, Droplets, Activity, Target, AlertTriangle, Cog, Users, BarChart3, GraduationCap, Car } from 'lucide-react';
+import { Award, Shield, Settings, Zap, Search, BookOpen, Wrench, Droplets, Activity, Target, AlertTriangle, Cog, Users, BarChart3, GraduationCap, Car, Building2 } from 'lucide-react';
 
 export const programs = [
+  {
+    id: 'iam-diploma',
+    title: 'IAM Diploma',
+    subtitle: 'Institute of Asset Management Diploma',
+    icon: Building2,
+    level: 'Advanced',
+    duration: '150+ hours',
+    price: '$5,500',
+    description:
+      'Master comprehensive strategic asset management principles and practices. Develop expertise in asset lifecycle optimization, risk management, and performance enhancement to become a certified asset management specialist.',
+    features: [
+      'Strategic Asset Management',
+      'Lifecycle Optimization',
+      'Risk Management',
+      'Performance Measurement',
+      'Stakeholder Management',
+      'Program Leadership',
+    ],
+    link: '/programs/iam-diploma',
+  },
+  {
+    id: 'iam-certification',
+    title: 'IAM Certification',
+    subtitle: 'Institute of Asset Management Certification',
+    icon: Building2,
+    level: 'Foundation',
+    duration: '80+ hours',
+    price: '$3,500',
+    description:
+      'Master fundamental asset management principles and practices. Develop essential skills in asset lifecycle management, risk assessment, and performance optimization to become a certified asset management professional.',
+    features: [
+      'Asset Management Fundamentals',
+      'Lifecycle Management',
+      'Risk Assessment',
+      'Performance Measurement',
+      'Stakeholder Engagement',
+      'Program Participation',
+    ],
+    link: '/programs/iam-certification',
+  },
   {
     id: 'rcm2-introductory',
     title: 'RCM2 Introductory Course',

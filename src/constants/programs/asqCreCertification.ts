@@ -1,4 +1,4 @@
-import { Users, Shield, TrendingUp, Search, Award, BookOpen, Clock } from 'lucide-react';
+import { Users, Shield, TrendingUp, Search } from 'lucide-react';
 
 export const benefits = [
   'Global recognition as a certified reliability engineering professional',

@@ -6,15 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Shield,
-  TrendingUp,
-  Search,
-  Target,
-  Zap,
-  BarChart3,
-  Settings,
-  Wrench,
-  Battery,
-  Car,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -115,7 +106,7 @@ const CertificateEvEngineeringSystemIntegration = () => {
                 to advanced system integration.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Through this program, you'll master battery technology, power
+                Through this program, you&apos;ll master battery technology, power
                 electronics, motor control systems, vehicle integration, and
                 charging infrastructure. The curriculum combines theoretical
                 knowledge with hands-on practical experience, ensuring you can

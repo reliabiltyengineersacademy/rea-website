@@ -19,12 +19,14 @@ import {
   examDetails,
   programFeatures,
   industryStats,
-} from '@/constants/programs/prosciChangeManagementCertification';
+  keyTopics,
+  certificationRequirements,
+} from '@/constants/programs/iamCertification';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const ProsciChangeManagementCertification = () => {
+const IAMCertification = () => {
   return (
     <div className='pt-24 min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-primary to-primary/80 text-primary-foreground'>
@@ -39,14 +41,15 @@ const ProsciChangeManagementCertification = () => {
               </div>
 
               <h1 className='text-4xl lg:text-5xl font-bold mb-6'>
-                Prosci Change Management Certification
+                Institute of Asset Management Certification
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Certified Change Management Specialist - The world-class
-                certification program that equips you with the tools, expertise,
-                and ongoing support needed to lead successful organizational
-                change.
+                Master the fundamental principles and practices of asset
+                management with our comprehensive certification program. Develop
+                essential skills in asset lifecycle management, risk assessment,
+                and performance optimization to become a certified asset
+                management professional.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -95,17 +98,20 @@ const ProsciChangeManagementCertification = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                Prosci&apos;s Change Management Certification Program is the global
-                standard for change management training. This immersive learning
-                experience gives you the knowledge, skills, and tools to drive
-                successful organizational change using Prosci&apos;s proven
-                methodology and ADKAR Model.
+                The Institute of Asset Management (IAM) Certification is a
+                comprehensive program designed to equip professionals with
+                essential knowledge and skills in asset management principles,
+                lifecycle optimization, and performance enhancement. This
+                certification program covers all fundamental aspects of asset
+                management from basics to practical applications.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                During the program, you&apos;ll apply Prosci&apos;s methodology to one of
-                your active projects, interact with peers, and gain access to
-                industry-leading tools. Graduates earn the distinction of being
-                a Prosci Certified Change Practitioner.
+                Through this program, you&apos;ll develop expertise in asset
+                strategy development, risk management, performance measurement,
+                and stakeholder engagement. The curriculum combines theoretical
+                knowledge with practical applications, ensuring you can
+                immediately apply your learning to real-world asset management
+                challenges.
               </p>
             </div>
             <Card className='p-8'>
@@ -128,19 +134,19 @@ const ProsciChangeManagementCertification = () => {
                 <div className='flex items-center'>
                   <Users className='h-5 w-5 text-primary mr-3' />
                   <span className='text-muted-foreground'>
-                    {examDetails.validity}
+                    Valid for {examDetails.validity}
                   </span>
                 </div>
                 <div className='flex items-center'>
                   <Shield className='h-5 w-5 text-primary mr-3' />
                   <span className='text-muted-foreground'>
-                    {examDetails.credits}
+                    {examDetails.recertification}
                   </span>
                 </div>
                 <div className='flex items-center'>
                   <Award className='h-5 w-5 text-primary mr-3' />
                   <span className='text-muted-foreground'>
-                    Lifetime certification
+                    {examDetails.credits}
                   </span>
                 </div>
               </CardContent>
@@ -204,7 +210,7 @@ const ProsciChangeManagementCertification = () => {
 
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-foreground mb-8'>
-            Program Agenda
+            Program Curriculum
           </h2>
           <div className='space-y-6'>
             {programModules.map((module, index) => (
@@ -212,15 +218,18 @@ const ProsciChangeManagementCertification = () => {
                 <CardContent>
                   <div className='flex items-center justify-between mb-4'>
                     <h3 className='text-xl font-semibold text-foreground'>
-                      {module.day}: {module.title}
+                      {module.module}
                     </h3>
                     <Badge
                       variant='secondary'
                       className='bg-primary/10 text-primary'
                     >
-                      {module.day}
+                      Module {index + 1}
                     </Badge>
                   </div>
+                  <h4 className='text-lg font-medium text-foreground mb-4'>
+                    {module.title}
+                  </h4>
                   <div className='grid md:grid-cols-2 gap-4'>
                     {module.topics.map((topic, topicIndex) => (
                       <div key={topicIndex} className='flex items-center'>
@@ -231,6 +240,26 @@ const ProsciChangeManagementCertification = () => {
                       </div>
                     ))}
                   </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Key Topics Covered
+          </h2>
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+            {keyTopics.map((topic, index) => (
+              <Card key={index} className='p-6'>
+                <CardContent>
+                  <h3 className='text-lg font-semibold text-foreground mb-3'>
+                    {topic.topic}
+                  </h3>
+                  <p className='text-muted-foreground text-sm'>
+                    {topic.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -253,6 +282,26 @@ const ProsciChangeManagementCertification = () => {
                   </h3>
                   <p className='text-muted-foreground text-sm'>
                     {benefit.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Certification Requirements
+          </h2>
+          <div className='grid md:grid-cols-2 gap-8'>
+            {certificationRequirements.map((requirement, index) => (
+              <Card key={index} className='p-8'>
+                <CardHeader>
+                  <CardTitle className='text-xl'>{requirement.requirement}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className='text-muted-foreground'>
+                    {requirement.description}
                   </p>
                 </CardContent>
               </Card>
@@ -319,87 +368,89 @@ const ProsciChangeManagementCertification = () => {
 
         <div className='mb-16'>
           <h2 className='text-3xl font-bold text-foreground mb-8'>
-            REA Prosci Change Management Preparation
+            REA IAM Certification Program
           </h2>
           <Card className='bg-gradient-to-br from-primary/5 to-primary/10 p-12'>
             <CardContent>
               <div className='grid lg:grid-cols-2 gap-12'>
                 <div>
                   <h3 className='text-2xl font-bold text-foreground mb-6'>
-                    Comprehensive Change Management Training
+                    Comprehensive Asset Management Training
                   </h3>
                   <p className='text-lg text-muted-foreground mb-6'>
-                    Our Prosci Change Management preparation course is designed
-                    for professionals seeking to master organizational change
-                    management and become certified change practitioners.
+                    Our Institute of Asset Management Certification program
+                    provides comprehensive training in all aspects of asset
+                    management, from fundamental principles to practical
+                    applications and real-world implementation.
                   </p>
                   <p className='text-lg text-muted-foreground mb-6'>
                     <strong>Lead Instructor:</strong> KVK Subramaniyam Naidu -
-                    Senior change management consultant and Prosci certified
-                    practitioner.
+                    Senior asset management consultant and IAM certified
+                    professional with extensive industry experience in asset
+                    management and lifecycle optimization.
                   </p>
                   <ul className='space-y-3'>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        3-5 days of intensive training
+                        80+ hours of comprehensive training
                       </span>
                     </li>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        Real project application during training
+                        Real-world case studies and practical applications
                       </span>
                     </li>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        Access to Prosci tools and resources
+                        Access to asset management tools and resources
                       </span>
                     </li>
                     <li className='flex items-center'>
                       <CheckCircle className='h-5 w-5 text-primary mr-3' />
                       <span className='text-muted-foreground'>
-                        Expert mentorship and peer learning
+                        Expert mentorship and ongoing support
                       </span>
                     </li>
                   </ul>
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Training Highlights</CardTitle>
+                    <CardTitle className='text-xl'>Program Highlights</CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        ADKAR Model Mastery
+                        Asset Management Fundamentals
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Learn to apply the ADKAR Model for individual change
+                        Master the core principles and practices of asset management
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        3-Phase Process
+                        Lifecycle Management
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master Prosci&apos;s 3-Phase Process for organizational change
+                        Learn techniques for managing assets throughout their lifecycle
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        PCT Model Application
+                        Risk Assessment
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Understand the Project, Change, and Technical aspects
+                        Develop skills in identifying and managing asset-related risks
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
                       <h5 className='font-semibold text-foreground'>
-                        Change Management Planning
+                        Performance Optimization
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Develop comprehensive change management plans
+                        Master techniques for optimizing asset performance and value
                       </p>
                     </div>
                   </CardContent>
@@ -412,12 +463,13 @@ const ProsciChangeManagementCertification = () => {
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
             <h2 className='text-3xl font-bold mb-4'>
-              Become a Certified Change Management Specialist
+              Become a Certified Asset Management Professional
             </h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
-              Join 150,000+ certified practitioners worldwide and master the art
-              of successful organizational change with Prosci&apos;s proven
-              methodology.
+              Join the ranks of certified asset management professionals and
+              advance your career with comprehensive expertise in asset
+              management principles, lifecycle optimization, and performance
+              enhancement.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>
@@ -425,7 +477,7 @@ const ProsciChangeManagementCertification = () => {
                   size='lg'
                   className='bg-primary-foreground text-primary hover:bg-primary-foreground/90'
                 >
-                  Enroll in Change Management Course
+                  Enroll in IAM Certification
                 </Button>
               </Link>
               <Link href='/contact'>
@@ -445,4 +497,4 @@ const ProsciChangeManagementCertification = () => {
   );
 };
 
-export default ProsciChangeManagementCertification;
+export default IAMCertification;

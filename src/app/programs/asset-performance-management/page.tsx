@@ -6,12 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Shield,
-  TrendingUp,
-  Search,
-  Target,
-  Zap,
-  BarChart3,
-  Settings,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -109,7 +103,7 @@ const AssetPerformanceManagementCertification = () => {
                 principles, tools, and implementation strategies.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Through this program, you'll learn to leverage data analytics,
+                Through this program, you&apos;ll learn to leverage data analytics,
                 predictive maintenance, and digital technologies to maximize
                 asset value, reduce downtime, and improve operational efficiency
                 across your organization.

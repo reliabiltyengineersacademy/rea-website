@@ -1,4 +1,4 @@
-import { Users, Shield, TrendingUp, Search, Award, BookOpen, Clock, Target, Zap, BarChart3, Settings, Wrench } from 'lucide-react';
+import { Users, Shield, TrendingUp, Search, Target, Zap } from 'lucide-react';
 
 export const benefits = [
   'Comprehensive understanding of reliability engineering principles and practices',

@@ -1,4 +1,4 @@
-import { Users, Shield, TrendingUp, Search, Award, BookOpen, Clock, Target, Zap, BarChart3, Settings, Wrench, Battery, Car } from 'lucide-react';
+import { Users, Shield, TrendingUp, Search, Target, Zap } from 'lucide-react';
 
 export const benefits = [
   'Master electric vehicle engineering principles and system integration',

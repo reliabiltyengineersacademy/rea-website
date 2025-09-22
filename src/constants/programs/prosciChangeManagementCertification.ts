@@ -1,9 +1,9 @@
-import { Users, Shield, TrendingUp, Search, Award, BookOpen, Clock, Target, Zap } from 'lucide-react';
+import { Users, Shield, TrendingUp, Search, Target, Zap } from 'lucide-react';
 
 export const benefits = [
   'Global recognition as a certified change management practitioner',
   'Enhanced career opportunities in organizational change and transformation',
-  'Access to Prosci\'s industry-leading change management methodology and tools',
+  'Access to Prosci&apos;s industry-leading change management methodology and tools',
   'Join a network of 150,000+ certified practitioners worldwide',
   'Proven skills to drive successful organizational change initiatives',
   'Increased project ROI and employee adoption rates',
@@ -53,11 +53,11 @@ export const learningObjectives = [
   },
   {
     objective: 'Apply the ADKAR Model',
-    description: 'Master Prosci\'s ADKAR Model for facilitating individual change',
+    description: 'Master Prosci&apos;s ADKAR Model for facilitating individual change',
   },
   {
     objective: 'Apply the 3-Phase Process',
-    description: 'Implement Prosci\'s 3-Phase Process for organizational change',
+    description: 'Implement Prosci&apos;s 3-Phase Process for organizational change',
   },
   {
     objective: 'Activate Change Roles',

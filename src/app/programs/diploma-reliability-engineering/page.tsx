@@ -6,13 +6,6 @@ import {
   BookOpen,
   ArrowRight,
   Shield,
-  TrendingUp,
-  Search,
-  Target,
-  Zap,
-  BarChart3,
-  Settings,
-  Wrench,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -113,7 +106,7 @@ const DiplomaReliabilityEngineering = () => {
                 advanced applications.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Through this program, you'll develop expertise in statistical
+                Through this program, you&apos;ll develop expertise in statistical
                 analysis, reliability testing, maintainability engineering, and
                 risk management. The curriculum combines theoretical knowledge
                 with practical applications, ensuring you can immediately apply

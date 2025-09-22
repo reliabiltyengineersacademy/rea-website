@@ -1,4 +1,4 @@
-import { Users, Shield, TrendingUp, Search, Award, BookOpen, Clock, Target, Zap, BarChart3, Settings } from 'lucide-react';
+import { Users, Shield, TrendingUp, Search, Target, Zap } from 'lucide-react';
 
 export const benefits = [
   'Master asset performance optimization strategies and techniques',
