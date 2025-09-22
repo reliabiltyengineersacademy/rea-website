@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Work_Sans, JetBrains_Mono, Source_Serif_4 } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import './globals.css';
 import ThemeProvider from '@/app/providers';
@@ -171,6 +172,7 @@ export default function RootLayout({
           </div>
 
           <Toaster />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
