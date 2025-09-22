@@ -172,8 +172,8 @@ export default function RootLayout({
           </div>
 
           <Toaster />
-          <Analytics />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
