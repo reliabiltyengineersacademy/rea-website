@@ -36,19 +36,15 @@ export default function OurServicesPage() {
             </p>
 
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button
-                size='lg'
-                className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4'
-              >
-                Explore Our Services
-              </Button>
-              <Button
-                variant='outline'
-                size='lg'
-                className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4'
-              >
-                Why Choose REA
-              </Button>
+              <Link href='/our-services/why-choose-us'>
+                <Button
+                  variant='outline'
+                  size='lg'
+                  className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4'
+                >
+                  Why Choose REA
+                </Button>
+              </Link>
             </div>
           </div>
         </Container>
@@ -72,9 +68,9 @@ export default function OurServicesPage() {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className='p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group'
+                className='p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group h-full'
               >
-                <CardContent>
+                <CardContent className='flex flex-col h-full'>
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
@@ -83,10 +79,10 @@ export default function OurServicesPage() {
                   <h3 className='text-xl font-bold text-foreground mb-4'>
                     {service.title}
                   </h3>
-                  <p className='text-muted-foreground leading-relaxed mb-6'>
+                  <p className='text-muted-foreground leading-relaxed mb-6 flex-grow'>
                     {service.description}
                   </p>
-                  <Link href={service.href}>
+                  <Link href={service.href} className='mt-auto'>
                     <Button
                       variant='outline'
                       className='w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors'
@@ -155,9 +151,11 @@ export default function OurServicesPage() {
                   intelligent, reliability-driven operations.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                  <Button size='lg' className='px-8 py-4'>
-                    Start Your Journey
-                  </Button>
+                  <Link href='/membership'>
+                    <Button size='lg' className='px-8 py-4'>
+                      Start Your Journey
+                    </Button>
+                  </Link>
                   <Button variant='outline' size='lg' className='px-8 py-4'>
                     Schedule Consultation
                   </Button>

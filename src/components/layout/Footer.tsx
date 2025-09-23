@@ -34,13 +34,16 @@ export default function Footer() {
             </div>
 
             <div className='space-y-3'>
-              <div className='flex items-start sm:items-center'>
-                <span className='text-2xl mr-3 flex-shrink-0 mt-1 sm:mt-0'>
-                  📧
+              <div className='flex items-start gap-3'>
+                <span className='text-xl flex-shrink-0 mt-0.5'>
+                  ✉️
                 </span>
-                <span className='text-muted-foreground break-all text-sm sm:text-base leading-relaxed'>
+                <a 
+                  href='mailto:reliabiltyengineersacademy@gmail.com'
+                  className='text-muted-foreground hover:text-primary transition-colors text-sm leading-relaxed break-words'
+                >
                   reliabiltyengineersacademy@gmail.com
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -105,7 +108,12 @@ export default function Footer() {
                     asChild
                     className='h-10 w-10'
                   >
-                    <a href={social.href} aria-label={social.name}>
+                    <a 
+                      href={social.href} 
+                      aria-label={social.name}
+                      target={social.href !== '#' ? '_blank' : undefined}
+                      rel={social.href !== '#' ? 'noopener noreferrer' : undefined}
+                    >
                       <social.icon className='h-5 w-5' />
                     </a>
                   </Button>

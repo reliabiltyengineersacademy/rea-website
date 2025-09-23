@@ -70,13 +70,6 @@ export default function OurChapterPage() {
                     Join Our Chapter
                   </Button>
                 </Link>
-                <Button
-                  variant='outline'
-                  size='lg'
-                  className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4'
-                >
-                  Learn More
-                </Button>
               </div>
             </div>
 

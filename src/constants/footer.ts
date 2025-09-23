@@ -26,7 +26,7 @@ export const resources = [
 
 export const socialLinks = [
   { icon: Linkedin, href: '#', name: 'LinkedIn' },
-  { icon: Twitter, href: '#', name: 'Twitter' },
-  { icon: Youtube, href: '#', name: 'YouTube' },
+  { icon: Twitter, href: 'https://x.com/rea14092024', name: 'X (Twitter)' },
+  { icon: Youtube, href: 'https://www.youtube.com/@ReliabilityEngineersAcademy', name: 'YouTube' },
   { icon: Facebook, href: '#', name: 'Facebook' },
 ];

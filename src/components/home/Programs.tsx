@@ -77,6 +77,17 @@ export default function Programs() {
           ))}
         </div>
 
+        <div className='text-center mb-8'>
+          <Link href='/programs'>
+            <Button
+              size='lg'
+              className='px-8 py-4 text-lg font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white border-0'
+            >
+              View All Programs and Certifications
+            </Button>
+          </Link>
+        </div>
+
         <Card className='bg-gradient-to-br from-primary/10 to-primary/20 p-6 md:p-12'>
           <CardContent>
             <div className='text-center mb-12'>

@@ -281,7 +281,7 @@ export default function About() {
                   <Button
                     variant='outline'
                     size='lg'
-                    className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary'
+                    className='border-2 border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary'
                   >
                     Learn About Our Programs
                   </Button>

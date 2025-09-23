@@ -145,36 +145,4 @@ export const certifications = [
     ],
     link: '/programs/asset-performance-management',
   },
-  {
-    icon: Wrench,
-    title: 'Diploma in Reliability Engineering',
-    subtitle: 'Advanced Diploma Program',
-    description:
-      'Comprehensive program covering reliability engineering principles, failure analysis, testing, and system optimization.',
-    duration: '120+ hours',
-    level: 'Advanced',
-    features: [
-      'Failure Analysis',
-      'Statistical Methods',
-      'Reliability Testing',
-      'System Optimization',
-    ],
-    link: '/programs/diploma-reliability-engineering',
-  },
-  {
-    icon: Car,
-    title: 'Certificate in EV Engineering',
-    subtitle: 'EV Engineering & System Integration',
-    description:
-      'Master cutting-edge electric vehicle technologies, battery systems, power electronics, and vehicle integration.',
-    duration: '100+ hours',
-    level: 'Professional',
-    features: [
-      'Battery Technology',
-      'Power Electronics',
-      'Vehicle Integration',
-      'Charging Systems',
-    ],
-    link: '/programs/certificate-ev-engineering-system-integration',
-  },
 ];
