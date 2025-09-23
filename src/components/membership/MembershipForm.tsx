@@ -268,7 +268,7 @@ export default function MembershipForm() {
                             <FormItem>
                               <FormLabel>Organization / Employer *</FormLabel>
                               <FormControl>
-                                <Input placeholder='e.g., TAQA Transmission' {...field} />
+                                <Input placeholder='e.g., Microsoft' {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
