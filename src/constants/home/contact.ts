@@ -4,20 +4,20 @@ export const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: 'info@reliabilityengineers.academy',
+    details: 'reliabiltyengineersacademy@gmail.com',
     subDetails: "We'll respond within 24 hours",
   },
   {
     icon: Phone,
     title: 'Call Us',
-    details: '+1 (555) 123-4567',
+    details: 'UAE : +971 56 821 9732, India : +91 9500182157, +91 95512 16508',
     subDetails: 'Mon-Fri, 9:00 AM - 6:00 PM EST',
   },
   {
     icon: MapPin,
     title: 'Visit Us',
-    details: '123 Reliability Drive, Suite 100',
-    subDetails: 'Houston, TX 77001, USA',
+    details: 'Abu Dhabi, UAE',
+    subDetails: '',
   },
   {
     icon: Clock,

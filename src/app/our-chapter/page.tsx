@@ -10,6 +10,7 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   missionPoints,
@@ -61,12 +62,14 @@ export default function OurChapterPage() {
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
-                <Button
-                  size='lg'
-                  className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4'
-                >
-                  Join Our Chapter
-                </Button>
+                <Link href='/membership'>
+                  <Button
+                    size='lg'
+                    className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4'
+                  >
+                    Join Our Chapter
+                  </Button>
+                </Link>
                 <Button
                   variant='outline'
                   size='lg'
@@ -487,12 +490,16 @@ export default function OurChapterPage() {
             reliability and maintenance excellence across all industries.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Button size='lg' className='px-8 py-4'>
-              Become a Member
-            </Button>
-            <Button variant='outline' size='lg' className='px-8 py-4'>
-              Contact G-ARMP
-            </Button>
+            <Link href='/membership'>
+              <Button size='lg' className='px-8 py-4'>
+                Become a Member
+              </Button>
+            </Link>
+            <Link href='/contact'>
+              <Button variant='outline' size='lg' className='px-8 py-4'>
+                Contact G-ARMP
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>
