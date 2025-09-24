@@ -213,7 +213,7 @@ export default function WhyChooseUsPage() {
                   <Button
                     variant='outline'
                     size='lg'
-                    className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4'
+                    className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 bg-transparent'
                   >
                     Contact Our Team
                   </Button>
