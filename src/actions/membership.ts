@@ -1,35 +1,23 @@
 'use server';
 
-import { createClient as createServiceClient } from '@supabase/supabase-js';
-import { membershipSchema, type MembershipFormData } from '@/validations/membership';
 import { revalidatePath } from 'next/cache';
+import { createClient as createServiceClient } from '@supabase/supabase-js';
+
+import {
+  membershipSchema,
+  type MembershipFormData,
+} from '@/validations/membership';
 import { uploadCVFileAction } from './file-upload';
 import { addSubscriberAction } from './subscribers';
 import { sendMembershipNotificationEmail } from '@/lib/email';
 
-export async function createMembershipApplicationAction(data: MembershipFormData, cvFile?: File) {
+export async function createMembershipApplicationAction(
+  data: MembershipFormData,
+  cvFile?: File
+) {
   try {
-    // Validate environment variables
-    if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
-      console.error('Missing NEXT_PUBLIC_SUPABASE_URL environment variable');
-      return {
-        success: false,
-        error: 'Server configuration error. Please contact support.',
-      };
-    }
-
-    if (!process.env.SUPABASE_SECRET_KEY) {
-      console.error('Missing SUPABASE_SECRET_KEY environment variable');
-      return {
-        success: false,
-        error: 'Server configuration error. Please contact support.',
-      };
-    }
-
-    // Validate the data
     const validatedData = membershipSchema.parse(data);
 
-    // Honeypot check
     if (validatedData.hpt && validatedData.hpt.trim() !== '') {
       return {
         success: false,
@@ -38,24 +26,25 @@ export async function createMembershipApplicationAction(data: MembershipFormData
     }
 
     const supabase = createServiceClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL,
-      process.env.SUPABASE_SECRET_KEY
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SECRET_KEY!
     );
 
-    // Handle CV file upload if provided
     let cvFilePath = null;
     if (cvFile) {
-      const uploadResult = await uploadCVFileAction(cvFile, validatedData.email);
+      const uploadResult = await uploadCVFileAction(
+        cvFile,
+        validatedData.email
+      );
       if (!uploadResult.success) {
         return {
           success: false,
-          error: uploadResult.error
+          error: uploadResult.error,
         };
       }
       cvFilePath = uploadResult.data?.path || null;
     }
 
-    // Insert the membership application
     const { data: membershipData, error } = await supabase
       .from('membership_applications')
       .insert([
@@ -92,7 +81,7 @@ export async function createMembershipApplicationAction(data: MembershipFormData
         message: error.message,
         details: error.details,
         hint: error.hint,
-        code: error.code
+        code: error.code,
       });
       return {
         success: false,
@@ -100,40 +89,30 @@ export async function createMembershipApplicationAction(data: MembershipFormData
       };
     }
 
-    // Handle newsletter subscription if user opted in
     if (validatedData.news) {
       try {
-        const subscriberResult = await addSubscriberAction(
-          validatedData.email
-        );
-        
+        const subscriberResult = await addSubscriberAction(validatedData.email);
+
         if (!subscriberResult.success) {
           console.warn('Failed to add subscriber:', subscriberResult.error);
-          // Don't fail the entire membership application if newsletter subscription fails
-        } else {
-          console.log('Successfully added subscriber:', validatedData.email);
         }
       } catch (error) {
         console.warn('Error adding subscriber:', error);
-        // Don't fail the entire membership application if newsletter subscription fails
       }
     }
 
-    // Send email notification to client
     try {
-      const emailResult = await sendMembershipNotificationEmail(validatedData, cvFilePath);
+      const emailResult = await sendMembershipNotificationEmail(
+        validatedData,
+        cvFilePath
+      );
       if (!emailResult.success) {
         console.warn('Failed to send email notification:', emailResult.error);
-        // Don't fail the entire membership application if email notification fails
-      } else {
-        console.log('Email notification sent successfully');
       }
     } catch (error) {
       console.warn('Error sending email notification:', error);
-      // Don't fail the entire membership application if email notification fails
     }
 
-    // Revalidate the membership page
     revalidatePath('/membership');
 
     return {
@@ -142,7 +121,7 @@ export async function createMembershipApplicationAction(data: MembershipFormData
     };
   } catch (error) {
     console.error('Error in createMembershipApplicationAction:', error);
-    
+
     if (error instanceof Error && error.name === 'ZodError') {
       return {
         success: false,

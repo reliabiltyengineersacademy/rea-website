@@ -136,8 +136,7 @@ export const careerBenefits = [
   {
     icon: Users,
     title: 'Network Access',
-    description:
-      'Join the global ASQ community of reliability professionals',
+    description: 'Join the global ASQ community of reliability professionals',
   },
 ];
 

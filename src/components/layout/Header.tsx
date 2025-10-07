@@ -104,8 +104,8 @@ export default function Header() {
                               ? 'text-primary font-bold'
                               : 'text-white font-bold'
                             : isScrolled
-                            ? 'text-muted-foreground'
-                            : 'text-white'
+                              ? 'text-muted-foreground'
+                              : 'text-white'
                         )}
                       >
                         {item.name}
@@ -138,8 +138,8 @@ export default function Header() {
                               ? 'text-primary font-bold'
                               : 'text-white font-bold'
                             : isScrolled
-                            ? 'text-muted-foreground'
-                            : 'text-white'
+                              ? 'text-muted-foreground'
+                              : 'text-white'
                         )}
                       >
                         {item.name}

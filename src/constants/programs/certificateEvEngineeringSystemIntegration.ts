@@ -45,11 +45,13 @@ export const targetAudience = [
 export const learningObjectives = [
   {
     objective: 'Master EV Fundamentals',
-    description: 'Understand core principles of electric vehicle design and operation',
+    description:
+      'Understand core principles of electric vehicle design and operation',
   },
   {
     objective: 'Design Battery Systems',
-    description: 'Learn battery technology, management systems, and safety protocols',
+    description:
+      'Learn battery technology, management systems, and safety protocols',
   },
   {
     objective: 'Implement Power Electronics',
@@ -57,15 +59,18 @@ export const learningObjectives = [
   },
   {
     objective: 'Integrate EV Systems',
-    description: 'Develop skills in system integration and vehicle architecture',
+    description:
+      'Develop skills in system integration and vehicle architecture',
   },
   {
     objective: 'Optimize Performance',
-    description: 'Learn vehicle dynamics, efficiency optimization, and range management',
+    description:
+      'Learn vehicle dynamics, efficiency optimization, and range management',
   },
   {
     objective: 'Manage Charging Infrastructure',
-    description: 'Understand charging systems, grid integration, and smart charging',
+    description:
+      'Understand charging systems, grid integration, and smart charging',
   },
 ];
 
@@ -167,14 +172,12 @@ export const careerBenefits = [
   {
     icon: Search,
     title: 'Technical Expertise',
-    description:
-      'Develop specialized skills in EV systems and integration',
+    description: 'Develop specialized skills in EV systems and integration',
   },
   {
     icon: Users,
     title: 'Professional Network',
-    description:
-      'Connect with EV industry professionals and experts',
+    description: 'Connect with EV industry professionals and experts',
   },
   {
     icon: Target,
@@ -185,8 +188,7 @@ export const careerBenefits = [
   {
     icon: Zap,
     title: 'Innovation Skills',
-    description:
-      'Master cutting-edge technologies in electric mobility',
+    description: 'Master cutting-edge technologies in electric mobility',
   },
 ];
 
@@ -194,7 +196,7 @@ export const eligibilityRequirements = [
   {
     title: 'Educational Background',
     requirements: [
-      'Bachelor\'s degree in Engineering (Mechanical, Electrical, Electronics, or related)',
+      "Bachelor's degree in Engineering (Mechanical, Electrical, Electronics, or related)",
       'Diploma in Engineering with relevant experience',
       'Equivalent technical qualification in automotive or electrical fields',
       'Basic understanding of electrical and mechanical systems',
@@ -226,13 +228,15 @@ export const examDetails = {
   cost: '$3,500 USD',
   validity: '3 years',
   recertification: '30 hours of continuing education required',
-  credits: 'Professional development and continuing education credits available',
+  credits:
+    'Professional development and continuing education credits available',
 };
 
 export const programFeatures = [
   {
     title: 'Comprehensive Curriculum',
-    description: 'Complete coverage of EV engineering principles, technologies, and applications',
+    description:
+      'Complete coverage of EV engineering principles, technologies, and applications',
     features: [
       'Eight comprehensive training modules',
       'Real-world case studies and industry applications',
@@ -242,7 +246,8 @@ export const programFeatures = [
   },
   {
     title: 'Practical Application',
-    description: 'Apply EV engineering principles to real projects and scenarios',
+    description:
+      'Apply EV engineering principles to real projects and scenarios',
     features: [
       'Capstone project in EV system design',
       'Peer collaboration and team projects',
@@ -321,7 +326,8 @@ export const keyTopics = [
 export const certificationRequirements = [
   {
     requirement: 'Complete All Modules',
-    description: 'Successfully complete all eight program modules with passing grades',
+    description:
+      'Successfully complete all eight program modules with passing grades',
   },
   {
     requirement: 'Pass Final Examination',
@@ -345,7 +351,8 @@ export const careerPaths = [
   },
   {
     role: 'Battery Engineer',
-    description: 'Specialize in battery technology and energy management systems',
+    description:
+      'Specialize in battery technology and energy management systems',
     salary: '$90,000 - $130,000',
   },
   {

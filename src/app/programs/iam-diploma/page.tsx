@@ -98,12 +98,12 @@ const IAMDiploma = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                The Institute of Asset Management (IAM) Diploma is a comprehensive
-                program designed to equip professionals with advanced knowledge
-                and skills in strategic asset management principles, lifecycle
-                optimization, and performance enhancement. This diploma program
-                covers all aspects of asset management from fundamentals to
-                advanced applications.
+                The Institute of Asset Management (IAM) Diploma is a
+                comprehensive program designed to equip professionals with
+                advanced knowledge and skills in strategic asset management
+                principles, lifecycle optimization, and performance enhancement.
+                This diploma program covers all aspects of asset management from
+                fundamentals to advanced applications.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 Through this program, you&apos;ll develop expertise in asset
@@ -297,7 +297,9 @@ const IAMDiploma = () => {
             {diplomaRequirements.map((requirement, index) => (
               <Card key={index} className='p-8'>
                 <CardHeader>
-                  <CardTitle className='text-xl'>{requirement.requirement}</CardTitle>
+                  <CardTitle className='text-xl'>
+                    {requirement.requirement}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className='text-muted-foreground'>
@@ -418,7 +420,9 @@ const IAMDiploma = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Program Highlights</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Program Highlights
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -426,7 +430,8 @@ const IAMDiploma = () => {
                         Strategic Asset Management
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master comprehensive asset strategy development and implementation
+                        Master comprehensive asset strategy development and
+                        implementation
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -434,7 +439,8 @@ const IAMDiploma = () => {
                         Lifecycle Optimization
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Learn advanced techniques for optimizing asset performance throughout lifecycle
+                        Learn advanced techniques for optimizing asset
+                        performance throughout lifecycle
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -442,7 +448,8 @@ const IAMDiploma = () => {
                         Risk Management
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Develop skills in asset risk assessment and mitigation strategies
+                        Develop skills in asset risk assessment and mitigation
+                        strategies
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -450,7 +457,8 @@ const IAMDiploma = () => {
                         Performance Measurement
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master KPIs and performance metrics for asset management excellence
+                        Master KPIs and performance metrics for asset management
+                        excellence
                       </p>
                     </div>
                   </CardContent>
@@ -462,9 +470,7 @@ const IAMDiploma = () => {
 
         <Card className='bg-gradient-to-r from-primary to-primary/80 p-12 text-center text-primary-foreground'>
           <CardContent>
-            <h2 className='text-3xl font-bold mb-4'>
-              Earn Your IAM Diploma
-            </h2>
+            <h2 className='text-3xl font-bold mb-4'>Earn Your IAM Diploma</h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
               Join the ranks of certified asset management professionals and
               advance your career with comprehensive expertise in strategic

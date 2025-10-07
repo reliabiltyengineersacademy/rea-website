@@ -10,13 +10,14 @@ export async function uploadCVFileAction(file: File, userId: string) {
       'application/msword',
       'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
       'application/vnd.ms-powerpoint',
-      'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation',
     ];
 
     if (!allowedTypes.includes(file.type)) {
       return {
         success: false,
-        error: 'Invalid file type. Please upload PDF, DOC, DOCX, PPT, or PPTX files only.'
+        error:
+          'Invalid file type. Please upload PDF, DOC, DOCX, PPT, or PPTX files only.',
       };
     }
 
@@ -25,7 +26,7 @@ export async function uploadCVFileAction(file: File, userId: string) {
     if (file.size > maxSize) {
       return {
         success: false,
-        error: 'File size too large. Please upload files smaller than 10MB.'
+        error: 'File size too large. Please upload files smaller than 10MB.',
       };
     }
 
@@ -47,14 +48,14 @@ export async function uploadCVFileAction(file: File, userId: string) {
       .from('cv-uploads')
       .upload(filePath, arrayBuffer, {
         contentType: file.type,
-        upsert: false
+        upsert: false,
       });
 
     if (error) {
       console.error('Error uploading file:', error);
       return {
         success: false,
-        error: 'Failed to upload file. Please try again.'
+        error: 'Failed to upload file. Please try again.',
       };
     }
 
@@ -62,14 +63,14 @@ export async function uploadCVFileAction(file: File, userId: string) {
       success: true,
       data: {
         path: data.path,
-        fullPath: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/cv-uploads/${data.path}`
-      }
+        fullPath: `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/cv-uploads/${data.path}`,
+      },
     };
   } catch (error) {
     console.error('Error in uploadCVFileAction:', error);
     return {
       success: false,
-      error: 'An unexpected error occurred while uploading the file.'
+      error: 'An unexpected error occurred while uploading the file.',
     };
   }
 }
@@ -89,18 +90,18 @@ export async function deleteCVFileAction(filePath: string) {
       console.error('Error deleting file:', error);
       return {
         success: false,
-        error: 'Failed to delete file.'
+        error: 'Failed to delete file.',
       };
     }
 
     return {
-      success: true
+      success: true,
     };
   } catch (error) {
     console.error('Error in deleteCVFileAction:', error);
     return {
       success: false,
-      error: 'An unexpected error occurred while deleting the file.'
+      error: 'An unexpected error occurred while deleting the file.',
     };
   }
 }

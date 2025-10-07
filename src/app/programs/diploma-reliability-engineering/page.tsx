@@ -48,8 +48,8 @@ const DiplomaReliabilityEngineering = () => {
                 Master the comprehensive principles and practices of reliability
                 engineering with our advanced diploma program. Develop expertise
                 in failure analysis, reliability testing, system optimization,
-                and risk management to become a certified reliability engineering
-                specialist.
+                and risk management to become a certified reliability
+                engineering specialist.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -106,11 +106,12 @@ const DiplomaReliabilityEngineering = () => {
                 advanced applications.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Through this program, you&apos;ll develop expertise in statistical
-                analysis, reliability testing, maintainability engineering, and
-                risk management. The curriculum combines theoretical knowledge
-                with practical applications, ensuring you can immediately apply
-                your learning to real-world reliability challenges.
+                Through this program, you&apos;ll develop expertise in
+                statistical analysis, reliability testing, maintainability
+                engineering, and risk management. The curriculum combines
+                theoretical knowledge with practical applications, ensuring you
+                can immediately apply your learning to real-world reliability
+                challenges.
               </p>
             </div>
             <Card className='p-8'>
@@ -296,7 +297,9 @@ const DiplomaReliabilityEngineering = () => {
             {diplomaRequirements.map((requirement, index) => (
               <Card key={index} className='p-8'>
                 <CardHeader>
-                  <CardTitle className='text-xl'>{requirement.requirement}</CardTitle>
+                  <CardTitle className='text-xl'>
+                    {requirement.requirement}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className='text-muted-foreground'>
@@ -417,7 +420,9 @@ const DiplomaReliabilityEngineering = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Program Highlights</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Program Highlights
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -425,7 +430,8 @@ const DiplomaReliabilityEngineering = () => {
                         Advanced Failure Analysis
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master comprehensive failure analysis techniques and root cause investigation
+                        Master comprehensive failure analysis techniques and
+                        root cause investigation
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -433,7 +439,8 @@ const DiplomaReliabilityEngineering = () => {
                         Statistical Methods & Modeling
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Learn advanced statistical analysis and reliability modeling techniques
+                        Learn advanced statistical analysis and reliability
+                        modeling techniques
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -441,7 +448,8 @@ const DiplomaReliabilityEngineering = () => {
                         Reliability Testing & Validation
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Design and execute comprehensive reliability testing programs
+                        Design and execute comprehensive reliability testing
+                        programs
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -449,7 +457,8 @@ const DiplomaReliabilityEngineering = () => {
                         System Optimization
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Develop skills in maintainability, availability, and system optimization
+                        Develop skills in maintainability, availability, and
+                        system optimization
                       </p>
                     </div>
                   </CardContent>

@@ -44,10 +44,10 @@ const AssetPerformanceManagementCertification = () => {
               </h1>
 
               <p className='text-xl text-primary-foreground/90 mb-8 leading-relaxed'>
-                Master the art of optimizing asset reliability, availability, and
-                performance while minimizing costs and operational risks. This
-                comprehensive certification program equips you with advanced
-                strategies and tools for superior asset management.
+                Master the art of optimizing asset reliability, availability,
+                and performance while minimizing costs and operational risks.
+                This comprehensive certification program equips you with
+                advanced strategies and tools for superior asset management.
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -99,14 +99,14 @@ const AssetPerformanceManagementCertification = () => {
                 Asset Performance Management (APM) is a strategic approach to
                 optimizing the reliability, availability, and performance of
                 physical assets while minimizing operational risks and costs.
-                This certification program provides comprehensive training in APM
-                principles, tools, and implementation strategies.
+                This certification program provides comprehensive training in
+                APM principles, tools, and implementation strategies.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Through this program, you&apos;ll learn to leverage data analytics,
-                predictive maintenance, and digital technologies to maximize
-                asset value, reduce downtime, and improve operational efficiency
-                across your organization.
+                Through this program, you&apos;ll learn to leverage data
+                analytics, predictive maintenance, and digital technologies to
+                maximize asset value, reduce downtime, and improve operational
+                efficiency across your organization.
               </p>
             </div>
             <Card className='p-8'>
@@ -392,7 +392,9 @@ const AssetPerformanceManagementCertification = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Training Highlights</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Training Highlights
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -400,7 +402,8 @@ const AssetPerformanceManagementCertification = () => {
                         Predictive Maintenance Mastery
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Learn advanced predictive maintenance strategies and data analytics
+                        Learn advanced predictive maintenance strategies and
+                        data analytics
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -408,7 +411,8 @@ const AssetPerformanceManagementCertification = () => {
                         Asset Lifecycle Optimization
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master techniques for optimizing asset performance throughout lifecycle
+                        Master techniques for optimizing asset performance
+                        throughout lifecycle
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -416,7 +420,8 @@ const AssetPerformanceManagementCertification = () => {
                         Digital APM Implementation
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Understand how to implement digital APM solutions and technologies
+                        Understand how to implement digital APM solutions and
+                        technologies
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -424,7 +429,8 @@ const AssetPerformanceManagementCertification = () => {
                         Performance Metrics & KPIs
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Develop and monitor key performance indicators for asset optimization
+                        Develop and monitor key performance indicators for asset
+                        optimization
                       </p>
                     </div>
                   </CardContent>
@@ -441,8 +447,8 @@ const AssetPerformanceManagementCertification = () => {
             </h2>
             <p className='text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
               Master the art of asset optimization and drive significant
-              improvements in performance, reliability, and cost reduction across
-              your organization.
+              improvements in performance, reliability, and cost reduction
+              across your organization.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link href='/pricing'>

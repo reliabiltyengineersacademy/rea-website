@@ -3,6 +3,7 @@ import { CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
+import ScheduleConsultation from './ScheduleConsultation';
 import { achievements, differentiators } from '@/constants/home/whyChoose';
 
 export default function WhyChoose() {
@@ -125,9 +126,7 @@ export default function WhyChoose() {
             <Button className='bg-primary text-white border-primary border-2 font-bold py-6 px-8'>
               Explore Programs
             </Button>
-            <Button className='bg-transparent text-primary border-primary border-2 font-bold py-6 px-8'>
-              Schedule Consultation
-            </Button>
+            <ScheduleConsultation />
           </div>
         </div>
       </Container>

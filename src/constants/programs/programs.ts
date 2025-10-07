@@ -1,4 +1,22 @@
-import { Award, Shield, Settings, Zap, Search, BookOpen, Wrench, Droplets, Activity, Target, AlertTriangle, Cog, Users, BarChart3, GraduationCap, Car, Building2 } from 'lucide-react';
+import {
+  Award,
+  Shield,
+  Settings,
+  Zap,
+  Search,
+  BookOpen,
+  Wrench,
+  Droplets,
+  Activity,
+  Target,
+  AlertTriangle,
+  Cog,
+  Users,
+  BarChart3,
+  GraduationCap,
+  Car,
+  Building2,
+} from 'lucide-react';
 
 export const programs = [
   {
@@ -464,7 +482,7 @@ export const programs = [
     duration: '3-5 days',
     price: '$4,500',
     description:
-      'World-class certification program that equips you with tools, expertise, and ongoing support to lead successful organizational change using Prosci\'s proven methodology and ADKAR Model.',
+      "World-class certification program that equips you with tools, expertise, and ongoing support to lead successful organizational change using Prosci's proven methodology and ADKAR Model.",
     features: [
       'ADKAR Model Mastery',
       '3-Phase Process',

@@ -95,17 +95,17 @@ const ProsciChangeManagementCertification = () => {
           <div className='grid lg:grid-cols-2 gap-12'>
             <div>
               <p className='text-lg text-muted-foreground mb-6 leading-relaxed'>
-                Prosci&apos;s Change Management Certification Program is the global
-                standard for change management training. This immersive learning
-                experience gives you the knowledge, skills, and tools to drive
-                successful organizational change using Prosci&apos;s proven
-                methodology and ADKAR Model.
+                Prosci&apos;s Change Management Certification Program is the
+                global standard for change management training. This immersive
+                learning experience gives you the knowledge, skills, and tools
+                to drive successful organizational change using Prosci&apos;s
+                proven methodology and ADKAR Model.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                During the program, you&apos;ll apply Prosci&apos;s methodology to one of
-                your active projects, interact with peers, and gain access to
-                industry-leading tools. Graduates earn the distinction of being
-                a Prosci Certified Change Practitioner.
+                During the program, you&apos;ll apply Prosci&apos;s methodology
+                to one of your active projects, interact with peers, and gain
+                access to industry-leading tools. Graduates earn the distinction
+                of being a Prosci Certified Change Practitioner.
               </p>
             </div>
             <Card className='p-8'>
@@ -367,7 +367,9 @@ const ProsciChangeManagementCertification = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Training Highlights</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Training Highlights
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -383,7 +385,8 @@ const ProsciChangeManagementCertification = () => {
                         3-Phase Process
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master Prosci&apos;s 3-Phase Process for organizational change
+                        Master Prosci&apos;s 3-Phase Process for organizational
+                        change
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>

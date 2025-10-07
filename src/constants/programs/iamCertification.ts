@@ -37,8 +37,7 @@ export const targetAudience = [
   },
   {
     title: 'Recent Graduates',
-    description:
-      'Graduates aspiring to enter the asset management profession',
+    description: 'Graduates aspiring to enter the asset management profession',
   },
 ];
 
@@ -53,11 +52,13 @@ export const learningObjectives = [
   },
   {
     objective: 'Apply Risk Management',
-    description: 'Master fundamental techniques for asset risk assessment and management',
+    description:
+      'Master fundamental techniques for asset risk assessment and management',
   },
   {
     objective: 'Optimize Performance',
-    description: 'Learn basic techniques for optimizing asset performance and value',
+    description:
+      'Learn basic techniques for optimizing asset performance and value',
   },
   {
     objective: 'Engage Stakeholders',
@@ -65,7 +66,8 @@ export const learningObjectives = [
   },
   {
     objective: 'Manage Asset Programs',
-    description: 'Learn to participate effectively in asset management programs and teams',
+    description:
+      'Learn to participate effectively in asset management programs and teams',
   },
 ];
 
@@ -142,7 +144,8 @@ export const careerBenefits = [
   {
     icon: TrendingUp,
     title: 'Career Advancement',
-    description: 'Open doors to asset management and related professional positions',
+    description:
+      'Open doors to asset management and related professional positions',
   },
   {
     icon: Search,
@@ -153,8 +156,7 @@ export const careerBenefits = [
   {
     icon: Users,
     title: 'Industry Network',
-    description:
-      'Join a community of certified asset management professionals',
+    description: 'Join a community of certified asset management professionals',
   },
   {
     icon: Target,
@@ -206,13 +208,15 @@ export const examDetails = {
   cost: '$3,500 USD',
   validity: '3 years',
   recertification: '30 hours of continuing education required',
-  credits: 'Professional development and continuing education credits available',
+  credits:
+    'Professional development and continuing education credits available',
 };
 
 export const programFeatures = [
   {
     title: 'Comprehensive Curriculum',
-    description: 'Complete coverage of asset management principles, methods, and applications',
+    description:
+      'Complete coverage of asset management principles, methods, and applications',
     features: [
       'Six comprehensive training modules',
       'Real-world case studies and applications',
@@ -222,7 +226,8 @@ export const programFeatures = [
   },
   {
     title: 'Practical Application',
-    description: 'Apply asset management principles to real projects and scenarios',
+    description:
+      'Apply asset management principles to real projects and scenarios',
     features: [
       'Practical project development',
       'Peer collaboration and learning',
@@ -232,7 +237,8 @@ export const programFeatures = [
   },
   {
     title: 'Essential Tools Training',
-    description: 'Access to industry-standard asset management tools and resources',
+    description:
+      'Access to industry-standard asset management tools and resources',
     features: [
       'Asset management software training',
       'Basic planning and analysis tools',
@@ -242,7 +248,8 @@ export const programFeatures = [
   },
   {
     title: 'Ongoing Support',
-    description: 'Continuous learning and professional development opportunities',
+    description:
+      'Continuous learning and professional development opportunities',
     features: [
       'Access to asset management community',
       'Regular webinars and updates',
@@ -278,7 +285,8 @@ export const keyTopics = [
   },
   {
     topic: 'Lifecycle Management',
-    description: 'Basic techniques for managing assets throughout their lifecycle',
+    description:
+      'Basic techniques for managing assets throughout their lifecycle',
   },
   {
     topic: 'Risk Management',
@@ -286,22 +294,26 @@ export const keyTopics = [
   },
   {
     topic: 'Performance Measurement',
-    description: 'Development and monitoring of basic performance metrics and KPIs',
+    description:
+      'Development and monitoring of basic performance metrics and KPIs',
   },
   {
     topic: 'Stakeholder Management',
-    description: 'Essential stakeholder engagement and communication strategies',
+    description:
+      'Essential stakeholder engagement and communication strategies',
   },
   {
     topic: 'Program Participation',
-    description: 'Skills for effective participation in asset management programs',
+    description:
+      'Skills for effective participation in asset management programs',
   },
 ];
 
 export const certificationRequirements = [
   {
     requirement: 'Complete All Modules',
-    description: 'Successfully complete all six program modules with passing grades',
+    description:
+      'Successfully complete all six program modules with passing grades',
   },
   {
     requirement: 'Pass Final Examination',
@@ -313,6 +325,7 @@ export const certificationRequirements = [
   },
   {
     requirement: 'Professional Assessment',
-    description: 'Demonstrate practical skills in asset management applications',
+    description:
+      'Demonstrate practical skills in asset management applications',
   },
 ];

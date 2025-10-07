@@ -27,7 +27,8 @@ export default function Hero() {
           <div className='text-primary-foreground'>
             <div className='inline-flex items-center bg-primary-foreground/10 rounded-full px-4 py-2 mb-6 backdrop-blur-sm border border-primary-foreground/20'>
               <span className='text-sm font-medium'>
-                🎯 Expert Consulting and Certification in Asset Management, Maintenance Strategy, and Reliability Engineering
+                🎯 Expert Consulting and Certification in Asset Management,
+                Maintenance Strategy, and Reliability Engineering
               </span>
             </div>
 
@@ -97,8 +98,8 @@ export default function Hero() {
                         index === currentSlide
                           ? 'translate-x-0 opacity-100'
                           : index < currentSlide
-                          ? '-translate-x-full opacity-0'
-                          : 'translate-x-full opacity-0'
+                            ? '-translate-x-full opacity-0'
+                            : 'translate-x-full opacity-0'
                       )}
                     >
                       <div className='h-full flex flex-col justify-center'>

@@ -58,6 +58,30 @@ export interface EmailCampaign {
   updated_at: string;
 }
 
+export interface ConsultationBooking {
+  id: string;
+  client_name: string;
+  client_email: string;
+  client_phone?: string;
+  company?: string;
+  consultation_date: string;
+  consultation_time: string;
+  consultation_datetime: string;
+  duration_minutes: number;
+  status:
+    | 'pending'
+    | 'confirmed'
+    | 'denied'
+    | 'rescheduled'
+    | 'completed'
+    | 'cancelled';
+  admin_notes?: string;
+  meeting_link?: string;
+  rescheduled_from?: string;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface DatabaseResponse<T> {
   success: boolean;
   data?: T;

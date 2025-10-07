@@ -45,7 +45,8 @@ export const targetAudience = [
 export const learningObjectives = [
   {
     objective: 'Define Change Management',
-    description: 'Understand the fundamental concepts and principles of change management',
+    description:
+      'Understand the fundamental concepts and principles of change management',
   },
   {
     objective: 'Explain the Value of Change Management',
@@ -53,19 +54,23 @@ export const learningObjectives = [
   },
   {
     objective: 'Apply the ADKAR Model',
-    description: 'Master Prosci&apos;s ADKAR Model for facilitating individual change',
+    description:
+      'Master Prosci&apos;s ADKAR Model for facilitating individual change',
   },
   {
     objective: 'Apply the 3-Phase Process',
-    description: 'Implement Prosci&apos;s 3-Phase Process for organizational change',
+    description:
+      'Implement Prosci&apos;s 3-Phase Process for organizational change',
   },
   {
     objective: 'Activate Change Roles',
-    description: 'Learn to activate and coordinate roles that contribute to change success',
+    description:
+      'Learn to activate and coordinate roles that contribute to change success',
   },
   {
     objective: 'Formulate Change Plans',
-    description: 'Develop comprehensive Change Management Plans for specific projects',
+    description:
+      'Develop comprehensive Change Management Plans for specific projects',
   },
 ];
 
@@ -117,13 +122,14 @@ export const careerBenefits = [
   {
     icon: TrendingUp,
     title: 'Career Advancement',
-    description: 'Open doors to senior change management and transformation roles',
+    description:
+      'Open doors to senior change management and transformation roles',
   },
   {
     icon: Search,
     title: 'Methodology Expertise',
     description:
-      'Master Prosci\'s proven change management methodology and tools',
+      "Master Prosci's proven change management methodology and tools",
   },
   {
     icon: Users,
@@ -186,7 +192,8 @@ export const examDetails = {
 export const programFeatures = [
   {
     title: 'Interactive Learning Experience',
-    description: 'Engaging, hands-on learning with peer collaboration and real-world application',
+    description:
+      'Engaging, hands-on learning with peer collaboration and real-world application',
     features: [
       'Breakout sessions and group activities',
       'Peer-to-peer learning and networking',
@@ -196,7 +203,8 @@ export const programFeatures = [
   },
   {
     title: 'Comprehensive Tool Suite',
-    description: 'Access to Prosci\'s industry-leading change management tools and resources',
+    description:
+      "Access to Prosci's industry-leading change management tools and resources",
     features: [
       'Research Hub with 25 years of data',
       'Knowledge Hub with ongoing resources',

@@ -2,9 +2,11 @@
 
 import { createClient as createServiceClient } from '@supabase/supabase-js';
 
-export async function addSubscriberAction(
-  email: string
-): Promise<{ success: boolean; error?: string; data?: { id: string; email: string; subscribed_at: string } }> {
+export async function addSubscriberAction(email: string): Promise<{
+  success: boolean;
+  error?: string;
+  data?: { id: string; email: string; subscribed_at: string };
+}> {
   try {
     const supabase = createServiceClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -25,16 +27,15 @@ export async function addSubscriberAction(
 
     // If subscriber already exists, return success (don't duplicate)
     if (existingSubscriber) {
-      console.log('Subscriber already exists:', email);
       return { success: true, data: existingSubscriber };
     }
 
     // Add new subscriber
     const { data, error } = await supabase
       .from('subscribers')
-      .insert({ 
+      .insert({
         email,
-        subscribed_at: new Date().toISOString()
+        subscribed_at: new Date().toISOString(),
       })
       .select()
       .single();
@@ -44,13 +45,13 @@ export async function addSubscriberAction(
       return { success: false, error: error.message };
     }
 
-    console.log('Successfully added subscriber:', email);
     return { success: true, data };
   } catch (error) {
     console.error('Unexpected error in addSubscriberAction:', error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'An unexpected error occurred',
+      error:
+        error instanceof Error ? error.message : 'An unexpected error occurred',
     };
   }
 }

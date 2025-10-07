@@ -13,18 +13,15 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import Container from '@/components/layout/Container';
-import { createMembershipApplicationAction } from '@/actions/membership';
-import { 
-  membershipSchema, 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
+  membershipSchema,
   type MembershipFormData,
   membershipTiers,
   countries,
@@ -35,10 +32,21 @@ import {
   chapters,
   paymentOptions,
 } from '@/validations/membership';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Textarea } from '@/components/ui/textarea';
+import Container from '@/components/layout/Container';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { createMembershipApplicationAction } from '@/actions/membership';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function MembershipForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState('');
@@ -72,7 +80,7 @@ export default function MembershipForm() {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     setFileError('');
-    
+
     if (file) {
       // Validate file type
       const allowedTypes = [
@@ -80,21 +88,25 @@ export default function MembershipForm() {
         'application/msword',
         'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
         'application/vnd.ms-powerpoint',
-        'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
       ];
-      
+
       if (!allowedTypes.includes(file.type)) {
-        setFileError('Invalid file type. Please upload PDF, DOC, DOCX, PPT, or PPTX files only.');
+        setFileError(
+          'Invalid file type. Please upload PDF, DOC, DOCX, PPT, or PPTX files only.'
+        );
         return;
       }
-      
+
       // Validate file size (10MB)
       const maxSize = 10 * 1024 * 1024;
       if (file.size > maxSize) {
-        setFileError('File size too large. Please upload files smaller than 10MB.');
+        setFileError(
+          'File size too large. Please upload files smaller than 10MB.'
+        );
         return;
       }
-      
+
       setSelectedFile(file);
     }
   };
@@ -106,7 +118,10 @@ export default function MembershipForm() {
     setFileError('');
 
     try {
-      const result = await createMembershipApplicationAction(data, selectedFile || undefined);
+      const result = await createMembershipApplicationAction(
+        data,
+        selectedFile || undefined
+      );
 
       if (result.success) {
         setSubmitStatus('success');
@@ -115,7 +130,9 @@ export default function MembershipForm() {
         setFileError('');
       } else {
         setSubmitStatus('error');
-        setErrorMessage(result.error || 'Failed to submit application. Please try again.');
+        setErrorMessage(
+          result.error || 'Failed to submit application. Please try again.'
+        );
       }
     } catch {
       setSubmitStatus('error');
@@ -135,9 +152,10 @@ export default function MembershipForm() {
               Application Submitted!
             </h2>
             <p className='text-lg text-muted-foreground mb-8'>
-              Thank you for your interest in joining G-ARMP. We&apos;ll review your application and contact you by email within 24 hours.
+              Thank you for your interest in joining G-ARMP. We&apos;ll review
+              your application and contact you by email within 24 hours.
             </p>
-            <Button 
+            <Button
               onClick={() => {
                 setSubmitStatus('idle');
                 setSelectedFile(null);
@@ -170,7 +188,8 @@ export default function MembershipForm() {
             </Badge>
           </div>
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto text-balance'>
-            Become part of a global community advancing asset reliability, maintenance excellence, and lifecycle value.
+            Become part of a global community advancing asset reliability,
+            maintenance excellence, and lifecycle value.
           </p>
         </div>
 
@@ -178,23 +197,27 @@ export default function MembershipForm() {
           <div className='lg:col-span-2'>
             <Card className='shadow-xl'>
               <CardHeader>
-                <CardTitle className='text-2xl'>Membership Application</CardTitle>
+                <CardTitle className='text-2xl'>
+                  Membership Application
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className='space-y-8'
+                  >
                     {submitStatus === 'error' && (
                       <Alert variant='destructive'>
                         <AlertDescription>{errorMessage}</AlertDescription>
                       </Alert>
                     )}
 
-                    {/* Personal Information */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Personal Information
                       </h3>
-                      
+
                       <div className='grid md:grid-cols-2 gap-6'>
                         <FormField
                           control={form.control}
@@ -231,7 +254,11 @@ export default function MembershipForm() {
                             <FormItem>
                               <FormLabel>Work email *</FormLabel>
                               <FormControl>
-                                <Input type='email' placeholder='name@company.com' {...field} />
+                                <Input
+                                  type='email'
+                                  placeholder='name@company.com'
+                                  {...field}
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -245,7 +272,11 @@ export default function MembershipForm() {
                             <FormItem>
                               <FormLabel>Phone (incl. country code)</FormLabel>
                               <FormControl>
-                                <Input type='tel' placeholder='+971 5x xxx xxxx' {...field} />
+                                <Input
+                                  type='tel'
+                                  placeholder='+971 5x xxx xxxx'
+                                  {...field}
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -254,12 +285,11 @@ export default function MembershipForm() {
                       </div>
                     </div>
 
-                    {/* Professional Information */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Professional Information
                       </h3>
-                      
+
                       <div className='grid md:grid-cols-2 gap-6'>
                         <FormField
                           control={form.control}
@@ -268,7 +298,10 @@ export default function MembershipForm() {
                             <FormItem>
                               <FormLabel>Organization / Employer *</FormLabel>
                               <FormControl>
-                                <Input placeholder='e.g., Microsoft' {...field} />
+                                <Input
+                                  placeholder='e.g., Microsoft'
+                                  {...field}
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -282,7 +315,10 @@ export default function MembershipForm() {
                             <FormItem>
                               <FormLabel>Role / Title *</FormLabel>
                               <FormControl>
-                                <Input placeholder='e.g., Senior Reliability Engineer' {...field} />
+                                <Input
+                                  placeholder='e.g., Senior Reliability Engineer'
+                                  {...field}
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -295,9 +331,12 @@ export default function MembershipForm() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Country/Region *</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -320,9 +359,12 @@ export default function MembershipForm() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Years of experience *</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -345,9 +387,12 @@ export default function MembershipForm() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Primary industry *</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -366,30 +411,45 @@ export default function MembershipForm() {
                       </div>
                     </div>
 
-                    {/* Professional Interests */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Professional Interests
                       </h3>
-                      
+
                       <FormField
                         control={form.control}
                         name='interests'
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Select multiple areas of interest</FormLabel>
+                            <FormLabel>
+                              Select multiple areas of interest
+                            </FormLabel>
                             <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
                               {professionalInterests.map((interest) => (
-                                <div key={interest.value} className='flex items-center space-x-2'>
+                                <div
+                                  key={interest.value}
+                                  className='flex items-center space-x-2'
+                                >
                                   <Checkbox
                                     id={interest.value}
-                                    checked={field.value?.includes(interest.value) || false}
+                                    checked={
+                                      field.value?.includes(interest.value) ||
+                                      false
+                                    }
                                     onCheckedChange={(checked) => {
-                                      const currentInterests = field.value || [];
+                                      const currentInterests =
+                                        field.value || [];
                                       if (checked) {
-                                        field.onChange([...currentInterests, interest.value]);
+                                        field.onChange([
+                                          ...currentInterests,
+                                          interest.value,
+                                        ]);
                                       } else {
-                                        field.onChange(currentInterests.filter(i => i !== interest.value));
+                                        field.onChange(
+                                          currentInterests.filter(
+                                            (i) => i !== interest.value
+                                          )
+                                        );
                                       }
                                     }}
                                   />
@@ -403,7 +463,8 @@ export default function MembershipForm() {
                               ))}
                             </div>
                             <p className='text-sm text-muted-foreground mt-2'>
-                              These help us tailor communities, courses, and events.
+                              These help us tailor communities, courses, and
+                              events.
                             </p>
                             <FormMessage />
                           </FormItem>
@@ -411,21 +472,25 @@ export default function MembershipForm() {
                       />
                     </div>
 
-                    {/* Additional Information */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Additional Information
                       </h3>
-                      
+
                       <div className='grid md:grid-cols-2 gap-6'>
                         <FormField
                           control={form.control}
                           name='certs'
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Key certifications (comma-separated)</FormLabel>
+                              <FormLabel>
+                                Key certifications (comma-separated)
+                              </FormLabel>
                               <FormControl>
-                                <Input placeholder='e.g., CMRP, IAM Cert, ARP-E, ASQ-CRE' {...field} />
+                                <Input
+                                  placeholder='e.g., CMRP, IAM Cert, ARP-E, ASQ-CRE'
+                                  {...field}
+                                />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -437,10 +502,15 @@ export default function MembershipForm() {
                           name='referrer'
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>How did you hear about G-ARMP?</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <FormLabel>
+                                How did you hear about G-ARMP?
+                              </FormLabel>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -472,7 +542,8 @@ export default function MembershipForm() {
                               />
                             </FormControl>
                             <p className='text-sm text-muted-foreground'>
-                              150–600 characters recommended. Current: {field.value?.length || 0}
+                              150–600 characters recommended. Current:{' '}
+                              {field.value?.length || 0}
                             </p>
                             <FormMessage />
                           </FormItem>
@@ -480,12 +551,11 @@ export default function MembershipForm() {
                       />
                     </div>
 
-                    {/* Membership Details */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Membership Details
                       </h3>
-                      
+
                       <div className='grid md:grid-cols-3 gap-6'>
                         <FormField
                           control={form.control}
@@ -493,9 +563,12 @@ export default function MembershipForm() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Membership tier *</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -518,9 +591,12 @@ export default function MembershipForm() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Preferred chapter</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -543,9 +619,12 @@ export default function MembershipForm() {
                           render={({ field }) => (
                             <FormItem>
                               <FormLabel>Payment preference</FormLabel>
-                              <Select onValueChange={field.onChange} value={field.value}>
+                              <Select
+                                onValueChange={field.onChange}
+                                value={field.value}
+                              >
                                 <FormControl>
-                                  <SelectTrigger>
+                                  <SelectTrigger className='w-full'>
                                     <SelectValue placeholder='Select…' />
                                   </SelectTrigger>
                                 </FormControl>
@@ -564,26 +643,32 @@ export default function MembershipForm() {
                       </div>
                     </div>
 
-                    {/* File Upload */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Additional Documents
                       </h3>
-                      
+
                       <div className='space-y-2'>
-                        <label className='text-sm font-medium'>Upload CV / Profile (PDF, optional)</label>
+                        <label className='text-sm font-medium'>
+                          Upload CV / Profile (PDF, optional)
+                        </label>
                         <div className='flex items-center justify-center w-full'>
                           <label className='flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-muted-foreground/25 rounded-lg cursor-pointer hover:bg-muted/50'>
                             <div className='flex flex-col items-center justify-center pt-5 pb-6'>
                               <Upload className='w-8 h-8 mb-4 text-muted-foreground' />
                               <p className='mb-2 text-sm text-muted-foreground'>
-                                <span className='font-semibold'>Click to upload</span> or drag and drop
+                                <span className='font-semibold'>
+                                  Click to upload
+                                </span>{' '}
+                                or drag and drop
                               </p>
-                              <p className='text-xs text-muted-foreground'>PDF, DOC, DOCX, PPT, PPTX (MAX. 10MB)</p>
+                              <p className='text-xs text-muted-foreground'>
+                                PDF, DOC, DOCX, PPT, PPTX (MAX. 10MB)
+                              </p>
                             </div>
-                            <input 
-                              type='file' 
-                              className='hidden' 
+                            <input
+                              type='file'
+                              className='hidden'
                               accept='.pdf,.doc,.docx,.ppt,.pptx'
                               onChange={handleFileChange}
                             />
@@ -592,8 +677,11 @@ export default function MembershipForm() {
                         {selectedFile && (
                           <div className='p-3 bg-green-50 border border-green-200 rounded-lg'>
                             <p className='text-sm text-green-800'>
-                              <span className='font-medium'>Selected file:</span> {selectedFile.name} 
-                              ({(selectedFile.size / 1024 / 1024).toFixed(2)} MB)
+                              <span className='font-medium'>
+                                Selected file:
+                              </span>{' '}
+                              {selectedFile.name}(
+                              {(selectedFile.size / 1024 / 1024).toFixed(2)} MB)
                             </p>
                           </div>
                         )}
@@ -601,17 +689,17 @@ export default function MembershipForm() {
                           <p className='text-sm text-red-600'>{fileError}</p>
                         )}
                         <p className='text-xs text-muted-foreground'>
-                          Max 10 MB. Supported formats: PDF, DOC, DOCX, PPT, PPTX
+                          Max 10 MB. Supported formats: PDF, DOC, DOCX, PPT,
+                          PPTX
                         </p>
                       </div>
                     </div>
 
-                    {/* Agreements */}
                     <div className='space-y-6'>
                       <h3 className='text-lg font-semibold text-foreground border-b pb-2'>
                         Agreements
                       </h3>
-                      
+
                       <div className='space-y-4'>
                         <FormField
                           control={form.control}
@@ -626,7 +714,8 @@ export default function MembershipForm() {
                               </FormControl>
                               <div className='space-y-1 leading-none'>
                                 <FormLabel>
-                                  I agree to abide by the G-ARMP Code of Ethics and Professional Conduct. *
+                                  I agree to abide by the G-ARMP Code of Ethics
+                                  and Professional Conduct. *
                                 </FormLabel>
                                 <FormMessage />
                               </div>
@@ -647,7 +736,9 @@ export default function MembershipForm() {
                               </FormControl>
                               <div className='space-y-1 leading-none'>
                                 <FormLabel>
-                                  I consent to the processing of my personal data for membership administration as described in the Privacy Notice. *
+                                  I consent to the processing of my personal
+                                  data for membership administration as
+                                  described in the Privacy Notice. *
                                 </FormLabel>
                                 <FormMessage />
                               </div>
@@ -668,7 +759,8 @@ export default function MembershipForm() {
                               </FormControl>
                               <div className='space-y-1 leading-none'>
                                 <FormLabel>
-                                  I&apos;d like to receive updates about events, certifications, and courses.
+                                  I&apos;d like to receive updates about events,
+                                  certifications, and courses.
                                 </FormLabel>
                                 <FormMessage />
                               </div>
@@ -678,7 +770,6 @@ export default function MembershipForm() {
                       </div>
                     </div>
 
-                    {/* Honeypot field */}
                     <FormField
                       control={form.control}
                       name='hpt'
@@ -686,7 +777,11 @@ export default function MembershipForm() {
                         <FormItem className='sr-only'>
                           <FormLabel>Leave this field empty</FormLabel>
                           <FormControl>
-                            <Input {...field} tabIndex={-1} autoComplete='off' />
+                            <Input
+                              {...field}
+                              tabIndex={-1}
+                              autoComplete='off'
+                            />
                           </FormControl>
                         </FormItem>
                       )}
@@ -717,7 +812,8 @@ export default function MembershipForm() {
                     </div>
 
                     <p className='text-xs text-muted-foreground text-center'>
-                      By submitting, you acknowledge that membership is subject to review. You can request data deletion at any time.
+                      By submitting, you acknowledge that membership is subject
+                      to review. You can request data deletion at any time.
                     </p>
                   </form>
                 </Form>
@@ -725,7 +821,6 @@ export default function MembershipForm() {
             </Card>
           </div>
 
-          {/* Benefits Sidebar */}
           <div className='space-y-6'>
             <Card>
               <CardHeader>
@@ -738,15 +833,18 @@ export default function MembershipForm() {
                 <ul className='space-y-3 text-sm text-muted-foreground'>
                   <li className='flex items-start'>
                     <CheckCircle className='h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0' />
-                    Access to member-only templates, calculators, and standards mappings.
+                    Access to member-only templates, calculators, and standards
+                    mappings.
                   </li>
                   <li className='flex items-start'>
                     <CheckCircle className='h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0' />
-                    Peer forums and technical SIGs (RCM, FMECA, RAM/LCC, PdM/IIoT).
+                    Peer forums and technical SIGs (RCM, FMECA, RAM/LCC,
+                    PdM/IIoT).
                   </li>
                   <li className='flex items-start'>
                     <CheckCircle className='h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0' />
-                    Discounts on certifications, workshops, and partner APM tools.
+                    Discounts on certifications, workshops, and partner APM
+                    tools.
                   </li>
                   <li className='flex items-start'>
                     <CheckCircle className='h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0' />
@@ -769,7 +867,13 @@ export default function MembershipForm() {
               </CardHeader>
               <CardContent>
                 <p className='text-sm text-muted-foreground'>
-                  Questions? <a href='mailto:reliabiltyengineersacademy@gmail.com' className='text-primary hover:underline'>reliabiltyengineersacademy@gmail.com</a>
+                  Questions?{' '}
+                  <a
+                    href='mailto:reliabiltyengineersacademy@gmail.com'
+                    className='text-primary hover:underline'
+                  >
+                    reliabiltyengineersacademy@gmail.com
+                  </a>
                 </p>
               </CardContent>
             </Card>

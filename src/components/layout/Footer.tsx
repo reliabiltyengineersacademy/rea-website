@@ -35,10 +35,8 @@ export default function Footer() {
 
             <div className='space-y-3'>
               <div className='flex items-start gap-3'>
-                <span className='text-xl flex-shrink-0 mt-0.5'>
-                  ✉️
-                </span>
-                <a 
+                <span className='text-xl flex-shrink-0 mt-0.5'>✉️</span>
+                <a
                   href='mailto:reliabiltyengineersacademy@gmail.com'
                   className='text-muted-foreground hover:text-primary transition-colors text-sm leading-relaxed break-words'
                 >
@@ -108,11 +106,13 @@ export default function Footer() {
                     asChild
                     className='h-10 w-10'
                   >
-                    <a 
-                      href={social.href} 
+                    <a
+                      href={social.href}
                       aria-label={social.name}
                       target={social.href !== '#' ? '_blank' : undefined}
-                      rel={social.href !== '#' ? 'noopener noreferrer' : undefined}
+                      rel={
+                        social.href !== '#' ? 'noopener noreferrer' : undefined
+                      }
                     >
                       <social.icon className='h-5 w-5' />
                     </a>

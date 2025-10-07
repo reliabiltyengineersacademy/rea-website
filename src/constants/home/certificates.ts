@@ -1,4 +1,14 @@
-import { Award, TrendingUp, Shield, Zap, Search, Settings, Cog, Users, BarChart3, Wrench, Car } from 'lucide-react';
+import {
+  Award,
+  TrendingUp,
+  Shield,
+  Zap,
+  Search,
+  Settings,
+  Cog,
+  Users,
+  BarChart3,
+} from 'lucide-react';
 
 export const certifications = [
   {

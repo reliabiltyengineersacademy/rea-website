@@ -297,7 +297,9 @@ const IAMCertification = () => {
             {certificationRequirements.map((requirement, index) => (
               <Card key={index} className='p-8'>
                 <CardHeader>
-                  <CardTitle className='text-xl'>{requirement.requirement}</CardTitle>
+                  <CardTitle className='text-xl'>
+                    {requirement.requirement}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className='text-muted-foreground'>
@@ -418,7 +420,9 @@ const IAMCertification = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Program Highlights</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Program Highlights
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -426,7 +430,8 @@ const IAMCertification = () => {
                         Asset Management Fundamentals
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master the core principles and practices of asset management
+                        Master the core principles and practices of asset
+                        management
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -434,7 +439,8 @@ const IAMCertification = () => {
                         Lifecycle Management
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Learn techniques for managing assets throughout their lifecycle
+                        Learn techniques for managing assets throughout their
+                        lifecycle
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -442,7 +448,8 @@ const IAMCertification = () => {
                         Risk Assessment
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Develop skills in identifying and managing asset-related risks
+                        Develop skills in identifying and managing asset-related
+                        risks
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -450,7 +457,8 @@ const IAMCertification = () => {
                         Performance Optimization
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master techniques for optimizing asset performance and value
+                        Master techniques for optimizing asset performance and
+                        value
                       </p>
                     </div>
                   </CardContent>

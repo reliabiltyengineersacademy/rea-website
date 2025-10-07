@@ -54,18 +54,16 @@ export async function sendMembershipNotificationEmail(
           // Convert blob to buffer
           const arrayBuffer = await fileData.arrayBuffer();
           const buffer = Buffer.from(arrayBuffer);
-          
+
           // Get file extension from path
           const fileExtension = cvFilePath.split('.').pop() || 'pdf';
           const fileName = `${firstName}_${lastName}_CV.${fileExtension}`;
-          
+
           cvAttachment = {
             filename: fileName,
             content: buffer,
             contentType: `application/${fileExtension === 'pdf' ? 'pdf' : 'octet-stream'}`,
           };
-          
-          console.log('CV file prepared for attachment:', fileName);
         }
       } catch (error) {
         console.error('Error preparing CV attachment:', error);
@@ -98,14 +96,17 @@ export async function sendMembershipNotificationEmail(
           <div class="container">
             <div class="header">
               <h1>New G-ARMP Membership Application</h1>
-              <p>Application received on ${new Date().toLocaleDateString('en-US', { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-              })}</p>
+              <p>Application received on ${new Date().toLocaleDateString(
+                'en-US',
+                {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                }
+              )}</p>
             </div>
             
             <div class="content">
@@ -152,9 +153,15 @@ export async function sendMembershipNotificationEmail(
               <div class="section">
                 <h3>Professional Interests</h3>
                 <div class="interests">
-                  ${interests && interests.length > 0 
-                    ? interests.map(interest => `<span class="interest-tag">${interest}</span>`).join('')
-                    : '<span class="value">None selected</span>'
+                  ${
+                    interests && interests.length > 0
+                      ? interests
+                          .map(
+                            (interest) =>
+                              `<span class="interest-tag">${interest}</span>`
+                          )
+                          .join('')
+                      : '<span class="value">None selected</span>'
                   }
                 </div>
               </div>
@@ -195,17 +202,21 @@ export async function sendMembershipNotificationEmail(
                   <span class="label">Newsletter Subscription:</span>
                   <span class="value">${news ? 'Yes - Subscribed' : 'No'}</span>
                 </div>
-                ${cvFilePath ? `
+                ${
+                  cvFilePath
+                    ? `
                 <div class="field">
                   <span class="label">CV Uploaded:</span>
                   <span class="value">Yes - File attached to this email</span>
                 </div>
-                ` : `
+                `
+                    : `
                 <div class="field">
                   <span class="label">CV Uploaded:</span>
                   <span class="value">No</span>
                 </div>
-                `}
+                `
+                }
               </div>
 
               <div class="footer">
@@ -247,13 +258,15 @@ export async function sendMembershipNotificationEmail(
       return { success: false, error: error.message };
     }
 
-    console.log('Membership notification email sent successfully:', data);
     return { success: true, data };
   } catch (error) {
     console.error('Unexpected error sending email:', error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'Failed to send email notification',
+      error:
+        error instanceof Error
+          ? error.message
+          : 'Failed to send email notification',
     };
   }
 }

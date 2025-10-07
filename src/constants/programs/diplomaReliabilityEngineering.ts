@@ -45,27 +45,33 @@ export const targetAudience = [
 export const learningObjectives = [
   {
     objective: 'Master Reliability Fundamentals',
-    description: 'Understand core principles of reliability engineering and failure mechanisms',
+    description:
+      'Understand core principles of reliability engineering and failure mechanisms',
   },
   {
     objective: 'Develop Failure Analysis Skills',
-    description: 'Learn advanced techniques for failure mode identification and root cause analysis',
+    description:
+      'Learn advanced techniques for failure mode identification and root cause analysis',
   },
   {
     objective: 'Apply Statistical Methods',
-    description: 'Master probability, statistics, and reliability modeling techniques',
+    description:
+      'Master probability, statistics, and reliability modeling techniques',
   },
   {
     objective: 'Implement Reliability Testing',
-    description: 'Design and execute comprehensive reliability testing programs',
+    description:
+      'Design and execute comprehensive reliability testing programs',
   },
   {
     objective: 'Optimize System Performance',
-    description: 'Learn to improve maintainability, availability, and overall system reliability',
+    description:
+      'Learn to improve maintainability, availability, and overall system reliability',
   },
   {
     objective: 'Manage Reliability Programs',
-    description: 'Develop skills in reliability program planning, implementation, and management',
+    description:
+      'Develop skills in reliability program planning, implementation, and management',
   },
 ];
 
@@ -162,7 +168,8 @@ export const careerBenefits = [
   {
     icon: TrendingUp,
     title: 'Career Advancement',
-    description: 'Open doors to senior reliability engineering and management positions',
+    description:
+      'Open doors to senior reliability engineering and management positions',
   },
   {
     icon: Search,
@@ -194,7 +201,7 @@ export const eligibilityRequirements = [
   {
     title: 'Educational Background',
     requirements: [
-      'Bachelor\'s degree in engineering or related technical field',
+      "Bachelor's degree in engineering or related technical field",
       'Equivalent professional experience in engineering or maintenance',
       'Basic understanding of mathematics and statistics',
       'Familiarity with engineering principles and practices',
@@ -226,13 +233,15 @@ export const examDetails = {
   cost: '$4,800 USD',
   validity: 'Lifetime diploma',
   recertification: 'Not required - lifetime credential',
-  credits: 'Professional development and continuing education credits available',
+  credits:
+    'Professional development and continuing education credits available',
 };
 
 export const programFeatures = [
   {
     title: 'Comprehensive Curriculum',
-    description: 'Complete coverage of reliability engineering principles, methods, and applications',
+    description:
+      'Complete coverage of reliability engineering principles, methods, and applications',
     features: [
       'Eight comprehensive training modules',
       'Real-world case studies and applications',
@@ -242,7 +251,8 @@ export const programFeatures = [
   },
   {
     title: 'Practical Application',
-    description: 'Apply reliability engineering principles to real projects and scenarios',
+    description:
+      'Apply reliability engineering principles to real projects and scenarios',
     features: [
       'Capstone project development',
       'Peer collaboration and learning',
@@ -252,7 +262,8 @@ export const programFeatures = [
   },
   {
     title: 'Advanced Tools Training',
-    description: 'Access to industry-leading reliability engineering software and tools',
+    description:
+      'Access to industry-leading reliability engineering software and tools',
     features: [
       'Reliability analysis software training',
       'Statistical analysis tools and platforms',
@@ -262,7 +273,8 @@ export const programFeatures = [
   },
   {
     title: 'Ongoing Support',
-    description: 'Continuous learning and professional development opportunities',
+    description:
+      'Continuous learning and professional development opportunities',
     features: [
       'Access to reliability engineering community',
       'Regular webinars and technical updates',
@@ -294,34 +306,41 @@ export const industryStats = [
 export const keyTopics = [
   {
     topic: 'Reliability Fundamentals',
-    description: 'Core principles of reliability engineering and failure mechanisms',
+    description:
+      'Core principles of reliability engineering and failure mechanisms',
   },
   {
     topic: 'Statistical Analysis',
-    description: 'Advanced statistical methods for reliability data analysis and modeling',
+    description:
+      'Advanced statistical methods for reliability data analysis and modeling',
   },
   {
     topic: 'Failure Analysis',
-    description: 'Comprehensive failure mode analysis and root cause investigation techniques',
+    description:
+      'Comprehensive failure mode analysis and root cause investigation techniques',
   },
   {
     topic: 'Reliability Testing',
-    description: 'Design and execution of reliability testing programs and validation',
+    description:
+      'Design and execution of reliability testing programs and validation',
   },
   {
     topic: 'System Optimization',
-    description: 'Techniques for improving system reliability, maintainability, and availability',
+    description:
+      'Techniques for improving system reliability, maintainability, and availability',
   },
   {
     topic: 'Risk Management',
-    description: 'Risk assessment and mitigation strategies for reliability-critical systems',
+    description:
+      'Risk assessment and mitigation strategies for reliability-critical systems',
   },
 ];
 
 export const diplomaRequirements = [
   {
     requirement: 'Complete All Modules',
-    description: 'Successfully complete all eight program modules with passing grades',
+    description:
+      'Successfully complete all eight program modules with passing grades',
   },
   {
     requirement: 'Pass Final Examination',
@@ -329,10 +348,12 @@ export const diplomaRequirements = [
   },
   {
     requirement: 'Capstone Project',
-    description: 'Complete and present a practical reliability engineering project',
+    description:
+      'Complete and present a practical reliability engineering project',
   },
   {
     requirement: 'Professional Portfolio',
-    description: 'Develop a portfolio demonstrating reliability engineering competencies',
+    description:
+      'Develop a portfolio demonstrating reliability engineering competencies',
   },
 ];

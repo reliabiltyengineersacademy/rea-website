@@ -334,7 +334,10 @@ const ASQCRECertification = () => {
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     {preparationModules.map((module, index) => (
-                      <div key={index} className='border-l-4 border-primary pl-4'>
+                      <div
+                        key={index}
+                        className='border-l-4 border-primary pl-4'
+                      >
                         <h5 className='font-semibold text-foreground'>
                           Module {index + 1}: {module.title}
                         </h5>
@@ -342,15 +345,17 @@ const ASQCRECertification = () => {
                           {module.description}
                         </p>
                         <div className='flex flex-wrap gap-1'>
-                          {module.topics.slice(0, 2).map((topic, topicIndex) => (
-                            <Badge
-                              key={topicIndex}
-                              variant='outline'
-                              className='text-xs'
-                            >
-                              {topic}
-                            </Badge>
-                          ))}
+                          {module.topics
+                            .slice(0, 2)
+                            .map((topic, topicIndex) => (
+                              <Badge
+                                key={topicIndex}
+                                variant='outline'
+                                className='text-xs'
+                              >
+                                {topic}
+                              </Badge>
+                            ))}
                           {module.topics.length > 2 && (
                             <Badge variant='outline' className='text-xs'>
                               +{module.topics.length - 2} more

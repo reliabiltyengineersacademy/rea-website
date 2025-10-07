@@ -13,12 +13,19 @@ export const membershipSchema = z.object({
   interests: z.array(z.string()).optional(),
   certs: z.string().optional(),
   referrer: z.string().optional(),
-  statement: z.string().min(1, 'Please share a short statement.').max(600, 'Statement should be 600 characters or less.'),
+  statement: z
+    .string()
+    .min(1, 'Please share a short statement.')
+    .max(600, 'Statement should be 600 characters or less.'),
   tier: z.string().min(1, 'Please choose a membership tier.'),
   chapter: z.string().optional(),
   payment: z.string().optional(),
-  ethics: z.boolean().refine(val => val === true, 'You must agree to the Code of Ethics.'),
-  privacy: z.boolean().refine(val => val === true, 'You must consent to data processing.'),
+  ethics: z
+    .boolean()
+    .refine((val) => val === true, 'You must agree to the Code of Ethics.'),
+  privacy: z
+    .boolean()
+    .refine((val) => val === true, 'You must consent to data processing.'),
   news: z.boolean().optional(),
   hpt: z.string().optional(), // Honeypot field
 });

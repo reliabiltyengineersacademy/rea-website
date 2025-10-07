@@ -68,7 +68,8 @@ export const navigation = [
       {
         name: 'RCM2 Introductory Course',
         href: '/programs/rcm2-introductory',
-        description: 'Master the fundamentals of Reliability Centered Maintenance',
+        description:
+          'Master the fundamentals of Reliability Centered Maintenance',
       },
       {
         name: 'RCM2 Facilitator Training',
@@ -98,12 +99,14 @@ export const navigation = [
       {
         name: 'MCA Level I Training',
         href: '/programs/mca-level1',
-        description: 'Motor Circuit Analysis & Electrical Signature Analysis Level I',
+        description:
+          'Motor Circuit Analysis & Electrical Signature Analysis Level I',
       },
       {
         name: 'CBM Basic Level',
         href: '/programs/cbm-basic',
-        description: 'Condition Based Maintenance for Plant Assets - Basic Level',
+        description:
+          'Condition Based Maintenance for Plant Assets - Basic Level',
       },
       {
         name: 'ARP-A Certification',
@@ -118,7 +121,8 @@ export const navigation = [
       {
         name: 'Balancing & Alignment',
         href: '/programs/balancing-alignment',
-        description: 'Precision balancing and alignment techniques for rotating equipment',
+        description:
+          'Precision balancing and alignment techniques for rotating equipment',
       },
       {
         name: 'TÜV Functional Safety',
@@ -128,12 +132,14 @@ export const navigation = [
       {
         name: 'MCA Level II Training',
         href: '/programs/mca-level2',
-        description: 'Motor Circuit Analysis & Electrical Signature Analysis Level II',
+        description:
+          'Motor Circuit Analysis & Electrical Signature Analysis Level II',
       },
       {
         name: 'Rotating Equipment Course',
         href: '/programs/rotating-equipment',
-        description: 'Operation & Maintenance Of Main Rotating Equipment Course',
+        description:
+          'Operation & Maintenance Of Main Rotating Equipment Course',
       },
       {
         name: 'Vibration Analysis',

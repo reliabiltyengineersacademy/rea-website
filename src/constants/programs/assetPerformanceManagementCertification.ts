@@ -45,27 +45,33 @@ export const targetAudience = [
 export const learningObjectives = [
   {
     objective: 'Master APM Fundamentals',
-    description: 'Understand core principles of Asset Performance Management and its strategic value',
+    description:
+      'Understand core principles of Asset Performance Management and its strategic value',
   },
   {
     objective: 'Implement Predictive Maintenance',
-    description: 'Learn to develop and execute predictive maintenance strategies using data analytics',
+    description:
+      'Learn to develop and execute predictive maintenance strategies using data analytics',
   },
   {
     objective: 'Optimize Asset Lifecycle',
-    description: 'Master techniques for managing assets throughout their entire lifecycle',
+    description:
+      'Master techniques for managing assets throughout their entire lifecycle',
   },
   {
     objective: 'Apply Risk Management',
-    description: 'Develop skills in identifying and mitigating asset-related risks',
+    description:
+      'Develop skills in identifying and mitigating asset-related risks',
   },
   {
     objective: 'Utilize Performance Metrics',
-    description: 'Learn to establish and monitor key performance indicators for asset optimization',
+    description:
+      'Learn to establish and monitor key performance indicators for asset optimization',
   },
   {
     objective: 'Leverage Digital Technologies',
-    description: 'Understand how to use digital tools and technologies for APM implementation',
+    description:
+      'Understand how to use digital tools and technologies for APM implementation',
   },
 ];
 
@@ -153,8 +159,7 @@ export const careerBenefits = [
   {
     icon: Users,
     title: 'Industry Recognition',
-    description:
-      'Join a community of certified APM professionals worldwide',
+    description: 'Join a community of certified APM professionals worldwide',
   },
   {
     icon: Target,
@@ -165,8 +170,7 @@ export const careerBenefits = [
   {
     icon: Zap,
     title: 'Digital Transformation',
-    description:
-      'Lead digital transformation initiatives in asset management',
+    description: 'Lead digital transformation initiatives in asset management',
   },
 ];
 
@@ -183,7 +187,7 @@ export const eligibilityRequirements = [
   {
     title: 'Educational Background',
     requirements: [
-      'Bachelor\'s degree in engineering, operations, or related field preferred',
+      "Bachelor's degree in engineering, operations, or related field preferred",
       'Technical certification in maintenance or reliability engineering',
       'Equivalent professional experience in asset-intensive industries',
       'Basic understanding of data analytics and digital technologies',
@@ -212,7 +216,8 @@ export const examDetails = {
 export const programFeatures = [
   {
     title: 'Comprehensive Curriculum',
-    description: 'Complete coverage of APM principles, tools, and implementation strategies',
+    description:
+      'Complete coverage of APM principles, tools, and implementation strategies',
     features: [
       'Six comprehensive training modules',
       'Real-world case studies and applications',
@@ -242,7 +247,8 @@ export const programFeatures = [
   },
   {
     title: 'Ongoing Support',
-    description: 'Continuous learning and professional development opportunities',
+    description:
+      'Continuous learning and professional development opportunities',
     features: [
       'Access to APM community and network',
       'Regular webinars and updates',
@@ -274,26 +280,32 @@ export const industryStats = [
 export const keyTopics = [
   {
     topic: 'Asset Performance Optimization',
-    description: 'Strategies and techniques for maximizing asset performance and reliability',
+    description:
+      'Strategies and techniques for maximizing asset performance and reliability',
   },
   {
     topic: 'Predictive Maintenance',
-    description: 'Implementation of data-driven maintenance strategies and technologies',
+    description:
+      'Implementation of data-driven maintenance strategies and technologies',
   },
   {
     topic: 'Condition Monitoring',
-    description: 'Advanced monitoring techniques and health assessment methodologies',
+    description:
+      'Advanced monitoring techniques and health assessment methodologies',
   },
   {
     topic: 'Risk Management',
-    description: 'Identification, assessment, and mitigation of asset-related risks',
+    description:
+      'Identification, assessment, and mitigation of asset-related risks',
   },
   {
     topic: 'Digital Transformation',
-    description: 'Leveraging digital technologies for APM implementation and optimization',
+    description:
+      'Leveraging digital technologies for APM implementation and optimization',
   },
   {
     topic: 'Performance Metrics',
-    description: 'Establishing and monitoring KPIs for asset performance management',
+    description:
+      'Establishing and monitoring KPIs for asset performance management',
   },
 ];

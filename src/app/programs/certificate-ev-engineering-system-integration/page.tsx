@@ -106,9 +106,9 @@ const CertificateEvEngineeringSystemIntegration = () => {
                 to advanced system integration.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Through this program, you&apos;ll master battery technology, power
-                electronics, motor control systems, vehicle integration, and
-                charging infrastructure. The curriculum combines theoretical
+                Through this program, you&apos;ll master battery technology,
+                power electronics, motor control systems, vehicle integration,
+                and charging infrastructure. The curriculum combines theoretical
                 knowledge with hands-on practical experience, ensuring you can
                 immediately contribute to EV development projects.
               </p>
@@ -319,7 +319,9 @@ const CertificateEvEngineeringSystemIntegration = () => {
             {certificationRequirements.map((requirement, index) => (
               <Card key={index} className='p-8'>
                 <CardHeader>
-                  <CardTitle className='text-xl'>{requirement.requirement}</CardTitle>
+                  <CardTitle className='text-xl'>
+                    {requirement.requirement}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className='text-muted-foreground'>
@@ -440,7 +442,9 @@ const CertificateEvEngineeringSystemIntegration = () => {
                 </div>
                 <Card className='bg-background p-8'>
                   <CardHeader>
-                    <CardTitle className='text-xl'>Program Highlights</CardTitle>
+                    <CardTitle className='text-xl'>
+                      Program Highlights
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className='space-y-4'>
                     <div className='border-l-4 border-primary pl-4'>
@@ -448,7 +452,8 @@ const CertificateEvEngineeringSystemIntegration = () => {
                         Battery Technology Mastery
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Learn advanced battery systems, management, and safety protocols
+                        Learn advanced battery systems, management, and safety
+                        protocols
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -456,7 +461,8 @@ const CertificateEvEngineeringSystemIntegration = () => {
                         Power Electronics & Motor Control
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Master power conversion, motor drives, and control systems
+                        Master power conversion, motor drives, and control
+                        systems
                       </p>
                     </div>
                     <div className='border-l-4 border-primary pl-4'>
@@ -472,7 +478,8 @@ const CertificateEvEngineeringSystemIntegration = () => {
                         Charging Infrastructure
                       </h5>
                       <p className='text-muted-foreground text-sm'>
-                        Understand charging systems, grid integration, and smart charging
+                        Understand charging systems, grid integration, and smart
+                        charging
                       </p>
                     </div>
                   </CardContent>

@@ -45,27 +45,33 @@ export const targetAudience = [
 export const learningObjectives = [
   {
     objective: 'Master Strategic Asset Management',
-    description: 'Understand advanced principles of strategic asset management and organizational value creation',
+    description:
+      'Understand advanced principles of strategic asset management and organizational value creation',
   },
   {
     objective: 'Develop Asset Strategy',
-    description: 'Learn to develop comprehensive asset management strategies and implementation plans',
+    description:
+      'Learn to develop comprehensive asset management strategies and implementation plans',
   },
   {
     objective: 'Apply Risk Management',
-    description: 'Master advanced techniques for asset risk assessment, mitigation, and management',
+    description:
+      'Master advanced techniques for asset risk assessment, mitigation, and management',
   },
   {
     objective: 'Optimize Performance',
-    description: 'Learn to optimize asset performance through advanced lifecycle management techniques',
+    description:
+      'Learn to optimize asset performance through advanced lifecycle management techniques',
   },
   {
     objective: 'Manage Stakeholders',
-    description: 'Develop skills in stakeholder engagement and communication for asset management success',
+    description:
+      'Develop skills in stakeholder engagement and communication for asset management success',
   },
   {
     objective: 'Lead Asset Programs',
-    description: 'Master leadership skills for managing complex asset management programs and teams',
+    description:
+      'Master leadership skills for managing complex asset management programs and teams',
   },
 ];
 
@@ -142,7 +148,8 @@ export const careerBenefits = [
   {
     icon: TrendingUp,
     title: 'Career Advancement',
-    description: 'Open doors to senior asset management and executive positions',
+    description:
+      'Open doors to senior asset management and executive positions',
   },
   {
     icon: Search,
@@ -206,13 +213,15 @@ export const examDetails = {
   cost: '$5,500 USD',
   validity: 'Lifetime diploma',
   recertification: 'Not required - lifetime credential',
-  credits: 'Professional development and continuing education credits available',
+  credits:
+    'Professional development and continuing education credits available',
 };
 
 export const programFeatures = [
   {
     title: 'Comprehensive Curriculum',
-    description: 'Complete coverage of strategic asset management principles, methods, and applications',
+    description:
+      'Complete coverage of strategic asset management principles, methods, and applications',
     features: [
       'Six comprehensive training modules',
       'Real-world case studies and applications',
@@ -222,7 +231,8 @@ export const programFeatures = [
   },
   {
     title: 'Strategic Application',
-    description: 'Apply strategic asset management principles to real organizational challenges',
+    description:
+      'Apply strategic asset management principles to real organizational challenges',
     features: [
       'Strategic project development',
       'Peer collaboration and learning',
@@ -232,7 +242,8 @@ export const programFeatures = [
   },
   {
     title: 'Advanced Tools Training',
-    description: 'Access to industry-leading asset management software and tools',
+    description:
+      'Access to industry-leading asset management software and tools',
     features: [
       'Asset management software training',
       'Strategic planning tools and platforms',
@@ -242,7 +253,8 @@ export const programFeatures = [
   },
   {
     title: 'Ongoing Support',
-    description: 'Continuous learning and professional development opportunities',
+    description:
+      'Continuous learning and professional development opportunities',
     features: [
       'Access to asset management community',
       'Regular webinars and strategic updates',
@@ -274,19 +286,23 @@ export const industryStats = [
 export const keyTopics = [
   {
     topic: 'Strategic Asset Management',
-    description: 'Advanced principles of strategic asset management and organizational value creation',
+    description:
+      'Advanced principles of strategic asset management and organizational value creation',
   },
   {
     topic: 'Lifecycle Optimization',
-    description: 'Techniques for optimizing asset performance throughout the entire lifecycle',
+    description:
+      'Techniques for optimizing asset performance throughout the entire lifecycle',
   },
   {
     topic: 'Risk Management',
-    description: 'Advanced risk assessment and mitigation strategies for asset management',
+    description:
+      'Advanced risk assessment and mitigation strategies for asset management',
   },
   {
     topic: 'Performance Measurement',
-    description: 'Development and monitoring of KPIs and performance metrics for asset excellence',
+    description:
+      'Development and monitoring of KPIs and performance metrics for asset excellence',
   },
   {
     topic: 'Stakeholder Management',
@@ -294,14 +310,16 @@ export const keyTopics = [
   },
   {
     topic: 'Program Leadership',
-    description: 'Leadership skills for managing complex asset management programs and teams',
+    description:
+      'Leadership skills for managing complex asset management programs and teams',
   },
 ];
 
 export const diplomaRequirements = [
   {
     requirement: 'Complete All Modules',
-    description: 'Successfully complete all six program modules with passing grades',
+    description:
+      'Successfully complete all six program modules with passing grades',
   },
   {
     requirement: 'Pass Final Examination',
@@ -313,6 +331,7 @@ export const diplomaRequirements = [
   },
   {
     requirement: 'Professional Portfolio',
-    description: 'Develop a portfolio demonstrating advanced asset management competencies',
+    description:
+      'Develop a portfolio demonstrating advanced asset management competencies',
   },
 ];
