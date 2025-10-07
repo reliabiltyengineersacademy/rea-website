@@ -19,6 +19,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 
 interface BookingFormData {
@@ -26,6 +27,7 @@ interface BookingFormData {
   client_email: string;
   client_phone: string;
   company: string;
+  message: string;
   consultation_date: string;
   consultation_time: string;
 }
@@ -35,11 +37,16 @@ const initialFormData: BookingFormData = {
   client_email: '',
   client_phone: '',
   company: '',
+  message: '',
   consultation_date: '',
   consultation_time: '',
 };
 
-export default function ScheduleConsultation() {
+export default function ScheduleConsultation({
+  className,
+}: {
+  className?: string;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState<BookingFormData>(initialFormData);
   const [availableTimeSlots, setAvailableTimeSlots] = useState<string[]>([]);
@@ -109,6 +116,7 @@ export default function ScheduleConsultation() {
     if (
       !formData.client_name ||
       !formData.client_email ||
+      !formData.message ||
       !formData.consultation_date ||
       !formData.consultation_time
     ) {
@@ -150,9 +158,7 @@ export default function ScheduleConsultation() {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className='bg-transparent text-primary border-primary border-2 font-bold py-6 px-8 hover:bg-primary hover:text-white transition-colors'>
-          Schedule Consultation
-        </Button>
+        <Button className={className}>Schedule Consultation</Button>
       </DialogTrigger>
       <DialogContent className='max-w-[90svw] sm:max-w-4xl max-h-[90svh] overflow-hidden'>
         <DialogHeader>
@@ -167,7 +173,7 @@ export default function ScheduleConsultation() {
         </DialogHeader>
 
         <div className='overflow-y-auto max-h-[calc(90svh-120px)] no-scrollbar'>
-          <form onSubmit={handleSubmit} className='space-y-6'>
+          <form onSubmit={handleSubmit} className='space-y-6 mx-1'>
             <div className='space-y-4'>
               <h3 className='text-lg font-semibold flex items-center gap-2'>
                 <User className='size-5' />
@@ -226,6 +232,20 @@ export default function ScheduleConsultation() {
                     placeholder='Enter your company name'
                   />
                 </div>
+              </div>
+
+              <div className='space-y-2'>
+                <Label htmlFor='message'>Message*</Label>
+                <Textarea
+                  id='message'
+                  value={formData.message}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
+                  placeholder='Enter your message'
+                  rows={6}
+                  className='resize-none'
+                  required
+                  minLength={10}
+                />
               </div>
             </div>
 
@@ -323,6 +343,7 @@ export default function ScheduleConsultation() {
                   isLoading ||
                   !formData.client_name ||
                   !formData.client_email ||
+                  !formData.message ||
                   !formData.consultation_date ||
                   !formData.consultation_time
                 }

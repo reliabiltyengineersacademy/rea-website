@@ -8,6 +8,7 @@ export interface CreateConsultationBookingData {
   client_email: string;
   client_phone?: string;
   company?: string;
+  message: string;
   consultation_date: string;
   consultation_time: string;
 }
@@ -72,6 +73,7 @@ export async function createConsultationBookingAction(
         client_email: bookingData.client_email,
         client_phone: bookingData.client_phone,
         company: bookingData.company,
+        message: bookingData.message,
         consultation_date: bookingData.consultation_date,
         consultation_time: bookingData.consultation_time,
         consultation_datetime: consultationDateTime.toISOString(),

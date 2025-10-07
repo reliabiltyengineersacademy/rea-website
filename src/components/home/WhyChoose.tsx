@@ -126,7 +126,7 @@ export default function WhyChoose() {
             <Button className='bg-primary text-white border-primary border-2 font-bold py-6 px-8'>
               Explore Programs
             </Button>
-            <ScheduleConsultation />
+            <ScheduleConsultation className='bg-transparent text-primary border-primary border-2 font-bold py-6 px-8 hover:bg-primary hover:text-white transition-colors' />
           </div>
         </div>
       </Container>

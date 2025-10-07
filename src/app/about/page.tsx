@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import Companies from '@/components/home/Companies';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
+import ScheduleConsultation from '@/components/home/ScheduleConsultation';
 
 export const metadata: Metadata = {
   title: 'About | Reliability Engineers Academy',
@@ -50,12 +51,8 @@ export default function About() {
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
-                <Button
-                  size='lg'
-                  className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4'
-                >
-                  Schedule Consultation
-                </Button>
+                <ScheduleConsultation className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4' />
+
                 <Button
                   variant='outline'
                   size='lg'
