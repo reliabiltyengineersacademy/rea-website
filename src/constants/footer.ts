@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, Youtube, Facebook } from 'lucide-react';
+import { Linkedin, Twitter, Youtube } from 'lucide-react';
 
 export const quickLinks = [
   { name: 'Meet the Founder', href: '/about' },
@@ -25,12 +25,11 @@ export const resources = [
 ];
 
 export const socialLinks = [
-  { icon: Linkedin, href: '#', name: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/109446922/', name: 'LinkedIn' },
   { icon: Twitter, href: 'https://x.com/rea14092024', name: 'X (Twitter)' },
   {
     icon: Youtube,
     href: 'https://www.youtube.com/@ReliabilityEngineersAcademy',
     name: 'YouTube',
   },
-  { icon: Facebook, href: '#', name: 'Facebook' },
 ];

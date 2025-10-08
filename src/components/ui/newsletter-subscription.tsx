@@ -41,6 +41,9 @@ export default function NewsletterSubscription({
 
   const form = useForm<NewsletterFormData>({
     resolver: zodResolver(newsletterSchema),
+    defaultValues: {
+      email: '',
+    },
   });
 
   const onSubmit = async (data: NewsletterFormData) => {
