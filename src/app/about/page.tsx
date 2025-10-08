@@ -139,28 +139,28 @@ export default function About() {
                       <span className='text-2xl font-bold text-blue-700 dark:text-blue-300'>GS</span>
                     </div>
                     <h3 className='text-xl font-semibold text-foreground mb-2'>
-                      Ganesh S
+                      Ganesh S.
                     </h3>
                     <p className='text-blue-700 dark:text-blue-300 mb-4 font-medium'>
-                      System Administrator & Technical Trainer
+                      Chartered Engineer & Asset Integrity Specialist
                     </p>
                     <p className='text-muted-foreground text-sm leading-relaxed mb-4'>
-                      Ganesh S is a dedicated System Administrator with strong expertise in Linux and AWS environments. 
-                      He holds a Bachelor of Engineering in Electronics and Communication Engineering and has been 
-                      serving as a Linux System Administrator at Happiest Minds Technologies since 2021.
+                      Ganesh S. is a post-graduate mechanical engineer with 48+ years of distinguished experience in asset integrity, 
+                      reliability, and rotating-equipment engineering across oil & gas, power, water, and process industries. 
+                      He is a Chartered Engineer and Certified Asset Management Assessor.
                     </p>
                     <div className='space-y-2'>
                       <div className='flex items-center justify-center'>
                         <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2'></div>
-                        <span className='text-muted-foreground text-sm'>AWS Certified Cloud Practitioner</span>
+                        <span className='text-muted-foreground text-sm'>Chartered Engineer (India)</span>
                       </div>
                       <div className='flex items-center justify-center'>
                         <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2'></div>
-                        <span className='text-muted-foreground text-sm'>Linux System Administration</span>
+                        <span className='text-muted-foreground text-sm'>Certified Asset Management Assessor</span>
                       </div>
                       <div className='flex items-center justify-center'>
                         <div className='w-1.5 h-1.5 bg-primary rounded-full mr-2'></div>
-                        <span className='text-muted-foreground text-sm'>Cloud Infrastructure Management</span>
+                        <span className='text-muted-foreground text-sm'>RCM & Reliability Engineering</span>
                       </div>
                     </div>
                     <div className='mt-4'>

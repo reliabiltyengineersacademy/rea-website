@@ -8,11 +8,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import ScheduleConsultation from '@/components/home/ScheduleConsultation';
 
 export const metadata: Metadata = {
-  title: 'S. Ganesh - Chartered Engineer & Asset Integrity Specialist | REA',
+  title: 'Ganesh S. - Chartered Engineer & Asset Integrity Specialist | REA',
   description:
-    'Meet S. Ganesh, a Chartered Engineer and Asset Integrity Specialist with 48+ years of experience in reliability engineering, RCM, and asset management across global industries.',
+    'Meet Ganesh S., a Chartered Engineer and Asset Integrity Specialist with 48+ years of experience in reliability engineering, RCM, and asset management across global industries.',
   keywords:
-    'S. Ganesh, Chartered Engineer, Asset Integrity Specialist, RCM, Reliability Engineering, CAMA, Asset Management',
+    'Ganesh S., Chartered Engineer, Asset Integrity Specialist, RCM, Reliability Engineering, CAMA, Asset Management',
 };
 
 export default function GaneshSPage() {
@@ -89,7 +89,7 @@ export default function GaneshSPage() {
               </div>
 
               <h1 className='text-4xl lg:text-5xl font-bold mb-6 text-gray-900 dark:text-white'>
-                S. Ganesh
+                Ganesh S.
               </h1>
 
               <p className='text-xl text-blue-700 dark:text-blue-300 mb-4 font-medium'>
@@ -163,7 +163,7 @@ export default function GaneshSPage() {
             </h2>
             <div className='max-w-4xl mx-auto'>
               <p className='text-lg text-muted-foreground leading-relaxed mb-6'>
-                Mr. S. Ganesh is a post-graduate mechanical engineer with more than 48 years of distinguished experience in asset integrity, reliability, and rotating-equipment engineering across oil & gas, power, water, and process industries. His career combines deep technical expertise with strategic leadership in implementing Risk-Based Maintenance (RBM), Reliability Centered Maintenance (RCM), FMEA/RCFA, and Asset Management (ISO 55000) frameworks worldwide.
+                Mr. Ganesh S. is a post-graduate mechanical engineer with more than 48 years of distinguished experience in asset integrity, reliability, and rotating-equipment engineering across oil & gas, power, water, and process industries. His career combines deep technical expertise with strategic leadership in implementing Risk-Based Maintenance (RBM), Reliability Centered Maintenance (RCM), FMEA/RCFA, and Asset Management (ISO 55000) frameworks worldwide.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
                 As a Chartered Engineer and Certified Asset Management Assessor, he has led critical assignments in the Middle East, India, and Southeast Asia—helping organizations optimize maintenance strategies, enhance reliability, and extend asset life through data-driven decision-making and integrity-led engineering.
