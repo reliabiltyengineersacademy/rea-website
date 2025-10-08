@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Award, Mail, Phone, MapPin, Users, Globe, Briefcase, GraduationCap, Star } from 'lucide-react';
+import { Award, Mail, Phone, Users, Globe, Briefcase, GraduationCap, Star } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -113,7 +113,7 @@ export default function SoundarapandianSrinivasanPage() {
               </p>
 
               <p className='text-lg text-gray-700 dark:text-gray-300 mb-8 italic leading-relaxed'>
-                "30+ years of multidisciplinary experience spanning defence, contracting, manufacturing, and infrastructure sectors with expertise in world-class Asset Lifecycle Management and ISO 55001 implementation."
+                &ldquo;30+ years of multidisciplinary experience spanning defence, contracting, manufacturing, and infrastructure sectors with expertise in world-class Asset Lifecycle Management and ISO 55001 implementation.&rdquo;
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -305,7 +305,7 @@ export default function SoundarapandianSrinivasanPage() {
                     Leadership Philosophy
                   </h2>
                   <p className='text-lg text-muted-foreground leading-relaxed mb-6'>
-                    Mr. Srinivasan's work is guided by the belief that asset management is not just about maintenance — it's about value creation, reliability assurance, and sustainable operations. His approach blends rigorous technical understanding with strategic foresight, empowering organisations to extract maximum value from their assets through structured governance and data-driven decision frameworks.
+                    Mr. Srinivasan&rsquo;s work is guided by the belief that asset management is not just about maintenance — it&rsquo;s about value creation, reliability assurance, and sustainable operations. His approach blends rigorous technical understanding with strategic foresight, empowering organisations to extract maximum value from their assets through structured governance and data-driven decision frameworks.
                   </p>
                 </div>
               </CardContent>
@@ -357,7 +357,7 @@ export default function SoundarapandianSrinivasanPage() {
                 <p className='text-xl text-primary-foreground/90 leading-relaxed mb-8'>
                   With 30+ years of experience spanning defence, contracting, manufacturing, and infrastructure sectors, 
                   Mr. Srinivasan brings unparalleled expertise in asset management, ISO 55001 implementation, and reliability engineering. 
-                  Let him help transform your organization's asset management practices.
+                  Let him help transform your organization&rsquo;s asset management practices.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Button
