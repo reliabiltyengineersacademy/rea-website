@@ -7,6 +7,8 @@ import {
   ExternalLink,
   Search,
   Play,
+  Megaphone,
+  Mail,
 } from 'lucide-react';
 import { toast } from 'sonner';
 import Image from 'next/image';
@@ -31,6 +33,7 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
+import NewsletterSubscription from '@/components/ui/newsletter-subscription';
 import { Webinar, PaginatedResponse } from '@/lib/types';
 import { formatDate, formatDuration } from '@/lib/utils';
 
@@ -129,6 +132,45 @@ export default function WebinarsClientPage({
                 <span>Flexible Timing</span>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Live Streaming Announcement */}
+      <section className='py-12 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 border-y border-green-200/50 dark:border-green-700/50'>
+        <Container>
+          <div className='max-w-4xl mx-auto'>
+            <Card className='bg-gradient-to-r from-blue-800 to-blue-900 text-white border-0 shadow-xl'>
+              <CardContent className='p-8'>
+                <div className='flex flex-col md:flex-row items-center gap-6'>
+                  <div className='flex-shrink-0'>
+                    <div className='w-16 h-16 bg-white/20 rounded-full flex items-center justify-center'>
+                      <Megaphone className='h-8 w-8 text-white' />
+                    </div>
+                  </div>
+                  <div className='flex-1 text-center md:text-left'>
+                    <h2 className='text-2xl md:text-3xl font-bold mb-2'>
+                      🎉 Exciting News!
+                    </h2>
+                    <p className='text-lg md:text-xl mb-4 text-white/90'>
+                      <strong>Webinar Live Streaming</strong> is launching on{' '}
+                      <span className='font-bold text-yellow-200'>January 1st, 2026</span>
+                    </p>
+                    <p className='text-white/80 mb-6'>
+                      Be the first to experience our enhanced webinar platform with live streaming capabilities, 
+                      interactive Q&A sessions, and real-time engagement features.
+                    </p>
+                    <div className='max-w-md mx-auto md:mx-0'>
+                      <div className='flex items-center gap-2 text-sm text-white/90 mb-4'>
+                        <Mail className='h-4 w-4' />
+                        <span>Join our newsletter to stay updated</span>
+                      </div>
+                      <NewsletterSubscription variant='minimal' className='[&_input]:bg-white/10 [&_input]:border-white/20 [&_input]:text-white [&_input]:placeholder-white/60 [&_button]:bg-white [&_button]:text-blue-800 [&_button]:hover:bg-white/90' />
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </Container>
       </section>
