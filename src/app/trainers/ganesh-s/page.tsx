@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Award, Mail, Phone, Users, Globe, Briefcase, GraduationCap, Star } from 'lucide-react';
+import { Award, Mail, Phone, Users, Globe, Briefcase, GraduationCap, Star, MapPin } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -341,7 +341,7 @@ export default function GaneshSPage() {
                 <p className='text-xl text-primary-foreground/90 leading-relaxed mb-8'>
                   With 48+ years of experience and 5,000+ engineers trained, Mr. Ganesh brings unparalleled expertise 
                   in asset integrity, reliability engineering, and maintenance optimization. Let him help transform 
-                  your organization's asset management practices.
+                  your organization&rsquo;s asset management practices.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                   <Button
