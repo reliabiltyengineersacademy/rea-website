@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Award, Mail, Phone, MapPin, Users, Globe, Briefcase, GraduationCap, Star } from 'lucide-react';
+import { Award, Users, Globe, Briefcase, Star } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -148,7 +148,7 @@ export default function TrinathSahooPage() {
               </p>
 
               <p className='text-lg text-gray-700 dark:text-gray-300 mb-8 italic leading-relaxed'>
-                "30+ years of progressive experience at Indian Oil Corporation Limited, renowned for expertise in technical management, reliability engineering, and process plant operations."
+                &ldquo;30+ years of progressive experience at Indian Oil Corporation Limited, renowned for expertise in technical management, reliability engineering, and process plant operations.&rdquo;
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -224,7 +224,7 @@ export default function TrinathSahooPage() {
                 Dr. Trinath Sahoo is a distinguished mechanical engineer and senior executive in the oil and gas sector, renowned for his extensive expertise in technical management, reliability engineering, and process plant operations. With over 30 years of progressive experience at Indian Oil Corporation Limited (IOCL), he has held leadership roles focused on maintenance, inspection, and strategic oversight in refinery environments.
               </p>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                Currently serving as Chief General Manager for Electrical Systems & Inspection, Maintenance & Contracts (ES&Inspection, M&C) at IOCL's Paradip Refinery in Odisha, India, Dr. Sahoo has contributed significantly to enhancing plant reliability, shutdown management, and failure analysis practices. His career emphasizes innovation in petroleum processing, lubrication systems, and equipment performance, complemented by his authorship of influential technical books and publications.
+                Currently serving as Chief General Manager for Electrical Systems & Inspection, Maintenance & Contracts (ES&Inspection, M&C) at IOCL&rsquo;s Paradip Refinery in Odisha, India, Dr. Sahoo has contributed significantly to enhancing plant reliability, shutdown management, and failure analysis practices. His career emphasizes innovation in petroleum processing, lubrication systems, and equipment performance, complemented by his authorship of influential technical books and publications.
               </p>
             </div>
           </div>

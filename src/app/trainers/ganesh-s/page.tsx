@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Award, Mail, Phone, MapPin, Users, Globe, Briefcase, GraduationCap, Star } from 'lucide-react';
+import { Award, Mail, Phone, Users, Globe, Briefcase, GraduationCap, Star } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -16,14 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default function GaneshSPage() {
-  const certifications = [
-    'Chartered Engineer, Institution of Engineers (India)',
-    'Certified Asset Management Assessor (CAMA), WPiAM',
-    'Member, Institute of Asset Management (IAM, UK)',
-    'CDM Certified Validator/Verifier – UNFCCC (GL Hamburg)',
-    'Gold Medalist, NIPM Calcutta',
-    'University Rank Holder, PSG College of Technology',
-  ];
 
   const expertiseAreas = [
     {
@@ -105,7 +97,7 @@ export default function GaneshSPage() {
               </p>
 
               <p className='text-lg text-gray-700 dark:text-gray-300 mb-8 italic leading-relaxed'>
-                "48+ years of distinguished experience in asset integrity, reliability, and rotating-equipment engineering across global industries."
+                &ldquo;48+ years of distinguished experience in asset integrity, reliability, and rotating-equipment engineering across global industries.&rdquo;
               </p>
 
               <div className='flex flex-col sm:flex-row gap-4'>
