@@ -2,6 +2,7 @@
 
 import { createClient } from '@/lib/supabase/server';
 import { ConsultationBooking, DatabaseResponse } from '@/lib/types';
+import { sendConsultationBookingNotificationToAdmin } from '@/lib/email';
 
 export interface CreateConsultationBookingData {
   client_name: string;
@@ -88,6 +89,12 @@ export async function createConsultationBookingAction(
         success: false,
         error: error.message,
       };
+    }
+
+    try {
+      await sendConsultationBookingNotificationToAdmin(data);
+    } catch (emailError) {
+      console.error('Failed to send admin notification email:', emailError);
     }
 
     return {

@@ -64,6 +64,7 @@ export interface ConsultationBooking {
   client_email: string;
   client_phone?: string;
   company?: string;
+  message?: string;
   consultation_date: string;
   consultation_time: string;
   consultation_datetime: string;

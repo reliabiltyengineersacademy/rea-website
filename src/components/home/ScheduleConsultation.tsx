@@ -43,8 +43,18 @@ const initialFormData: BookingFormData = {
 };
 
 export default function ScheduleConsultation({
+  size,
   className,
 }: {
+  size?:
+    | 'default'
+    | 'sm'
+    | 'lg'
+    | 'icon'
+    | 'icon-sm'
+    | 'icon-lg'
+    | null
+    | undefined;
   className?: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -158,7 +168,9 @@ export default function ScheduleConsultation({
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className={className}>Schedule Consultation</Button>
+        <Button size={size} className={className}>
+          Schedule Consultation
+        </Button>
       </DialogTrigger>
       <DialogContent className='max-w-[90svw] sm:max-w-4xl max-h-[90svh] overflow-hidden'>
         <DialogHeader>
@@ -235,16 +247,13 @@ export default function ScheduleConsultation({
               </div>
 
               <div className='space-y-2'>
-                <Label htmlFor='message'>Message*</Label>
+                <Label htmlFor='message'>Message</Label>
                 <Textarea
                   id='message'
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
-                  placeholder='Enter your message'
-                  rows={6}
-                  className='resize-none'
-                  required
-                  minLength={10}
+                  placeholder='Tell us about your reliability engineering needs or any specific questions you have...'
+                  rows={4}
                 />
               </div>
             </div>
