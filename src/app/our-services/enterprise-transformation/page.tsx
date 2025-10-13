@@ -10,7 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function EnterpriseTransformationPage() {
   return (
-    <div className='pt-24 min-h-screen bg-background'>
+    <div className='min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-red-100 via-red-200 to-red-100 dark:from-red-900 dark:via-red-800 dark:to-red-900 text-foreground'>
         <Container className='py-20'>
           <div className='text-center max-w-4xl mx-auto'>

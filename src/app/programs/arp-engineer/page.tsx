@@ -21,7 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ARPEngineer = () => {
   return (
-    <div className='pt-24 min-h-screen bg-background'>
+    <div className='min-h-screen bg-background'>
       <div className='bg-gradient-to-r from-primary to-primary/80 text-primary-foreground'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
