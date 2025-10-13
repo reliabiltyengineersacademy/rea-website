@@ -94,7 +94,7 @@ export const industries = [
 export const achievements = [
   {
     icon: Users,
-    number: '500+',
+    number: '1000+',
     label: 'Professionals Trained',
     description:
       'Reliability engineers and maintenance professionals certified',

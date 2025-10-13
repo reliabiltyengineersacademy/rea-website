@@ -68,7 +68,7 @@ const RCM2Introductory = () => {
               <div className='bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8'>
                 <div className='grid grid-cols-2 gap-6'>
                   <div className='text-center'>
-                    <div className='text-3xl font-bold mb-2'>2,500+</div>
+                    <div className='text-3xl font-bold mb-2'>2,1000+</div>
                     <div className='text-primary-foreground/80'>
                       Professionals Trained
                     </div>

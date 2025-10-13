@@ -44,7 +44,7 @@ export const differentiators = [
       'Demonstrated success in improving organizational reliability and asset performance',
     features: [
       '98% Success Rate',
-      '500+ Certified Professionals',
+      '1000+ Certified Professionals',
       '25+ Countries Served',
       'Industry Recognition',
     ],
@@ -53,7 +53,7 @@ export const differentiators = [
 
 export const achievements = [
   { number: '15+', label: 'Years of Excellence', icon: Award },
-  { number: '500+', label: 'Certified Engineers', icon: Users },
+  { number: '1000+', label: 'Certified Engineers', icon: Users },
   { number: '25+', label: 'Countries Served', icon: Globe },
   { number: '98%', label: 'Success Rate', icon: TrendingUp },
 ];
