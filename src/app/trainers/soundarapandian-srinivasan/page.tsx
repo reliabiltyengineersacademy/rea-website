@@ -370,8 +370,9 @@ export default function SoundarapandianSrinivasanPage() {
                     variant='outline'
                     size='lg'
                     className='border-2 border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary'
+                    asChild
                   >
-                    View Training Programs
+                    <a href='/programs'>View Training Programs</a>
                   </Button>
                 </div>
               </div>

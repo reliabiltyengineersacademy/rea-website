@@ -33,17 +33,6 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className='space-y-3'>
-              <div className='flex items-start gap-3'>
-                <span className='text-xl flex-shrink-0 mt-0.5'>✉️</span>
-                <a
-                  href='mailto:reliabiltyengineersacademy@gmail.com'
-                  className='text-muted-foreground hover:text-primary transition-colors text-sm leading-relaxed break-words'
-                >
-                  reliabiltyengineersacademy@gmail.com
-                </a>
-              </div>
-            </div>
           </div>
 
           <div>

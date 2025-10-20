@@ -1,4 +1,5 @@
 import { CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
@@ -123,9 +124,11 @@ export default function WhyChoose() {
             with REA&apos;s world-class training and certification programs.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Button className='bg-primary text-white border-primary border-2 font-bold py-6 px-8'>
-              Explore Programs
-            </Button>
+            <Link href='/programs'>
+              <Button className='bg-primary text-white border-primary border-2 font-bold py-6 px-8'>
+                Explore Programs
+              </Button>
+            </Link>
             <ScheduleConsultation className='bg-transparent text-primary border-primary border-2 font-bold py-6 px-8 hover:bg-primary hover:text-white transition-colors' />
           </div>
         </div>

@@ -41,7 +41,7 @@ export const upcomingWebinars = [
     title: 'Advanced Vibration Analysis Techniques',
     date: 'March 15, 2025',
     time: '2:00 PM EST',
-    speaker: 'Dr. Sarah Johnson',
+    speaker: 'KVK Subramaniyam Naidu',
     topic: 'Predictive Maintenance',
     image:
       'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -50,7 +50,7 @@ export const upcomingWebinars = [
     title: 'Digital Transformation in Asset Management',
     date: 'March 22, 2025',
     time: '10:00 AM EST',
-    speaker: 'Michael Chen',
+    speaker: 'Ganesh S.',
     topic: 'Technology & Innovation',
     image:
       'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -59,7 +59,7 @@ export const upcomingWebinars = [
     title: 'Root Cause Analysis Best Practices',
     date: 'March 29, 2025',
     time: '3:00 PM EST',
-    speaker: 'Dr. Robert Martinez',
+    speaker: 'Soundarapandian Srinivasan',
     topic: 'Failure Analysis',
     image:
       'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
