@@ -31,39 +31,6 @@ export default function TrinathSahooPage() {
     }
   ];
 
-  const careerPositions = [
-    {
-      title: 'Chief General Manager, ES&Inspection, M&C',
-      company: 'Indian Oil Corporation Limited, Paradip Refinery, Odisha',
-      period: 'Current (2020-Present)',
-      description: 'Overseeing electrical systems, inspection protocols, maintenance strategies, and contract management for one of IOCL\'s flagship refineries. Focus on ensuring operational integrity, risk mitigation, and compliance in petroleum processing.'
-    },
-    {
-      title: 'General Manager',
-      company: 'Indian Oil Corporation Limited, Paradip Refinery, Odisha',
-      period: 'Circa 2020–Present',
-      description: 'Led technical and management initiatives in refinery operations, including reliability programs and equipment optimization. Authored key publications during this period, reflecting hands-on involvement in lubrication and failure analysis.'
-    },
-    {
-      title: 'Deputy General Manager',
-      company: 'Indian Oil Corporation Limited',
-      period: 'Circa 2010s',
-      description: 'Managed technical operations in refinery divisions, emphasizing design and engineering of piping, pressure vessels, and process equipment. Contributed to performance improvements in liquefied petroleum gas and condensate services.'
-    },
-    {
-      title: 'Senior Manager / Chief Manager',
-      company: 'Indian Oil Corporation Limited',
-      period: 'May 2006–Present',
-      description: 'Directed maintenance and reliability functions across refinery sites, including West Bengal\'s Refinery Division. Responsibilities included root cause analysis, shutdown planning, and turnaround management for process plants.'
-    },
-    {
-      title: 'Deputy Manager (Maintenance)',
-      company: 'Indian Oil Corporation Limited, Refinery Division, West Bengal',
-      period: 'Early Career',
-      description: 'Handled day-to-day maintenance of process equipment, focusing on engineering solutions for better performance in gas and condensate handling.'
-    }
-  ];
-
   const publications = [
     {
       title: 'Root Cause Failure Analysis: A Guide to Improve Plant Reliability',
@@ -258,35 +225,6 @@ export default function TrinathSahooPage() {
             </div>
           </div>
 
-          {/* Career Progression */}
-          <div className='mb-16'>
-            <h2 className='text-3xl font-bold text-foreground mb-8 text-center'>
-              Career Progression at IOCL
-            </h2>
-            <div className='space-y-6'>
-              {careerPositions.map((position, index) => (
-                <Card key={index} className='p-6'>
-                  <CardContent>
-                    <div className='flex items-start justify-between mb-3'>
-                      <h3 className='text-lg font-semibold text-foreground'>
-                        {position.title}
-                      </h3>
-                      <Badge variant='secondary' className='ml-4'>
-                        {position.period}
-                      </Badge>
-                    </div>
-                    <p className='text-green-700 dark:text-green-300 font-medium mb-2'>
-                      {position.company}
-                    </p>
-                    <p className='text-muted-foreground'>
-                      {position.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
           {/* Areas of Expertise */}
           <div className='mb-16'>
             <h2 className='text-3xl font-bold text-foreground mb-8 text-center'>
@@ -409,12 +347,10 @@ export default function TrinathSahooPage() {
                   and reliability engineering practices.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                  <Button
+                  <ScheduleConsultation
                     size='lg'
                     className='bg-primary-foreground text-primary hover:bg-primary-foreground/90'
-                  >
-                    Schedule a Consultation
-                  </Button>
+                  />
                   <Button
                     variant='outline'
                     size='lg'

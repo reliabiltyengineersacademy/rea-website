@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import { Award, Mail, Phone, Users, Globe, Briefcase, GraduationCap, Star, MapPin } from 'lucide-react';
-
-import { Badge } from '@/components/ui/badge';
+import { Award, Mail, Phone, Users, Globe, Briefcase, Star, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Container from '@/components/layout/Container';
 import { Card, CardContent } from '@/components/ui/card';
@@ -41,29 +39,6 @@ export default function GaneshSPage() {
     {
       title: 'ISO 55000 Asset Management',
       description: 'Asset management system implementation and training',
-    },
-  ];
-
-  const careerHighlights = [
-    {
-      title: 'Risk-Based Maintenance Methodology',
-      description: 'Developed methodology for rotating equipment and authored FDS for RCM module of AIMS (GALIOM) software with Germanischer Lloyd (GLM Malaysia)',
-      impact: '€1 billion initiative',
-    },
-    {
-      title: 'RCM Implementation Leadership',
-      description: 'Led RCM Implementation at PTT Gas Processing Plant (Thailand), Bangchak Refinery (Thailand), and multiple IOC refineries',
-      impact: 'Multiple international projects',
-    },
-    {
-      title: 'Plant Maintenance Optimization',
-      description: 'Team Lead for GASCO, ASAB (Abu Dhabi), handling 50,000+ asset tags across mechanical, electrical & instrumentation systems',
-      impact: 'Significant cost and downtime reductions',
-    },
-    {
-      title: 'Training & Mentorship',
-      description: 'Extensive training experience with over 5,000 engineers trained in RCM, RBI, and World-Class Maintenance',
-      impact: 'Global reach across 7+ countries',
     },
   ];
 
@@ -171,55 +146,6 @@ export default function GaneshSPage() {
             </div>
           </div>
 
-          {/* Education */}
-          <div className='mb-16'>
-            <h2 className='text-3xl font-bold text-foreground mb-8 text-center'>
-              Education & Qualifications
-            </h2>
-            <Card className='p-8'>
-              <CardContent>
-                <div className='grid md:grid-cols-2 gap-8'>
-                  <div>
-                    <div className='flex items-center mb-4'>
-                      <GraduationCap className='h-6 w-6 text-primary mr-3' />
-                      <h3 className='text-xl font-semibold text-foreground'>Academic Qualifications</h3>
-                    </div>
-                    <ul className='space-y-2'>
-                      <li className='flex items-start'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0'></div>
-                        <span className='text-muted-foreground'>M.E. (Mechanical – Fluid Machinery), PSG College of Technology</span>
-                      </li>
-                      <li className='flex items-start'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0'></div>
-                        <span className='text-muted-foreground'>B.E. (Mechanical), College of Engineering – Madras University</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-4'>
-                      <Award className='h-6 w-6 text-primary mr-3' />
-                      <h3 className='text-xl font-semibold text-foreground'>Professional Certifications</h3>
-                    </div>
-                    <ul className='space-y-2'>
-                      <li className='flex items-start'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0'></div>
-                        <span className='text-muted-foreground'>Certified Asset Management Assessor (CAMA)</span>
-                      </li>
-                      <li className='flex items-start'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0'></div>
-                        <span className='text-muted-foreground'>Member – Institute of Asset Management (UK)</span>
-                      </li>
-                      <li className='flex items-start'>
-                        <div className='w-1.5 h-1.5 bg-primary rounded-full mr-3 mt-2 flex-shrink-0'></div>
-                        <span className='text-muted-foreground'>Chartered Engineer (India)</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
           {/* Areas of Expertise */}
           <div className='mb-16'>
             <h2 className='text-3xl font-bold text-foreground mb-8 text-center'>
@@ -234,32 +160,6 @@ export default function GaneshSPage() {
                     </h3>
                     <p className='text-muted-foreground'>
                       {area.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Career Highlights */}
-          <div className='mb-16'>
-            <h2 className='text-3xl font-bold text-foreground mb-8 text-center'>
-              Career Highlights
-            </h2>
-            <div className='space-y-6'>
-              {careerHighlights.map((highlight, index) => (
-                <Card key={index} className='p-6'>
-                  <CardContent>
-                    <div className='flex items-start justify-between mb-3'>
-                      <h3 className='text-lg font-semibold text-foreground'>
-                        {highlight.title}
-                      </h3>
-                      <Badge variant='secondary' className='ml-4'>
-                        {highlight.impact}
-                      </Badge>
-                    </div>
-                    <p className='text-muted-foreground'>
-                      {highlight.description}
                     </p>
                   </CardContent>
                 </Card>
@@ -344,12 +244,10 @@ export default function GaneshSPage() {
                   your organization&rsquo;s asset management practices.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                  <Button
+                  <ScheduleConsultation
                     size='lg'
                     className='bg-primary-foreground text-primary hover:bg-primary-foreground/90'
-                  >
-                    Schedule a Consultation
-                  </Button>
+                  />
                   <Button
                     variant='outline'
                     size='lg'

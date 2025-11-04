@@ -57,8 +57,11 @@ export default function About() {
                   variant='outline'
                   size='lg'
                   className='border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4'
+                  asChild
                 >
-                  Download CV
+                  <a href='/assets/KVK_Subramani_CV.pdf' download>
+                    Download CV
+                  </a>
                 </Button>
               </div>
             </div>
@@ -295,7 +298,7 @@ export default function About() {
                       </p>
                       <p className='text-muted-foreground text-sm leading-relaxed mb-4'>
                         Soundarapandian Srinivasan is a qualified Asset Management
-                        and Maintenance professional with 30+ years of
+                        and Maintenance professional with 40+ years of
                         multidisciplinary experience spanning defence,
                         contracting, manufacturing, and infrastructure sectors. He
                         specializes in ISO 55001 implementation and asset
